@@ -8,9 +8,13 @@ laboratorios de frontera que son su objeto.
 
 ## Estructura
 
-- `index.html` — maquetación, estilos y contenedores. No contiene datos.
+- `index.html` — maquetación, estilos y contenedores del mapa. No contiene datos.
 - `app.js` — lee `data.json` y renderiza el SVG. No contiene datos.
 - `data.json` — nodos y aristas. **Única fuente de datos del mapa.**
+- `asi.html` — página divulgativa independiente ("¿Qué es la ASI?"), enlazada
+  desde `index.html`. Contenido propio con cita y fuente primaria por
+  afirmación; no lee `data.json`.
+- `assets/asi.css` — estilos de `asi.html`, separados de `assets/style.css`.
 - `CHANGELOG.md` — qué cambió y qué se verificó en cada actualización.
 
 ## Datos y verificación

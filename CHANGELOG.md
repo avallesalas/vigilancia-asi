@@ -20,8 +20,19 @@ Palihapitiya), verificado contra BBC News y The Guardian directamente. El
 research completo, incluidas las citas descartadas por falta de fuente
 primaria verificable, queda en `research/asi-page-quotes.md`.
 
-`site/index.html` lleva un enlace nuevo al subtítulo hacia la página nueva.
-No se modifica `data.json`.
+`site/index.html` lleva un enlace nuevo hacia la página nueva. No se
+modifica `data.json`.
+
+Ajustes posteriores en la misma sesión:
+- El enlace se puso primero dentro de `#subtitle`, pero `app.js:90`
+  sobrescribe ese elemento con `meta.subtitle` de `data.json` en cada carga
+  (vía `textContent`), así que nunca llegaba a verse. Se movió a un `<p>`
+  propio, fuera del elemento que gestiona `app.js`.
+- Texto del enlace ajustado a "¿Quieres saber qué es la ASI y por qué se
+  vigila? →".
+- Las referencias inline a nodos del mapa (`.node-ref` en `assets/asi.css`)
+  pasan de caja gris con borde apenas visible a chip con el acento teal del
+  propio mapa, más legible.
 
 ## 2026-09-13 (CEGIA verificado — 0 nodos sin verificar)
 El usuario compartió https://cegia.org.br/#sobre, la web oficial del CEGIA
