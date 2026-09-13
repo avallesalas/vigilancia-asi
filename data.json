@@ -382,7 +382,7 @@
       "type": "policy",
       "panel": "france",
       "country": "Francia",
-      "desc": "French Center for AI Safety, fundado en mayo de 2024 en París por EffiSciences. Interlocutor habitual de la Comisión Europea y la OCDE; impulsó el \"Global Call for AI Red Lines\", respaldado por 15 premios Nobel. Dirige el programa formativo ML4Good.",
+      "desc": "French Center for AI Safety, fundado en mayo de 2024 en París por EffiSciences. Interlocutor habitual de la Comisión Europea y la OCDE; impulsó el \"Global Call for AI Red Lines\". El número de premios Nobel que lo respaldan varía según la fuente y el momento: 10 según la propia página de CeSIA, 12 según la biografía de su director ejecutivo Charbel-Raphaël Segerie, y \"15 Nobel Prize and Turing Award recipients\" (cifra combinada, no solo Nobel) según el sitio oficial de la campaña, red-lines.ai — probablemente reflejando firmas añadidas en distintos momentos. Dirige el programa formativo ML4Good.",
       "url": "https://www.cesia.org",
       "confidence": "verified",
       "source": "https://www.lesswrong.com/posts/rCLs56wfissFheLap/announcing-cesia-the-french-center-for-ai-safety",

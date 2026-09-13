@@ -69,3 +69,15 @@ Carnegie Endowment, NIST, gov.uk/Hansard, economie.gouv.fr, La Moncloa,
 openphilanthropy.org/grants, goodventures.org, 80,000 Hours, futureoflife.org
 (AI Safety Index verano 2026), forum.effectivealtruism.org, alignmentforum.org,
 lanais.org, aisafetybrazil.org, meti.go.jp, aisi.re.kr, imda.gov.sg.
+
+## 2026-09-13 (corrección posterior — aviso del usuario)
+- **El nodo CeSIA decía "15 premios Nobel" sin cruzar fuentes.** El usuario señaló
+  que la biografía de Segerie (ya citada como fuente esta misma sesión) dice 12, no
+  15 — la misma discrepancia que él ya había detectado entre la web de CeSIA y la
+  bio de Segerie. Verificado directamente: `cesia.org` dice 10 premios Nobel;
+  `red-lines.ai` (sitio oficial de la campaña) dice "15 Nobel Prize and Turing Award
+  recipients" — una cifra combinada de Nobel *y* Turing, no 15 Nobel puros; la bio
+  de Segerie dice 12 Nobel. Las tres son fuentes primarias legítimas que
+  probablemente reflejan firmas añadidas en distintos momentos y conteos distintos
+  (Nobel solo vs. Nobel+Turing). Se corrigió la descripción para citar las tres
+  cifras con su fuente en vez de quedarse con una sola sin contrastar.
