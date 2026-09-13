@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quién vigila a la superinteligencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1 id="title">Quién vigila a la superinteligencia</h1>
+  <p class="sub" id="subtitle">mapa navegable — clic en un bloque o una línea para ver el detalle abajo</p>
+
+  <div class="board"><svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+
+  <div class="legend">
+    <div class="grp"><b>Tipo de organización</b>
+      <div class="row"><span class="swatch" style="background:var(--research)"></span>Investigación técnica</div>
+      <div class="row"><span class="swatch" style="background:var(--policy)"></span>Gobernanza / think tank</div>
+      <div class="row"><span class="swatch" style="background:var(--funding)"></span>Financiación</div>
+      <div class="row"><span class="swatch" style="background:var(--activism)"></span>Activismo</div>
+      <div class="row"><span class="swatch" style="background:var(--gov)"></span>Organismo gubernamental</div>
+      <div class="row"><span class="swatch" style="background:var(--compliance)"></span>Cumplimiento normativo</div>
+      <div class="row"><span class="swatch" style="background:var(--network)"></span>Red / comunidad</div>
+      <div class="row"><span class="swatch" style="background:var(--doc)"></span>Documento / manifiesto</div>
+      <div class="row"><span class="swatch" style="background:var(--frontier)"></span>Laboratorio de frontera (objeto de vigilancia)</div>
+    </div>
+    <div class="grp"><b>Tipo de vínculo</b>
+      <div class="row"><span class="lswatch" style="border-color:var(--policy);border-top-style:dotted"></span>Evaluación / supervisión</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--activism);border-top-style:dashed"></span>Protesta / acción directa</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--doc)"></span>Autoría / relación directa</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--funding);border-top-style:dotted"></span>Financiación</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--policy);border-top-style:dotted"></span>Incidencia política</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--gov);border-top-style:dotted"></span>Red internacional AISI</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--activism);border-top-style:dashed"></span>Influencia narrativa</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--split);border-top-style:dashed"></span>Escisión / desacuerdo</div>
+      <div class="row"><span class="lswatch" style="border-color:var(--doc);border-top-style:dashed;opacity:.6"></span>Vínculo débil / mismo ecosistema</div>
+    </div>
+    <div class="grp"><b>Confianza del dato</b>
+      <div class="row"><span class="cbadge verified">verificado</span>fuente primaria citada</div>
+      <div class="row"><span class="cbadge unverified">sin verificar</span>plausible, sin cita puntual</div>
+    </div>
+  </div>
+
+  <div id="detail"><p class="placeholder">Selecciona un bloque o una línea del mapa para ver información aquí.</p></div>
+
+  <footer id="footer">Mapa ilustrativo — no exhaustivo.</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
