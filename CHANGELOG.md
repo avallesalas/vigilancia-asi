@@ -2,6 +2,22 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-13 (CEGIA verificado — 0 nodos sin verificar)
+El usuario compartió https://cegia.org.br/#sobre, la web oficial del CEGIA
+(Brasil) que ya estaba en el mapa como único nodo `unverified`. Se confirma con
+fuente primaria: misión, sede en Brasília, equipo (Luis Urtubey, director de
+estrategia — corroborado por una fuente externa independiente, USP) y una
+colaboración pública concreta (webinar con el Instituto de Estudos Avançados de
+la USP y The Future Society, septiembre 2026). Sigue sin aparecer una fecha de
+fundación en ninguna fuente — `founded` queda honestamente en `null`.
+
+De paso, el usuario compartió antes un enlace que resultó ser un CEGIA
+*distinto* (el Comité de Ética y Gobernanza de la IA del Ayuntamiento de
+València, España) — coincidencia de siglas sin relación con el brasileño. Esa
+ficha queda propuesta en `research/candidatos.md`, pendiente de aprobación.
+
+Resultado: **0/40 nodos unverified** (antes 1). Aristas sin cambios (18/49).
+
 ## 2026-09-13 (verificación de las 8 aristas de evaluación vigilante→laboratorio)
 Sesión de investigación dirigida a las 8 aristas de tipo `eval` que conectan METR,
 Apollo Research, US AISI/CAISI y UK AI Security Institute con Anthropic, OpenAI y

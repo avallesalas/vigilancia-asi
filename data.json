@@ -640,11 +640,14 @@
       "type": "policy",
       "panel": "brazil",
       "country": "Brasil",
-      "desc": "Centro de Estudos em Governança de Inteligência Artificial. Organización brasileña sin ánimo de lucro dedicada a fortalecer la gobernanza de IA con foco en seguridad y responsabilidad. No existe una fuente primaria disponible que precise su año de fundación o dirección, ni que respalde específicamente su papel en los debates de gobernanza de IA en Brasil.",
+      "desc": "Centro de Estudos em Governança de IA, organización brasileña sin ánimo de lucro con sede en Brasília dedicada a fortalecer la gobernanza de la IA con foco en riesgos sistémicos y seguridad; traduce al portugués materiales de referencia internacional sobre gobernanza y seguridad de IA. Ha colaborado con el Instituto de Estudos Avançados de la USP y The Future Society en actividades públicas sobre riesgos de la IA de frontera.",
       "url": "https://cegia.org.br",
-      "confidence": "unverified",
-      "source": "not found",
-      "last_checked": "2026-09-13"
+      "confidence": "verified",
+      "source": "https://cegia.org.br/",
+      "last_checked": "2026-09-13",
+      "leadership": [
+        "Luis Urtubey (director de estrategia)"
+      ]
     },
     {
       "founded": "2025-09",
