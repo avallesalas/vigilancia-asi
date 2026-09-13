@@ -11,9 +11,9 @@
 <body>
 <div class="wrap">
   <h1 id="title">Quién vigila a la superinteligencia</h1>
-  <p class="sub" id="subtitle">mapa navegable — clic en un bloque o una línea para ver el detalle abajo</p>
+  <p class="sub" id="subtitle">mapa navegable — busca, arrastra los nodos, pasa el ratón para resaltar conexiones, clic para ver el detalle</p>
 
-  <div class="board"><svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+  <div class="board" id="graph-wrap"></div>
 
   <div class="legend">
     <div class="grp"><b>Tipo de organización</b>
@@ -44,11 +44,10 @@
     </div>
   </div>
 
-  <div id="detail"><p class="placeholder">Selecciona un bloque o una línea del mapa para ver información aquí.</p></div>
-
   <footer id="footer">Mapa ilustrativo — no exhaustivo.</footer>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

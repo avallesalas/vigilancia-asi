@@ -2,6 +2,27 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-13 (cambio de presentación — grafo de fuerza dirigida)
+- Se reemplaza el layout de paneles fijos por país por un grafo de fuerza dirigida
+  (D3 v7), explorado primero como prototipo en Claude Design (3 direcciones
+  comparadas: grafo de fuerza, paneles mejorados, vista de tabla — se eligió la
+  primera). Cambio puramente de presentación/interacción: `data.json` conserva
+  exactamente el mismo esquema, campos de `confidence`/`source`/`source_ref` y
+  lógica de verificación (fuente citada o "not found", nunca oculto ni relleno).
+- Nuevo: buscador por nombre/tipo/país, zoom/pan, arrastre de nodos, resaltado de
+  vecinos al pasar el ratón, popup flotante al clic (nodo o arista) en vez del
+  panel fijo bajo el mapa.
+- El popup ahora muestra `founded`/`founded_precision`/`leadership` cuando existen
+  — campos que ya estaban verificados en el dataset pero que la vista anterior no
+  llegaba a mostrar.
+- `meta.subtitle` en `data.json` actualizado para describir la interacción real
+  (buscar/arrastrar/hover/clic) en vez del texto antiguo ("clic... para ver el
+  detalle abajo", que ya no aplica). Es texto de presentación, no dato del esquema.
+- Añadida dependencia externa: d3@7.9.0 vía CDN (jsdelivr), cargada antes de
+  `app.js` en `index.html`.
+- Probado en navegador: carga sin errores de consola, popup de nodo y de arista,
+  búsqueda, zoom, reset, arrastre — todo verificado con Chrome antes de publicar.
+
 ## 2026-09-13
 - Se separa el prototipo de un solo fichero (`archive/prototipo-2026-09-13.html`) en
   `index.html` + `app.js` + `data.json`, siguiendo el esquema de `CLAUDE.md`.

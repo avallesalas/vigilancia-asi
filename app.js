@@ -1,5 +1,6 @@
-// Lee data.json y renderiza el mapa. No contiene datos: solo layout y render.
-const SVGNS='http://www.w3.org/2000/svg', XHTMLNS='http://www.w3.org/1999/xhtml';
+// Lee data.json y renderiza el mapa como grafo de fuerza dirigida (D3). No contiene
+// datos: solo layout, interacción y render. El esquema de data.json (confidence,
+// source, source_ref, "not found") no se toca aquí — solo se lee y se muestra.
 const TYPE_LABEL={research:'Investigación',policy:'Gobernanza / policy',funding:'Financiación',activism:'Activismo',gov:'Organismo gubernamental',compliance:'Cumplimiento normativo',network:'Red / comunidad',document:'Documento','frontier-lab':'Laboratorio de frontera'};
 const TYPE_COLOR={research:'var(--research)',policy:'var(--policy)',funding:'var(--funding)',activism:'var(--activism)',gov:'var(--gov)',compliance:'var(--compliance)',network:'var(--network)',document:'var(--doc)','frontier-lab':'var(--frontier)'};
 const EDGE_STYLE={
@@ -20,13 +21,69 @@ fetch('data.json')
   .then(r=>{ if(!r.ok) throw new Error('No se pudo cargar data.json: HTTP '+r.status); return r.json(); })
   .then(render)
   .catch(err=>{
-    document.getElementById('detail').innerHTML =
-      `<p class="placeholder">Error cargando los datos del mapa: ${err.message}</p>`;
+    document.getElementById('graph-wrap').innerHTML =
+      `<p class="placeholder" style="padding:18px;">Error cargando los datos del mapa: ${err.message}</p>`;
     console.error(err);
   });
 
+// ---- helpers de presentación de una ficha (nodo o arista) — comparten la misma
+// lógica de verificación que el resto del sitio: badge de confidence, "not found"
+// se muestra como tal, nunca se oculta ni se rellena. ----
+function confBadge(confidence){
+  const cls = confidence==='verified' ? 'verified' : 'unverified';
+  const label = confidence==='verified' ? 'verificado' : 'sin verificar';
+  return `<span class="badge cbadge ${cls}">${label}</span>`;
+}
+
+function foundedLabel(n){
+  if(!n.founded) return null;
+  if(n.founded_precision==='month'){
+    const [y,m]=String(n.founded).split('-');
+    const meses=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+    return `${meses[parseInt(m,10)-1]||m} ${y}`;
+  }
+  return String(n.founded);
+}
+
+function nodeDetailHTML(n){
+  const summaryHtml = n.summary ? `<p class="popup-summary">${n.summary}</p>` : '';
+  const sourceHtml = (n.source && n.source!=='not found')
+    ? `<a href="${n.source}" target="_blank" rel="noopener">fuente ↗</a>`
+    : `<span class="not-found">fuente: not found</span>`;
+  const urlHtml = (n.url && n.url!=='not found')
+    ? `<a href="${n.url}" target="_blank" rel="noopener">${n.url.replace(/^https?:\/\//,'')} ↗</a>` : '';
+  const founded = foundedLabel(n);
+  const foundedHtml = founded ? `<div><span class="meta-k">Fundación:</span> ${founded}</div>` : '';
+  const leadershipHtml = (n.leadership && n.leadership.length)
+    ? `<div class="popup-leadership"><span class="meta-k">Liderazgo:</span><ul>${n.leadership.map(l=>`<li>${l}</li>`).join('')}</ul></div>` : '';
+  const metaHtml = (foundedHtml||leadershipHtml) ? `<div class="popup-meta">${foundedHtml}${leadershipHtml}</div>` : '';
+  const lastChecked = n.last_checked ? `<div class="popup-footnote">id: ${n.id} · verificado por última vez: ${n.last_checked}</div>` : '';
+  return `<h2>${n.name}</h2>
+    <div class="popup-badges">
+      <span class="badge" style="color:${TYPE_COLOR[n.type]};border-color:${TYPE_COLOR[n.type]}">${TYPE_LABEL[n.type]||n.type}</span>
+      <span class="badge">${n.country||''}</span>
+      ${confBadge(n.confidence)}
+    </div>
+    <p>${n.desc||''}</p>${summaryHtml}${metaHtml}
+    <div class="popup-links">${urlHtml}${sourceHtml}</div>${lastChecked}`;
+}
+
+function edgeDetailHTML(e, byId){
+  const s=byId[e.source], t=byId[e.target];
+  const style = EDGE_STYLE[e.type]||EDGE_STYLE.weak;
+  const sourceHtml = (e.source_ref && e.source_ref!=='not found')
+    ? `<div class="popup-links"><a href="${e.source_ref}" target="_blank" rel="noopener">fuente ↗</a></div>`
+    : `<div class="popup-links"><span class="not-found">fuente: not found</span></div>`;
+  return `<h2>${s?s.name:e.source} → ${t?t.name:e.target}</h2>
+    <div class="popup-badges">
+      <span class="badge" style="color:${style.color};border-color:${style.color}">${e.label}</span>
+      ${confBadge(e.confidence)}
+    </div>
+    <p>${e.desc||''}</p>${sourceHtml}`;
+}
+
 function render(DATA){
-  const {meta, panels: PANELS, nodes: NODES, edges: EDGES} = DATA;
+  const {meta, nodes: NODES, edges: EDGES} = DATA;
 
   if(meta){
     if(meta.title){ document.getElementById('title').textContent = meta.title; document.title = meta.title; }
@@ -34,150 +91,163 @@ function render(DATA){
     if(meta.footer) document.getElementById('footer').textContent = meta.footer;
   }
 
-  // ---- layout ----
-  const nodeW=195, nodeH=60, gapX=18, gapY=16, padTop=36, padBottom=16, padX=18;
-  const colWidth=padX*2+nodeW*2+gapX, colGap=28, rowGap=28, marginX=36, marginY=36, macroCols=3;
+  buildForceGraph(document.getElementById('graph-wrap'), NODES, EDGES);
+}
 
-  const byId={}; NODES.forEach(n=>byId[n.id]=n);
-  const panelsById={}; PANELS.forEach(p=>panelsById[p.id]=p);
+function buildForceGraph(container, nodesIn, edgesIn){
+  const nodes = nodesIn.map(n=>Object.assign({},n));
+  const links = edgesIn.map(e=>Object.assign({},e));
+  const byId = {}; nodes.forEach(n=>byId[n.id]=n);
+  const width = 1200, height = 760;
 
-  const docPanel=panelsById['docs'];
-  const countryPanels=PANELS.filter(p=>p.id!=='docs');
+  container.innerHTML = `
+    <div class="fg-toolbar">
+      <input id="fg-search" class="fg-search" placeholder="Buscar por nombre, tipo o país…">
+      <div class="fg-zoomctl">
+        <button id="fg-zoomin" class="fg-btn" title="Acercar">+</button>
+        <button id="fg-zoomout" class="fg-btn" title="Alejar">–</button>
+        <button id="fg-reset" class="fg-btn fg-btn-wide" title="Restablecer vista">reset</button>
+      </div>
+    </div>
+    <div id="fg-stage" class="fg-stage">
+      <svg id="fg-svg" class="fg-svg" viewBox="0 0 ${width} ${height}"></svg>
+      <div id="fg-popup" class="fg-popup" hidden>
+        <button id="fg-popup-close" class="fg-popup-close" aria-label="Cerrar">✕</button>
+        <div id="fg-popup-body"></div>
+      </div>
+    </div>`;
 
-  countryPanels.forEach(p=>{
-    const n=NODES.filter(nd=>nd.panel===p.id).length;
-    const rows=Math.ceil(n/2);
-    p.w=colWidth; p.h=padTop+rows*(nodeH+gapY)-gapY+padBottom;
-  });
-  if(docPanel){
-    docPanel.w=colWidth*macroCols+colGap*(macroCols-1);
-    docPanel.h=padTop+90;
-    docPanel.x=marginX; docPanel.y=marginY;
+  const svg = d3.select(container.querySelector('#fg-svg'));
+  const g = svg.append('g');
+  const zoom = d3.zoom().scaleExtent([0.35,3]).on('zoom', ev=>g.attr('transform', ev.transform));
+  svg.call(zoom);
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(links).id(d=>d.id).distance(78).strength(0.55))
+    .force('charge', d3.forceManyBody().strength(-230))
+    .force('center', d3.forceCenter(width/2, height/2))
+    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:26));
+
+  const linkGroup = g.append('g').selectAll('g').data(links).join('g');
+  const linkHit = linkGroup.append('line')
+    .attr('stroke', 'transparent')
+    .attr('stroke-width', 14)
+    .style('cursor','pointer');
+  const linkSel = linkGroup.append('line')
+    .attr('stroke', d=>(EDGE_STYLE[d.type]||EDGE_STYLE.weak).color)
+    .attr('stroke-width', d=>(EDGE_STYLE[d.type]||EDGE_STYLE.weak).w)
+    .attr('stroke-dasharray', d=>{const s=EDGE_STYLE[d.type]||EDGE_STYLE.weak; return s.dash==='none'?null:s.dash;})
+    .attr('opacity', 0.5)
+    .style('cursor','pointer')
+    .style('pointer-events','none');
+  linkGroup.on('click',(ev,d)=>{ev.stopPropagation();selectEdge(d,ev);})
+    .on('mouseenter',(ev,d)=>highlightEdge(d))
+    .on('mouseleave',()=>clearHighlight());
+
+  const nodeSel = g.append('g').selectAll('g').data(nodes).join('g')
+    .attr('class','fg-node')
+    .call(d3.drag()
+      .on('start',(ev,d)=>{if(!ev.active) sim.alphaTarget(0.25).restart(); d.fx=d.x; d.fy=d.y;})
+      .on('drag',(ev,d)=>{d.fx=ev.x; d.fy=ev.y;})
+      .on('end',(ev,d)=>{if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null;}));
+
+  function octagonPoints(r){
+    const pts=[];
+    for(let i=0;i<8;i++){ const a = Math.PI/8 + i*Math.PI/4; pts.push((r*Math.cos(a)).toFixed(2)+','+(r*Math.sin(a)).toFixed(2)); }
+    return pts.join(' ');
   }
-
-  let y=marginY+(docPanel?docPanel.h+rowGap:0), colIdx=0, rowMaxH=0;
-  countryPanels.forEach(p=>{
-    p.x=marginX+colIdx*(colWidth+colGap);
-    p.y=y;
-    rowMaxH=Math.max(rowMaxH,p.h);
-    colIdx++;
-    if(colIdx>=macroCols){colIdx=0;y+=rowMaxH+rowGap;rowMaxH=0;}
-  });
-  const contentBottom = colIdx!==0 ? y+rowMaxH : y-rowGap;
-  const totalHeight=contentBottom+marginY;
-  const totalWidth=marginX*2+colWidth*macroCols+colGap*(macroCols-1);
-
-  function placeNodes(panel){
-    const nds=NODES.filter(n=>n.panel===panel.id);
-    if(panel.id==='docs'){
-      const dw=(panel.w-padX*2-gapX*2)/3;
-      nds.forEach((n,i)=>{
-        n.x=panel.x+padX+i*(dw+gapX); n.y=panel.y+padTop; n.w=dw; n.h=90;
-        n.cx=n.x+dw/2; n.cy=n.y+45;
-      });
+  nodeSel.each(function(d){
+    const sel = d3.select(this);
+    if(d.type==='frontier-lab'){
+      sel.append('polygon')
+        .attr('points', octagonPoints(24))
+        .attr('fill', '#161C24')
+        .attr('stroke', TYPE_COLOR[d.type])
+        .attr('stroke-width', 3.5);
+    } else if(d.type==='document'){
+      sel.append('rect')
+        .attr('x', -22).attr('y', -13).attr('width', 44).attr('height', 26)
+        .attr('fill', '#161C24')
+        .attr('stroke', TYPE_COLOR[d.type])
+        .attr('stroke-width', 2)
+        .attr('stroke-dasharray', '4 3');
     } else {
-      nds.forEach((n,i)=>{
-        const row=Math.floor(i/2), col=i%2;
-        n.x=panel.x+padX+col*(nodeW+gapX); n.y=panel.y+padTop+row*(nodeH+gapY);
-        n.w=nodeW; n.h=nodeH; n.cx=n.x+nodeW/2; n.cy=n.y+nodeH/2;
-      });
+      sel.append('circle')
+        .attr('r', 16)
+        .attr('fill', '#161C24')
+        .attr('stroke', TYPE_COLOR[d.type])
+        .attr('stroke-width', 2);
     }
-  }
-  if(docPanel) placeNodes(docPanel);
-  countryPanels.forEach(placeNodes);
-
-  // ---- render ----
-  const svg=document.getElementById('svg');
-  svg.setAttribute('viewBox',`0 0 ${totalWidth} ${totalHeight}`);
-  svg.setAttribute('width',totalWidth); svg.setAttribute('height',totalHeight);
-
-  function el(tag,attrs){
-    const e=document.createElementNS(SVGNS,tag);
-    for(const k in attrs) e.setAttribute(k,attrs[k]);
-    return e;
-  }
-
-  // panels
-  const allPanels = docPanel ? [docPanel,...countryPanels] : countryPanels;
-  allPanels.forEach(p=>{
-    svg.appendChild(el('rect',{x:p.x,y:p.y,width:p.w,height:p.h,rx:12,class:'panel-bg'+(p.id==='docs'?' docs':'')}));
-    const t=el('text',{x:p.x+18,y:p.y+24,class:'panel-label'}); t.textContent=p.label;
-    svg.appendChild(t);
   });
 
-  // edges (under nodes)
-  EDGES.forEach(e=>{
-    const s=byId[e.source], t=byId[e.target];
-    if(!s||!t) return;
-    const mx=(s.cx+t.cx)/2, my=(s.cy+t.cy)/2 - 26;
-    const d=`M${s.cx},${s.cy} Q${mx},${my} ${t.cx},${t.cy}`;
-    const style=EDGE_STYLE[e.type]||EDGE_STYLE.weak;
-    const hit=el('path',{d,class:'edge-hit'});
-    const path=el('path',{d,class:'edge','stroke':style.color,'stroke-width':style.w,'stroke-dasharray':style.dash==='none'?'':style.dash});
-    const g=el('g',{});
-    g.appendChild(hit); g.appendChild(path);
-    g.addEventListener('click',()=>selectEdge(e,g,style.color));
-    svg.appendChild(g);
+  nodeSel.append('text')
+    .text(d=>d.name.length>18? d.name.slice(0,17)+'…' : d.name)
+    .attr('text-anchor','middle')
+    .attr('y', d=>(d.type==='frontier-lab'?24:d.type==='document'?13:16)+13)
+    .attr('class','fg-node-label');
+
+  nodeSel.on('click',(ev,d)=>{ev.stopPropagation();selectNode(d,ev);})
+    .on('mouseenter',(ev,d)=>highlight(d))
+    .on('mouseleave',()=>clearHighlight());
+  svg.on('click', ()=>{clearHighlight();hidePopup();});
+
+  sim.on('tick', ()=>{
+    linkHit.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    linkSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
   });
 
-  // nodes
-  let selectedNode=null, selectedEdgeG=null;
-  NODES.forEach(n=>{
-    const g=el('g',{class:'node',color:TYPE_COLOR[n.type]});
-    const isFrontier = n.type==='frontier-lab';
-    const rect=el('rect',{x:n.x,y:n.y,width:n.w,height:n.h,rx:isFrontier?3:8,stroke:TYPE_COLOR[n.type],
-      'stroke-width': isFrontier?3:2,
-      'stroke-dasharray': n.type==='document' ? '4 3' : 'none'});
-    g.appendChild(rect);
-    const fo=el('foreignObject',{x:n.x,y:n.y,width:n.w,height:n.h});
-    const div=document.createElementNS(XHTMLNS,'div');
-    div.setAttribute('class','node-inner');
-    div.innerHTML=`<div class="n-name">${n.name}</div><div class="n-meta">${TYPE_LABEL[n.type]||n.type} · ${n.country||''}</div>`;
-    fo.appendChild(div);
-    g.appendChild(fo);
-    g.addEventListener('click',()=>selectNode(n,g));
-    svg.appendChild(g);
-    n._g=g;
+  function highlight(d){
+    const connIds = new Set([d.id]);
+    links.forEach(l=>{ if(l.source.id===d.id) connIds.add(l.target.id); if(l.target.id===d.id) connIds.add(l.source.id); });
+    nodeSel.style('opacity', n=>connIds.has(n.id)?1:0.15);
+    linkSel.style('opacity', l=>(l.source.id===d.id||l.target.id===d.id)?1:0.04);
+  }
+  function clearHighlight(){ nodeSel.style('opacity',1); linkSel.style('opacity',0.5); }
+  function highlightEdge(d){
+    nodeSel.style('opacity', n=>(n.id===d.source.id||n.id===d.target.id)?1:0.15);
+    linkSel.style('opacity', l=>l===d?1:0.04);
+  }
+
+  const stageEl = container.querySelector('#fg-stage');
+  const popupEl = container.querySelector('#fg-popup');
+  const popupBody = container.querySelector('#fg-popup-body');
+  container.querySelector('#fg-popup-close').addEventListener('click', (ev)=>{ev.stopPropagation();hidePopup();});
+  function hidePopup(){ popupEl.hidden = true; }
+  function showPopupAt(x,y,html){
+    popupBody.innerHTML = html;
+    popupEl.hidden = false;
+    const stageRect = stageEl.getBoundingClientRect();
+    const pw = 380, margin=12;
+    let left = x, top = y + 14;
+    if(left + pw + margin > stageRect.width) left = stageRect.width - pw - margin;
+    if(left < margin) left = margin;
+    if(top + 320 > stageRect.height) top = Math.max(margin, y - 320);
+    popupEl.style.left = left+'px';
+    popupEl.style.top = top+'px';
+  }
+  function selectNode(n, ev){
+    const [x,y] = d3.pointer(ev, stageEl);
+    showPopupAt(x,y,nodeDetailHTML(n));
+  }
+  function selectEdge(e, ev){
+    const [x,y] = d3.pointer(ev, stageEl);
+    const norm = Object.assign({}, e, {source: e.source.id||e.source, target: e.target.id||e.target});
+    showPopupAt(x,y,edgeDetailHTML(norm, byId));
+  }
+
+  function matchesQuery(d,q){
+    return d.name.toLowerCase().includes(q)
+      || (d.country||'').toLowerCase().includes(q)
+      || (TYPE_LABEL[d.type]||d.type).toLowerCase().includes(q);
+  }
+  container.querySelector('#fg-search').addEventListener('input', ev=>{
+    const q = ev.target.value.trim().toLowerCase();
+    if(!q){ nodeSel.style('opacity',1); linkSel.style('opacity',0.5); return; }
+    nodeSel.style('opacity', d=>matchesQuery(d,q)?1:0.1);
+    linkSel.style('opacity', 0.04);
   });
-
-  const detail=document.getElementById('detail');
-
-  function clearSelection(){
-    if(selectedNode) selectedNode._g.classList.remove('selected');
-    if(selectedEdgeG) selectedEdgeG.querySelector('.edge').classList.remove('selected');
-    selectedNode=null; selectedEdgeG=null;
-  }
-
-  function confBadge(confidence){
-    const cls = confidence==='verified' ? 'verified' : 'unverified';
-    const label = confidence==='verified' ? 'verificado' : 'sin verificar';
-    return `<span class="badge cbadge ${cls}">${label}</span>`;
-  }
-
-  function selectNode(n,g){
-    clearSelection();
-    g.classList.add('selected'); selectedNode=n;
-    const summaryHtml = n.summary ? `<p style="margin-top:12px;padding-top:12px;border-top:1px solid var(--panel-border);color:var(--muted);">${n.summary}</p>` : '';
-    const sourceHtml = (n.source && n.source!=='not found')
-      ? `<a href="${n.source}" target="_blank" rel="noopener">fuente ↗</a>` : '';
-    const urlHtml = (n.url && n.url!=='not found')
-      ? `<a href="${n.url}" target="_blank" rel="noopener">${n.url.replace(/^https?:\/\//,'')} ↗</a>` : '';
-    detail.innerHTML=`<h2>${n.name}</h2>
-      <div class="badge">${TYPE_LABEL[n.type]||n.type} · ${n.country||''}</div>
-      ${confBadge(n.confidence)}
-      <p>${n.desc||''}</p>${summaryHtml}
-      <div style="margin-top:8px;display:flex;gap:14px;">${urlHtml}${sourceHtml}</div>`;
-  }
-
-  function selectEdge(e,g,color){
-    clearSelection();
-    g.querySelector('.edge').classList.add('selected'); selectedEdgeG=g;
-    const s=byId[e.source], t=byId[e.target];
-    const sourceHtml = (e.source_ref && e.source_ref!=='not found')
-      ? `<div style="margin-top:8px;"><a href="${e.source_ref}" target="_blank" rel="noopener">fuente ↗</a></div>` : '';
-    detail.innerHTML=`<h2>${s.name} → ${t.name}</h2>
-      <div class="badge" style="color:${color}">${e.label}</div>
-      ${confBadge(e.confidence)}
-      <p>${e.desc||''}</p>${sourceHtml}`;
-  }
+  container.querySelector('#fg-zoomin').addEventListener('click', ()=>svg.transition().duration(200).call(zoom.scaleBy,1.3));
+  container.querySelector('#fg-zoomout').addEventListener('click', ()=>svg.transition().duration(200).call(zoom.scaleBy,0.75));
+  container.querySelector('#fg-reset').addEventListener('click', ()=>svg.transition().duration(300).call(zoom.transform, d3.zoomIdentity));
 }
