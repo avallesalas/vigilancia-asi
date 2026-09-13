@@ -126,7 +126,7 @@ function buildForceGraph(container, nodesIn, edgesIn){
     .force('link', d3.forceLink(links).id(d=>d.id).distance(78).strength(0.55))
     .force('charge', d3.forceManyBody().strength(-230))
     .force('center', d3.forceCenter(width/2, height/2))
-    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:26));
+    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:d.type==='document'?32:26));
 
   const linkGroup = g.append('g').selectAll('g').data(links).join('g');
   const linkHit = linkGroup.append('line')
@@ -165,12 +165,21 @@ function buildForceGraph(container, nodesIn, edgesIn){
         .attr('stroke', TYPE_COLOR[d.type])
         .attr('stroke-width', 3.5);
     } else if(d.type==='document'){
-      sel.append('rect')
-        .attr('x', -22).attr('y', -13).attr('width', 44).attr('height', 26)
+      // "página con esquina doblada": mismo lenguaje que un icono de documento,
+      // con borde sólido (el punteado se leía como placeholder sin renderizar).
+      const w=44,h=26,x=-w/2,y=-h/2,fold=9;
+      sel.append('path')
+        .attr('d', `M${x},${y} H${x+w-fold} L${x+w},${y+fold} V${y+h} H${x} Z`)
         .attr('fill', '#161C24')
         .attr('stroke', TYPE_COLOR[d.type])
         .attr('stroke-width', 2)
-        .attr('stroke-dasharray', '4 3');
+        .attr('stroke-linejoin', 'round');
+      sel.append('path')
+        .attr('d', `M${x+w-fold},${y} V${y+fold} H${x+w}`)
+        .attr('fill', 'none')
+        .attr('stroke', TYPE_COLOR[d.type])
+        .attr('stroke-width', 1.4)
+        .attr('opacity', 0.7);
     } else {
       sel.append('circle')
         .attr('r', 16)

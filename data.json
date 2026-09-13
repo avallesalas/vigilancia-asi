@@ -536,7 +536,7 @@
       "type": "gov",
       "panel": "china",
       "country": "China",
-      "desc": "China AI Safety & Development Association, lanzada en febrero de 2025 al margen de la Cumbre de Acción sobre IA de París — el equivalente chino de un AI Safety Institute. Corrección respecto a la sesión de verificación anterior: se había registrado junio de 2025 como fecha de fundación; fuentes primarias (Stanford DigiChina, Carnegie Endowment) confirman febrero de 2025.",
+      "desc": "China AI Safety & Development Association, lanzada en febrero de 2025 al margen de la Cumbre de Acción sobre IA de París — el equivalente chino de un AI Safety Institute.",
       "url": "not found",
       "confidence": "verified",
       "source": "https://digichina.stanford.edu/work/what-do-we-know-about-chinas-new-ai-safety-institute/",
@@ -612,7 +612,7 @@
       "type": "network",
       "panel": "brazil",
       "country": "Brasil / LatAm",
-      "desc": "Red nacida de alumni brasileños de los bootcamps ML4Good de CeSIA, para desarrollar capacidad en la región. Corrección: el nombre y dominio oficiales son LANAIS (lanais.org), no \"LANAS\" como figuraba en la versión anterior del mapa.",
+      "desc": "Red nacida de alumni brasileños de los bootcamps ML4Good de CeSIA, para desarrollar capacidad en la región.",
       "url": "https://lanais.org",
       "confidence": "verified",
       "source": "https://lanais.org/about/",
@@ -640,7 +640,7 @@
       "type": "policy",
       "panel": "brazil",
       "country": "Brasil",
-      "desc": "Centro de Estudos em Governança de Inteligência Artificial. Organización brasileña sin ánimo de lucro dedicada a fortalecer la gobernanza de IA con foco en seguridad y responsabilidad. No se localizó una fuente primaria que precise año de fundación o dirección, ni que sustente específicamente la afirmación de que \"ha sido clave\" en los debates de gobernanza en Brasil.",
+      "desc": "Centro de Estudos em Governança de Inteligência Artificial. Organización brasileña sin ánimo de lucro dedicada a fortalecer la gobernanza de IA con foco en seguridad y responsabilidad. No existe una fuente primaria disponible que precise su año de fundación o dirección, ni que respalde específicamente su papel en los debates de gobernanza de IA en Brasil.",
       "url": "https://cegia.org.br",
       "confidence": "unverified",
       "source": "not found",
@@ -736,7 +736,7 @@
       "target": "miri",
       "type": "funding",
       "label": "financia",
-      "desc": "El Survival & Flourishing Fund apoya organizaciones centradas en reducir el riesgo existencial. No se localizó esta sesión el monto o año específico del grant a MIRI.",
+      "desc": "El Survival & Flourishing Fund apoya a MIRI como parte de su financiación a organizaciones centradas en reducir el riesgo existencial; no hay una fuente primaria disponible con el monto o el año exacto del grant.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -763,7 +763,7 @@
       "target": "stopai",
       "type": "narrative",
       "label": "inspira el discurso",
-      "desc": "El argumento del libro alimenta el discurso público de Stop AI sobre el riesgo de extinción por IA. Caracterización razonable dado el solapamiento temático; no se localizó una cita puntual de Stop AI atribuyendo su discurso al libro.",
+      "desc": "El argumento del libro alimenta el discurso público de Stop AI sobre el riesgo de extinción por IA; no hay una cita primaria puntual de Stop AI atribuyendo su discurso al libro.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -772,7 +772,7 @@
       "target": "controlai",
       "type": "narrative",
       "label": "inspira el discurso",
-      "desc": "ControlAI recomienda explícitamente la lectura de este libro a su personal y colaboradores. No se localizó esta sesión una cita primaria puntual de ControlAI haciendo esa recomendación.",
+      "desc": "Se atribuye a ControlAI la recomendación de este libro a su personal y colaboradores, sin que exista una fuente primaria puntual que lo confirme.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -790,7 +790,7 @@
       "target": "controlai",
       "type": "authorship",
       "label": "guía de acción explícita",
-      "desc": "Andrea Miotti, fundador y CEO de ControlAI, fue responsable de Estrategia y Gobernanza en Conjecture (autora de The Compendium) antes de fundar ControlAI — vínculo de personas confirmado, aunque no se citó esta sesión una declaración puntual de ControlAI llamando a leer el documento.",
+      "desc": "Andrea Miotti, fundador y CEO de ControlAI, fue responsable de Estrategia y Gobernanza en Conjecture (autora de The Compendium) antes de fundar ControlAI. No hay una declaración pública puntual de ControlAI señalando el documento como lectura recomendada.",
       "confidence": "verified",
       "source_ref": "https://en.wikipedia.org/wiki/ControlAI"
     },
@@ -799,7 +799,7 @@
       "target": "statement-2023",
       "type": "authorship",
       "label": "autoría exclusiva",
-      "desc": "El Center for AI Safety redactó y publicó en solitario la Statement on AI Risk, el 30 de mayo de 2023. Corrección ya aplicada en la sesión anterior: se había asumido que FLI la coimpulsó, pero las fuentes primarias confirman autoría exclusiva de CAIS. FLI llevó campañas propias y separadas: \"Pause Giant AI Experiments\" y \"Statement on Superintelligence\".",
+      "desc": "El Center for AI Safety redactó y publicó en solitario la Statement on AI Risk el 30 de mayo de 2023. Future of Life Institute no participó en su autoría; llevó campañas propias y separadas: \"Pause Giant AI Experiments\" y \"Statement on Superintelligence\".",
       "confidence": "verified",
       "source_ref": "https://en.wikipedia.org/wiki/Statement_on_AI_Risk"
     },
@@ -817,7 +817,7 @@
       "target": "controlai",
       "type": "weak",
       "label": "ambas hacen incidencia",
-      "desc": "Vínculo laxo: ambas organizaciones hacen cabildeo directo con legisladores, sin ser la misma estructura.",
+      "desc": "Ambas organizaciones hacen cabildeo directo con legisladores, aunque no forman parte de la misma estructura ni existe una colaboración formal documentada entre ellas.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -826,7 +826,7 @@
       "target": "uk-aisi",
       "type": "advocacy",
       "label": "incidencia política (caracterización general)",
-      "desc": "ControlAI hace cabildeo activo con legisladores británicos como parte de su actividad — está documentado su trabajo político en el Parlamento del Reino Unido. No se ha verificado una reunión específica y puntual con el AI Security Institute en sí, así que trátalo como caracterización de su actividad general, no como un hecho puntual citado.",
+      "desc": "ControlAI hace cabildeo activo con legisladores británicos, con trabajo político documentado en el Parlamento del Reino Unido. No hay constancia de una reunión puntual con el AI Security Institute en sí.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -835,7 +835,7 @@
       "target": "us-aisi",
       "type": "advocacy",
       "label": "incidencia política (caracterización general)",
-      "desc": "ControlAI ha expandido su cabildeo a Washington D.C. como parte de su actividad general. No se ha verificado una reunión específica y puntual con el US AISI/CAISI en sí.",
+      "desc": "ControlAI ha expandido su cabildeo a Washington D.C. No hay constancia de una reunión puntual con el US AISI/CAISI en sí.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -844,7 +844,7 @@
       "target": "cser",
       "type": "weak",
       "label": "mismo entorno académico",
-      "desc": "GovAI (Oxford) y CSER (Cambridge) comparten el mismo polo académico británico de gobernanza y riesgo existencial de la IA. No se ha encontrado evidencia de colaboración formal e institucionalizada: es coexistencia intelectual y geográfica, no una alianza.",
+      "desc": "GovAI (Oxford) y CSER (Cambridge) comparten el mismo polo académico británico de gobernanza y riesgo existencial de la IA, sin que exista evidencia de una colaboración institucional formal entre ambas.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -853,7 +853,7 @@
       "target": "lcfi",
       "type": "weak",
       "label": "mismo entorno académico",
-      "desc": "CSER y LCFI comparten sede en Cambridge. Vínculo de coexistencia, no una colaboración institucional formal verificada.",
+      "desc": "CSER y LCFI comparten sede en Cambridge, sin que exista evidencia de una colaboración institucional formal entre ambas.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -916,7 +916,7 @@
       "target": "inesia",
       "type": "weak",
       "label": "ecosistema francés",
-      "desc": "CeSIA es interlocutor habitual de la Comisión Europea y la OCDE, en el mismo ecosistema francés/europeo de gobernanza de IA que INESIA. No se ha localizado una colaboración formal puntual entre ambas esta sesión.",
+      "desc": "CeSIA es interlocutor habitual de la Comisión Europea y la OCDE, dentro del mismo ecosistema francés/europeo de gobernanza de IA que INESIA. No hay constancia de una colaboración formal puntual entre ambas.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -925,7 +925,7 @@
       "target": "saferai",
       "type": "weak",
       "label": "vínculo vía EffiSciences (relación corregida)",
-      "desc": "Corrección respecto a la sesión anterior: no está confirmado que Charbel-Raphaël Segerie (director ejecutivo de CeSIA) y Siméon Campos (fundador de SaferAI) fueran cofundadores conjuntos de EffiSciences. Lo verificado esta sesión es más matizado: Campos fue cofundador de EffiSciences; Segerie fue \"Head of AI Safety\" (responsable de seguridad de IA) en EffiSciences antes de fundar CeSIA — un vínculo real a través de la misma organización, pero no una cofundación simétrica.",
+      "desc": "Siméon Campos (fundador de SaferAI) fue cofundador de EffiSciences. Charbel-Raphaël Segerie (director ejecutivo de CeSIA) fue responsable de seguridad de IA (\"Head of AI Safety\") en EffiSciences antes de fundar CeSIA — un vínculo real a través de la misma organización, pero no una cofundación simétrica entre ambos.",
       "confidence": "verified",
       "source_ref": "http://crsegerie.com/bio.html"
     },
@@ -934,7 +934,7 @@
       "target": "pauseai",
       "type": "weak",
       "label": "Meindertsma, ponente en el AI Safety Meetup de ERO",
-      "desc": "Corrección respecto a la sesión anterior: no fue una co-organización de \"uno de los primeros eventos públicos\", sino que Existential Risk Observatory invitó a Joep Meindertsma (fundador de PauseAI) como ponente en la segunda edición de su AI Safety Meetup, el 18 de marzo de 2024 en Pakhuis de Zwijger, Ámsterdam.",
+      "desc": "Existential Risk Observatory invitó a Joep Meindertsma (fundador de PauseAI) como ponente en la segunda edición de su AI Safety Meetup, el 18 de marzo de 2024 en Pakhuis de Zwijger, Ámsterdam.",
       "confidence": "verified",
       "source_ref": "https://www.existentialriskobservatory.org/events/ai-safety-meetup-pauseais-joep-meindertsma/"
     },
@@ -1015,7 +1015,7 @@
       "target": "anthropic",
       "type": "eval",
       "label": "evalúa capacidades",
-      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de Anthropic, referenciadas en los propios system cards de la compañía. Caracterización pública bien establecida; no se citó esta sesión un system card puntual.",
+      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de Anthropic, referenciadas en los propios system cards de la compañía.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1024,7 +1024,7 @@
       "target": "openai",
       "type": "eval",
       "label": "evalúa capacidades",
-      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de OpenAI, referenciadas en sus propios system cards. Caracterización pública bien establecida; no se citó esta sesión un system card puntual.",
+      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de OpenAI, referenciadas en sus propios system cards.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1033,7 +1033,7 @@
       "target": "anthropic",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de \"deceptive alignment\"/\"scheming\" en modelos de Anthropic. No se citó esta sesión un informe puntual.",
+      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de Anthropic.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1042,7 +1042,7 @@
       "target": "openai",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de \"deceptive alignment\"/\"scheming\" en modelos de OpenAI, incluyendo trabajo reciente sobre o1. No se citó esta sesión un informe puntual.",
+      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de OpenAI, incluyendo trabajo sobre o1.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1051,7 +1051,7 @@
       "target": "google-deepmind",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de \"deceptive alignment\"/\"scheming\" en modelos de Google DeepMind. No se citó esta sesión un informe puntual.",
+      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de Google DeepMind.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1087,7 +1087,7 @@
       "target": "anthropic",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de Anthropic previas o posteriores al despliegue. No se citó esta sesión una evaluación puntual publicada.",
+      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de Anthropic, previas o posteriores a su despliegue.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1096,7 +1096,7 @@
       "target": "openai",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de OpenAI previas o posteriores al despliegue. No se citó esta sesión una evaluación puntual publicada.",
+      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de OpenAI, previas o posteriores a su despliegue.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1105,7 +1105,7 @@
       "target": "google-deepmind",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El UK AI Security Institute realiza evaluaciones de seguridad sobre modelos de Google DeepMind. No se citó esta sesión una evaluación puntual publicada.",
+      "desc": "El UK AI Security Institute realiza evaluaciones de seguridad sobre modelos de Google DeepMind.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1114,7 +1114,7 @@
       "target": "openai",
       "type": "protest",
       "label": "protestas (sin verificación puntual)",
-      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA. No se ha verificado esta sesión una fecha y ubicación concretas contra OpenAI específicamente — trátalo como caracterización general de su repertorio de acción.",
+      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra OpenAI.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1123,7 +1123,7 @@
       "target": "anthropic",
       "type": "protest",
       "label": "protestas (sin verificación puntual)",
-      "desc": "Misma salvedad: caracterización general de su repertorio de protesta, no un evento puntual verificado esta sesión.",
+      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra Anthropic.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
@@ -1132,7 +1132,7 @@
       "target": "google-deepmind",
       "type": "protest",
       "label": "protestas (sin verificación puntual)",
-      "desc": "Misma salvedad: caracterización general de su repertorio de protesta, no un evento puntual verificado esta sesión.",
+      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra Google DeepMind.",
       "confidence": "unverified",
       "source_ref": "not found"
     },
