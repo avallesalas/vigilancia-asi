@@ -2,6 +2,27 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (nueva página "Qué es la ASI")
+Se añade `site/asi.html`, página divulgativa independiente enlazada desde el
+mapa, que explica qué es la ASI, por qué se plantea como riesgo y qué hace
+cada tipo de organización catalogada. Enfoque neutral: expone los argumentos
+de quienes lo consideran un riesgo serio y de quienes lo cuestionan (por el
+riesgo en sí o por el motivo de quien lo invoca), sin tomar partido.
+
+Contenido con cita textual y fuente primaria para cada afirmación atribuida,
+entre otros: Hinton, Bengio, Russell, Yudkowsky, Amodei (BNN Bloomberg,
+Bulletin of the Atomic Scientists, TIME, ensayos propios), LeCun y Ng como
+voces escépticas (TechCrunch/WSJ, comparecencia escrita de Ng ante el Senado
+de EE. UU.), y cobertura completa del episodio "we must pace the frontier"
+de septiembre de 2026 (Amodei, Altman, Musk, Hassabis, Jacob Coxon, David
+Krueger, y el escepticismo sobre el motivo de David Sacks y Chamath
+Palihapitiya), verificado contra BBC News y The Guardian directamente. El
+research completo, incluidas las citas descartadas por falta de fuente
+primaria verificable, queda en `research/asi-page-quotes.md`.
+
+`site/index.html` lleva un enlace nuevo al subtítulo hacia la página nueva.
+No se modifica `data.json`.
+
 ## 2026-09-13 (CEGIA verificado — 0 nodos sin verificar)
 El usuario compartió https://cegia.org.br/#sobre, la web oficial del CEGIA
 (Brasil) que ya estaba en el mapa como único nodo `unverified`. Se confirma con

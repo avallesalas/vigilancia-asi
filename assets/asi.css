@@ -1,0 +1,92 @@
+/* Página "Qué es la ASI" — estilos propios, no comparte reglas con style.css
+   más allá de las variables de color (:root ya definido ahí). */
+
+.asi-body{
+  max-width:1180px;margin:0 auto;padding:32px 20px 90px;
+  display:flex;gap:48px;align-items:flex-start;
+}
+
+/* ---- índice lateral ---- */
+.asi-toc{
+  position:sticky;top:28px;flex:none;width:200px;
+  font-family:'JetBrains Mono',monospace;font-size:12px;
+}
+.asi-toc-title{color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-size:10.5px;margin:0 0 10px;}
+.asi-toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;}
+.asi-toc li{border-left:2px solid var(--panel-border);}
+.asi-toc a{
+  display:block;padding:6px 0 6px 12px;color:var(--muted);text-decoration:none;
+  line-height:1.4;transition:color .15s;
+}
+.asi-toc a:hover{color:var(--text);}
+.asi-toc li.active{border-left-color:var(--research);}
+.asi-toc li.active a{color:var(--research);}
+.asi-toc .back{display:block;margin-bottom:18px;color:var(--text);font-size:12px;}
+.asi-toc .back:hover{color:var(--research);}
+
+/* ---- índice móvil (collapsado) ---- */
+.asi-toc-mobile{display:none;}
+.back-mobile{display:none;}
+
+/* ---- columna de contenido ---- */
+.asi-content{flex:1 1 auto;max-width:700px;min-width:0;}
+.asi-content h1{font-size:28px;margin:0 0 8px;}
+.asi-content p.sub{margin-bottom:36px;}
+.asi-content section{margin-bottom:52px;scroll-margin-top:24px;}
+.asi-content h2{
+  font-size:20px;font-weight:600;margin:0 0 18px;
+  padding-bottom:10px;border-bottom:1px solid var(--panel-border);
+}
+.asi-content h3{font-size:15px;font-weight:600;margin:26px 0 10px;color:var(--text);}
+.asi-content p{
+  font-size:15.5px;line-height:1.75;color:var(--text);margin:0 0 16px;
+  max-width:66ch;
+}
+.asi-content ol.argumento{padding-left:22px;margin:0 0 16px;max-width:66ch;}
+.asi-content ol.argumento li{font-size:15.5px;line-height:1.75;margin-bottom:14px;}
+.asi-content ul.tipos{padding-left:0;list-style:none;margin:0 0 16px;}
+.asi-content ul.tipos li{margin-bottom:12px;font-size:15.5px;line-height:1.7;max-width:66ch;}
+
+.asi-content strong{color:var(--text);}
+.asi-content a{font-family:'Space Grotesk',sans-serif;font-size:inherit;color:var(--research);text-decoration:underline;text-decoration-color:rgba(63,182,168,.4);}
+.asi-content a:hover{text-decoration-color:var(--research);}
+
+.node-ref{
+  font-family:'JetBrains Mono',monospace !important;font-size:11px !important;
+  color:var(--muted) !important;text-decoration:none !important;
+  border:1px solid var(--panel-border);border-radius:4px;padding:1px 5px;
+  margin-left:4px;white-space:nowrap;
+}
+.node-ref:hover{color:var(--research) !important;border-color:var(--research);}
+
+blockquote{
+  margin:18px 0;padding:2px 0 2px 20px;border-left:3px solid var(--policy);
+  max-width:64ch;
+}
+blockquote p{font-size:16px;line-height:1.65;font-style:italic;color:var(--text);margin:0 0 8px;}
+.quote-source{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);
+  font-style:normal;margin:0 0 18px 20px;max-width:64ch;
+}
+.quote-source a{font-family:'JetBrains Mono',monospace;font-size:11.5px;}
+
+.asi-back-footer{margin-top:8px;padding-top:24px;border-top:1px solid var(--panel-border);}
+
+@media (max-width: 900px){
+  .asi-body{flex-direction:column;gap:0;padding:24px 16px 70px;}
+  .asi-toc{display:none;}
+  .back-mobile{
+    display:inline-block;margin-bottom:16px;color:var(--text);
+    font-family:'JetBrains Mono',monospace;font-size:12px;text-decoration:none;
+  }
+  .back-mobile:hover{color:var(--research);}
+  .asi-toc-mobile{
+    display:block;position:static;width:auto;margin-bottom:28px;
+    font-family:'JetBrains Mono',monospace;font-size:12px;
+  }
+  .asi-toc-mobile summary{cursor:pointer;color:var(--muted);padding:10px 14px;
+    border:1px solid var(--panel-border);border-radius:8px;}
+  .asi-toc-mobile ol{list-style:none;margin:10px 0 0;padding:0 0 0 4px;display:flex;flex-direction:column;gap:8px;}
+  .asi-toc-mobile a{color:var(--text);text-decoration:none;}
+  .asi-content{max-width:none;}
+}
