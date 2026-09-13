@@ -17,7 +17,7 @@ const EDGE_STYLE={
  protest:{color:'var(--activism)',dash:'3 4',w:1.4},
 };
 
-fetch('data.json')
+fetch('data.json', {cache: 'no-cache'})
   .then(r=>{ if(!r.ok) throw new Error('No se pudo cargar data.json: HTTP '+r.status); return r.json(); })
   .then(render)
   .catch(err=>{

@@ -2,6 +2,40 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-13 (auditoría de redactado — todo el data.json)
+A petición del usuario, revisión completa de los 40 nodos y 49 aristas para
+comprobar que el texto es correcto y de tono objetivo/formal, más allá del barrido
+puntual de la sesión anterior (que solo buscó frases con "sesión"/"corrección").
+
+- **7 `label` de arista llevaban comentario de verificación entre paréntesis**
+  ("(caracterización general)", "(sin verificación puntual)") o, en un caso,
+  un resto literal del proceso de edición: `cesia→saferai` decía
+  "vínculo vía EffiSciences **(relación corregida)**". El estado de verificación ya
+  lo muestra el badge junto al label — no hace falta repetirlo en el texto.
+- **`compendium→controlai` afirmaba como hecho verificado** ("guía de acción
+  explícita") algo que su propio `desc` decía no tener fuente puntual. Se cambia el
+  label a "vínculo de personal (ex-Conjecture)", que es lo que sí está confirmado.
+- **3 nodos afirmaban como hecho plano lo que sus propias aristas relacionadas
+  marcan `unverified`**: `book-iabi` y `compendium` sobre su influencia/uso por
+  ControlAI y Stop AI, y `controlai` sobre el mismo vínculo. Reescritos para que el
+  nodo y la arista comuniquen el mismo grado de certeza.
+- **2 superlativos sin fuente propia**, heredados sin cambios del prototipo
+  original: "el mayor financiador" (Coefficient Giving) → "uno de los mayores
+  financiadores"; "el think tank más visible" (FLI) → "uno de los think tanks más
+  visibles". El resto del nodo estaba verificado, pero esa frase concreta no lo
+  estaba — exactamente el caso que ya cubre la regla 6 de CLAUDE.md.
+- **`ai-safety-brazil` era un fragmento**, no una ficha: "Enfoque 'full-spectrum':
+  desde sesgo algorítmico hasta riesgo catastrófico" sin decir siquiera qué es la
+  organización. Reescrito como descripción completa.
+- Verificado tras los cambios: 0 coincidencias de lenguaje de bitácora en todo el
+  archivo, 0 aristas huérfanas, 0 nodos `verified` sin `source` citable, 0 fichas
+  con `desc` menor a 60 caracteres.
+- Se añaden 3 reglas nuevas a `CLAUDE.md` (no negociables #7 y #8, más una en el
+  esquema de ficha) para que este tipo de fallo no se repita: el texto de proceso
+  nunca va en `desc`/`summary`/`label`; un cambio de confidence en una arista debe
+  revisar si el nodo en sus extremos sigue el mismo grado de certeza; y el texto
+  heredado de versiones anteriores no está exento del mismo escrutinio.
+
 ## 2026-09-13 (cambio de presentación — grafo de fuerza dirigida)
 - Se reemplaza el layout de paneles fijos por país por un grafo de fuerza dirigida
   (D3 v7), explorado primero como prototipo en Claude Design (3 direcciones
