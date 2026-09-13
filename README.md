@@ -4,7 +4,7 @@ Mapa interactivo (HTML/SVG/JS estático, sin build) de las organizaciones que in
 vigilan, financian o hacen incidencia sobre el riesgo existencial de AGI/ASI, junto a los
 laboratorios de frontera que son su objeto.
 
-**Publicado en:** https://<usuario>.github.io/vigilancia-asi/
+**Publicado en:** https://avallesalas.github.io/vigilancia-asi/
 
 ## Estructura
 
