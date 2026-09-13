@@ -2,6 +2,47 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-13 (verificación de las 8 aristas de evaluación vigilante→laboratorio)
+Sesión de investigación dirigida a las 8 aristas de tipo `eval` que conectan METR,
+Apollo Research, US AISI/CAISI y UK AI Security Institute con Anthropic, OpenAI y
+Google DeepMind — el eje central del mapa. Las 8 pasan a `confidence: "verified"`
+con fuente primaria (system cards, informes técnicos conjuntos alojados en
+nist.gov, blogs oficiales de los propios laboratorios y de Apollo Research).
+
+- **METR → Anthropic** se etiquetaba "evalúa capacidades", pero lo que hay
+  documentado es METR revisando el propio informe de riesgo de sabotaje de
+  Anthropic para Claude Opus 4.6 (no una evaluación de capacidades independiente).
+  Se ajustó también el `label` a "revisión externa de riesgo (sabotaje)" para no
+  afirmar más de lo que la fuente sostiene.
+- **METR → OpenAI**: evaluación de gpt-5-thinking documentada en el system card de
+  GPT-5.
+- **Apollo → Anthropic**: evaluó una versión preliminar de Claude Opus 4, encontró
+  la tasa de "scheming" más alta de cualquier modelo de frontera hasta entonces;
+  Anthropic documenta esto en su propio system card e incorporó mitigaciones antes
+  de la versión final.
+- **Apollo → OpenAI**: colaboración documentada en la publicación conjunta
+  "Detecting and reducing scheming in AI models" (o1, o3, o4-mini).
+- **Apollo → Google DeepMind**: Gemini 1.5 Pro incluido en el estudio propio de
+  Apollo "More Capable Models Are Better At In-Context Scheming".
+- **US AISI → Anthropic** y **US AISI → OpenAI**: informes técnicos conjuntos
+  US AISI + UK AISI, alojados directamente en nist.gov (Claude 3.5 Sonnet
+  actualizado, octubre 2024; o1 de OpenAI, diciembre 2024).
+- **UK AISI → Google DeepMind**: documentado en el blog oficial de Google
+  DeepMind sobre su colaboración con el UK AISI, que tuvo acceso previo al
+  despliegue de Gemini Ultra.
+- De paso, se añade "Apollo Research" a la lista de quien evalúa a Google
+  DeepMind en la ficha del propio nodo, para que quede consistente con la nueva
+  arista verificada.
+
+Resultado: nodos unverified 1/40 (sin cambios, sigue siendo CEGIA); aristas
+unverified 26/49 → **18/49**. Auditoría de integridad tras el cambio: 0 aristas
+huérfanas, 0 nodos/aristas `verified` sin fuente citable, 0 coincidencias de
+lenguaje de bitácora.
+
+Candidatos nuevos encontrados: 0 (sesión de verificación, no de descubrimiento).
+Descartes: 0. Detalle completo de fuentes en
+`research/verificaciones/2026-09-13-eval-labs.md`.
+
 ## 2026-09-13 (auditoría de redactado — todo el data.json)
 A petición del usuario, revisión completa de los 40 nodos y 49 aristas para
 comprobar que el texto es correcto y de tono objetivo/formal, más allá del barrido

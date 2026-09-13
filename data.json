@@ -364,7 +364,7 @@
       "type": "frontier-lab",
       "panel": "uk",
       "country": "Reino Unido / EE. UU.",
-      "desc": "Laboratorio de IA de frontera con sede operativa en Londres, bajo Alphabet. Nace en 2023 de la fusión de DeepMind (fundada en 2010) con Google Brain. Su marco de autogobernanza es el Frontier Safety Framework. Es objeto de evaluación del UK AI Security Institute y de calificación en el AI Safety Index de FLI. En agosto de 2026 Demis Hassabis dejó el cargo de CEO para pasar a presidente y a chief scientist de Alphabet; las operaciones diarias pasaron a Koray Kavukcuoglu, sin título de CEO independiente, reportando a Sundar Pichai.",
+      "desc": "Laboratorio de IA de frontera con sede operativa en Londres, bajo Alphabet. Nace en 2023 de la fusión de DeepMind (fundada en 2010) con Google Brain. Su marco de autogobernanza es el Frontier Safety Framework. Es objeto de evaluación del UK AI Security Institute y de Apollo Research, y de calificación en el AI Safety Index de FLI. En agosto de 2026 Demis Hassabis dejó el cargo de CEO para pasar a presidente y a chief scientist de Alphabet; las operaciones diarias pasaron a Koray Kavukcuoglu, sin título de CEO independiente, reportando a Sundar Pichai.",
       "url": "https://deepmind.google",
       "confidence": "verified",
       "source": "https://www.axios.com/2026/08/06/googles-ai-leadership-shuffle",
@@ -1014,46 +1014,46 @@
       "source": "metr",
       "target": "anthropic",
       "type": "eval",
-      "label": "evalúa capacidades",
-      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de Anthropic, referenciadas en los propios system cards de la compañía.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "revisión externa de riesgo (sabotaje)",
+      "desc": "METR revisó el informe de riesgo de sabotaje de Anthropic para Claude Opus 4.6 (marzo de 2026), evaluando la solidez de su análisis y de sus conclusiones — no es una evaluación de capacidades independiente desde cero, sino una revisión externa del propio informe de Anthropic.",
+      "confidence": "verified",
+      "source_ref": "https://metr.org/blog/2026-03-12-sabotage-risk-report-opus-4-6-review/"
     },
     {
       "source": "metr",
       "target": "openai",
       "type": "eval",
       "label": "evalúa capacidades",
-      "desc": "METR publica evaluaciones de capacidades peligrosas de modelos de OpenAI, referenciadas en sus propios system cards.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "METR evaluó gpt-5-thinking para riesgos de autonomía en un trabajo de tres semanas, documentado en el system card de GPT-5 de OpenAI; concluyó que es improbable que acelere la investigación en IA más de 10x o que sea capaz de sabotaje estratégico o replicación autónoma.",
+      "confidence": "verified",
+      "source_ref": "https://arxiv.org/pdf/2601.03267"
     },
     {
       "source": "apollo",
       "target": "anthropic",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de Anthropic.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "Apollo Research evaluó una versión preliminar de Claude Opus 4 y encontró comportamiento de engaño estratégico (\"scheming\") con una frecuencia mayor que en cualquier modelo de frontera evaluado antes, documentado en el system card de Claude Opus 4 y Claude Sonnet 4 (mayo de 2025); Anthropic incorporó mitigaciones de seguridad antes de la versión final.",
+      "confidence": "verified",
+      "source_ref": "https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf"
     },
     {
       "source": "apollo",
       "target": "openai",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de OpenAI, incluyendo trabajo sobre o1.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "Apollo Research colaboró con OpenAI en el desarrollo de evaluaciones de \"scheming\" (comportamiento engañoso encubierto) en los modelos o1, o3 y o4-mini, documentado en la publicación conjunta \"Detecting and reducing scheming in AI models\".",
+      "confidence": "verified",
+      "source_ref": "https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/"
     },
     {
       "source": "apollo",
       "target": "google-deepmind",
       "type": "eval",
       "label": "evalúa alineamiento engañoso",
-      "desc": "Apollo Research realiza evaluaciones de comportamiento engañoso (\"deceptive alignment\"/\"scheming\") en modelos de Google DeepMind.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "Apollo Research incluyó a Gemini 1.5 Pro, junto a modelos de OpenAI, Anthropic y Meta, en su estudio \"More Capable Models Are Better At In-Context Scheming\", que evalúa comportamiento de engaño estratégico condicionado al contexto.",
+      "confidence": "verified",
+      "source_ref": "https://www.apolloresearch.ai/science/more-capable-models-are-better-at-in-context-scheming"
     },
     {
       "source": "fli",
@@ -1087,27 +1087,27 @@
       "target": "anthropic",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de Anthropic, previas o posteriores a su despliegue.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "El US AISI y el UK AISI realizaron una evaluación conjunta previa al despliegue de la versión actualizada de Claude 3.5 Sonnet (octubre de 2024), cubriendo capacidades biológicas, cibernéticas, de desarrollo de software/IA y eficacia de salvaguardas, documentada en un informe técnico conjunto.",
+      "confidence": "verified",
+      "source_ref": "https://www.nist.gov/system/files/documents/2024/11/19/Upgraded%20Sonnet-Publication-US.pdf"
     },
     {
       "source": "us-aisi",
       "target": "openai",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El US AISI/CAISI realiza evaluaciones de seguridad sobre modelos de OpenAI, previas o posteriores a su despliegue.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "El US AISI y el UK AISI realizaron una evaluación conjunta previa al despliegue del modelo o1 de OpenAI (diciembre de 2024), documentada en un informe técnico conjunto; o1 tuvo un desempeño similar a los modelos de referencia, salvo capacidades adicionales detectadas en criptografía.",
+      "confidence": "verified",
+      "source_ref": "https://www.nist.gov/system/files/documents/2024/12/18/US_UK_AI%20Safety%20Institute_%20December_Publication-OpenAIo1.pdf"
     },
     {
       "source": "uk-aisi",
       "target": "google-deepmind",
       "type": "eval",
       "label": "evaluación gubernamental",
-      "desc": "El UK AI Security Institute realiza evaluaciones de seguridad sobre modelos de Google DeepMind.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "desc": "Google DeepMind documenta en su propio blog la colaboración con el UK AI Security Institute, que ha tenido acceso previo al despliegue a modelos de Google, incluido Gemini Ultra antes de su lanzamiento público.",
+      "confidence": "verified",
+      "source_ref": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/"
     },
     {
       "source": "pauseai",
