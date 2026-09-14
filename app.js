@@ -159,11 +159,32 @@ function buildForceGraph(container, nodesIn, edgesIn){
     const b = regionBucket(d.country);
     return b ? width*REGION_X[b] : width/2;
   }
-  function targetY(d){
-    if(d.type==='document') return height*0.12;
-    if(d.type==='frontier-lab') return height*0.48;
-    return height*0.85;
-  }
+  // Tres paneles fijos (documentos / laboratorios / quién vigila) que además
+  // de orientar con una fuerza también "inmovilizan" físicamente cada nodo
+  // dentro de su franja — un enlace tirando con fuerza no debe poder sacarlo
+  // de su capa, así que además de la fuerza se aplica un clamp duro en cada
+  // tick (ver más abajo).
+  const BANDS = {
+    document: {label:'Documentos', y0:16, y1:height*0.28},
+    'frontier-lab': {label:'Laboratorios de frontera (objeto de vigilancia)', y0:height*0.30, y1:height*0.64},
+    other: {label:'Quién vigila (investigación, gobernanza, activismo…)', y0:height*0.66, y1:height-16},
+  };
+  function bandFor(d){ return BANDS[d.type] || BANDS.other; }
+  function targetY(d){ const b = bandFor(d); return (b.y0+b.y1)/2; }
+  const bandsG = g.append('g').attr('class','fg-bands');
+  Object.values(BANDS).forEach(b=>{
+    bandsG.append('rect')
+      .attr('x', 8).attr('y', b.y0)
+      .attr('width', width-16).attr('height', b.y1-b.y0)
+      .attr('fill', 'none')
+      .attr('stroke', 'var(--panel-border)')
+      .attr('stroke-width', 1.5)
+      .attr('rx', 10);
+    bandsG.append('text')
+      .attr('x', 20).attr('y', b.y0+24)
+      .attr('class', 'fg-band-label')
+      .text(b.label);
+  });
 
   const sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(d=>d.id).distance(150).strength(0.4))
@@ -250,6 +271,15 @@ function buildForceGraph(container, nodesIn, edgesIn){
   svg.on('click', ()=>{clearHighlight();hidePopup();});
 
   sim.on('tick', ()=>{
+    // Clamp duro: el nodo nunca puede salir de su panel, por fuerte que tire
+    // un enlace hacia una capa distinta — el panel dibujado y el límite real
+    // del nodo son la misma frontera.
+    nodes.forEach(d=>{
+      const b = bandFor(d);
+      const r = (d.type==='frontier-lab'?42:d.type==='document'?40:34) + 12;
+      d.y = Math.max(b.y0+r, Math.min(b.y1-r, d.y));
+      d.x = Math.max(r, Math.min(width-r, d.x));
+    });
     linkHit.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
     linkSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
     nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
