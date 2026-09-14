@@ -1992,6 +1992,195 @@
       "desc": "SaferAI publicó un análisis titulado \"Anthropic's responsible scaling policy update makes a step backwards\", señalando un retroceso en una de las revisiones de la RSP.",
       "confidence": "verified",
       "source_ref": "https://www.safer-ai.org/anthropics-responsible-scaling-policy-update-makes-a-step-backwards"
+    },
+    {
+      "source": "anthropic",
+      "target": "openai",
+      "type": "split",
+      "label": "escisión fundacional (2021)",
+      "desc": "Dario Amodei y otros siete empleados de OpenAI dejaron la compañía en 2021 por desacuerdos sobre el ritmo de comercialización frente a la seguridad, y fundaron Anthropic.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Anthropic"
+    },
+    {
+      "source": "controlai",
+      "target": "conjecture",
+      "type": "network",
+      "label": "fundador procedente de Conjecture",
+      "desc": "Andrea Miotti, fundador y CEO de ControlAI (oct. 2023), fue antes responsable de Estrategia y Gobernanza en Conjecture.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/ControlAI"
+    },
+    {
+      "source": "minimax",
+      "target": "sensetime",
+      "type": "network",
+      "label": "fundadores procedentes de SenseTime",
+      "desc": "MiniMax fue fundada en diciembre de 2021 por antiguos investigadores de SenseTime, entre ellos su CEO Yan Junjie.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/MiniMax_(company)"
+    },
+    {
+      "source": "xiaomi-mimo",
+      "target": "deepseek",
+      "type": "network",
+      "label": "responsable de modelos fichada de DeepSeek",
+      "desc": "Luo Fuli, exinvestigadora de DeepSeek, se incorporó a Xiaomi en noviembre de 2025 para dirigir su equipo de modelos de gran escala (MiMo).",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Xiaomi_MiMo"
+    },
+    {
+      "source": "baai",
+      "target": "xiaomi-mimo",
+      "type": "network",
+      "label": "institución fundadora de BAAI",
+      "desc": "Xiaomi es una de las instituciones fundadoras de BAAI (2018), junto a Peking University, Tsinghua, la Academia China de Ciencias y ByteDance.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Beijing_Academy_of_Artificial_Intelligence"
+    },
+    {
+      "source": "baai",
+      "target": "bytedance-seed",
+      "type": "network",
+      "label": "institución fundadora de BAAI",
+      "desc": "ByteDance es una de las instituciones fundadoras de BAAI (2018), junto a Peking University, Tsinghua, la Academia China de Ciencias y Xiaomi.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Beijing_Academy_of_Artificial_Intelligence"
+    },
+    {
+      "source": "ilina-program",
+      "target": "govai",
+      "type": "network",
+      "label": "antiguos becarios pasan a la fellowship de GovAI",
+      "desc": "Varios antiguos becarios del ILINA Program han continuado su carrera en la fellowship de investigación de GovAI.",
+      "confidence": "verified",
+      "source_ref": "https://www.brookings.edu/articles/building-regional-capacity-for-ai-safety-and-security-in-africa"
+    },
+    {
+      "source": "alibaba-qwen",
+      "target": "moonshot-ai",
+      "type": "funding",
+      "label": "inversor principal (~36%, desde 2024)",
+      "desc": "Alibaba invirtió unos 800 millones de dólares en Moonshot AI (participación de ~36%, según sus cuentas del año fiscal 2024) y lideró una ronda de 2.500 millones de dólares a comienzos de 2024; esa participación se ha revalorizado hasta unos 5.000 millones de dólares con el crecimiento posterior de Moonshot.",
+      "confidence": "verified",
+      "source_ref": "https://www.scmp.com/tech/tech-trends/article/3362156/cxmt-zhipu-how-alibabas-investment-pays-growing-ai-and-chip-portfolio"
+    },
+    {
+      "source": "alibaba-qwen",
+      "target": "zhipu-ai",
+      "type": "funding",
+      "label": "inversor (desde 2023)",
+      "desc": "Alibaba participó en una ronda de más de 300 millones de dólares para Zhipu AI en 2023, junto a Tencent, y en una ronda posterior de 140 millones de dólares en marzo de 2025.",
+      "confidence": "verified",
+      "source_ref": "https://www.bloomberg.com/news/articles/2025-03-03/alibaba-backed-zhipu-raises-140-million-as-deepseek-heats-up-ai"
+    },
+    {
+      "source": "alibaba-qwen",
+      "target": "minimax",
+      "type": "funding",
+      "label": "segundo mayor accionista (12,52%)",
+      "desc": "Alibaba lideró una ronda de 600 millones de dólares para MiniMax a comienzos de 2024 (valoración superior a 2.500 millones de dólares); en la salida a bolsa de enero de 2026 mantenía, a través de Alisoft China, una participación del 12,52%, siendo su segundo mayor accionista, con un puesto en el consejo (Chen Yingjie, del departamento de inversión estratégica de Alibaba).",
+      "confidence": "verified",
+      "source_ref": "https://www.itiger.com/news/1126099864"
+    },
+    {
+      "source": "concordia",
+      "target": "openai",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a GPT entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "concordia",
+      "target": "anthropic",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a Claude entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "concordia",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a DeepSeek entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "concordia",
+      "target": "alibaba-qwen",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a Qwen entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "concordia",
+      "target": "minimax",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a MiniMax entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "concordia",
+      "target": "spacexai",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Concordia AI incluye a Grok entre los modelos que monitoriza en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos (ofensiva cibernética, riesgos biológicos, químicos y pérdida de control).",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "g42",
+      "target": "openai",
+      "type": "funding",
+      "label": "coinversor en la Serie E (oct. 2024)",
+      "desc": "MGX —fondo de inversión en IA cofundado por G42 y Mubadala— participó en la ronda Serie E de OpenAI de 6.600 millones de dólares en octubre de 2024, sin desvelar el importe exacto de su participación.",
+      "confidence": "verified",
+      "source_ref": "https://www.agbi.com/ai/2024/10/uaes-mgx-part-of-openais-6-6bn-fund-raising/"
+    },
+    {
+      "source": "metr",
+      "target": "google-deepmind",
+      "type": "eval",
+      "label": "ejercicio piloto de desalineación (feb.-mar. 2026)",
+      "desc": "Google participó, junto a Anthropic, Meta y OpenAI, en el ejercicio piloto de METR (16 feb.-16 mar. 2026) para evaluar si los agentes de IA usados internamente por laboratorios de frontera tenían medios, motivo y oportunidad para crear \"despliegues rebeldes\" que evadieran sus propias medidas de seguridad.",
+      "confidence": "verified",
+      "source_ref": "https://metr.org/blog/2026-05-19-frontier-risk-report/"
+    },
+    {
+      "source": "metr",
+      "target": "meta-msl",
+      "type": "eval",
+      "label": "ejercicio piloto de desalineación (feb.-mar. 2026)",
+      "desc": "Meta participó, junto a Anthropic, Google y OpenAI, en el ejercicio piloto de METR (16 feb.-16 mar. 2026) para evaluar si los agentes de IA usados internamente por laboratorios de frontera tenían medios, motivo y oportunidad para crear \"despliegues rebeldes\" que evadieran sus propias medidas de seguridad.",
+      "confidence": "verified",
+      "source_ref": "https://metr.org/blog/2026-05-19-frontier-risk-report/"
+    },
+    {
+      "source": "baai",
+      "target": "cnaisda",
+      "type": "network",
+      "label": "institución miembro",
+      "desc": "BAAI es una de las instituciones integradas en la estructura de red de CnAISDA, y uno de sus polos de actividad técnica en Pekín.",
+      "confidence": "verified",
+      "source_ref": "https://carnegieendowment.org/research/2025/06/how-some-of-chinas-top-ai-thinkers-built-their-own-ai-safety-institute?lang=en"
+    },
+    {
+      "source": "africa-ai-council",
+      "target": "au-continental-ai-strategy",
+      "type": "network",
+      "label": "implementa/alinea con la estrategia",
+      "desc": "El Africa AI Council está copresidido por la Comisión de la Unión Africana y la UIT para garantizar la alineación estratégica con la Continental AI Strategy, en su fase de implementación desde 2025.",
+      "confidence": "verified",
+      "source_ref": "https://techreviewafrica.com/news/6362/african-union-smart-africa-align-efforts-to-promote-continental-ai-strategy"
     }
   ]
 }

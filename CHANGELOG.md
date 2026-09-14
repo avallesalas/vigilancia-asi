@@ -2,6 +2,60 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (auditoría completa de consistencia: 17 aristas nuevas)
+El usuario pidió recorrer todo `data.json`, verificar con fuentes primarias que no
+faltan aristas relevantes entre los nodos existentes, y anotar como candidatos
+(sin añadirlos) cualquier organización nueva que apareciera en el proceso. Método:
+un script comparó el texto de `desc`/`summary` de cada nodo contra los nombres de
+todos los demás para detectar menciones sin arista correspondiente, más
+investigación dirigida en la web para relaciones no mencionadas explícitamente en
+ningún nodo. 17 aristas nuevas, todas entre nodos ya existentes:
+
+- `anthropic → openai` (`split`): los 8 fundadores de Anthropic dejaron OpenAI en
+  2021 por desacuerdo sobre el ritmo de comercialización frente a la seguridad.
+- `controlai → conjecture`, `minimax → sensetime`, `xiaomi-mimo → deepseek`
+  (`network`): linaje de fundadores/personal ya citado en el propio `desc` de
+  cada nodo, sin arista hasta ahora.
+- `baai → xiaomi-mimo`, `baai → bytedance-seed` (`network`): Xiaomi y ByteDance
+  son instituciones fundadoras de BAAI (2018), ya mencionado en su `desc`.
+- `baai → cnaisda` (`network`): BAAI es una de las instituciones integradas en la
+  red de CnAISDA (Carnegie Endowment).
+- `ilina-program → govai` (`network`): antiguos becarios de ILINA continúan en la
+  fellowship de GovAI, ya citado en el `desc` de ILINA.
+- `alibaba-qwen → moonshot-ai` (~36%, ~5.000M$), `→ zhipu-ai` (ronda 2023 + 140M$
+  en 2025) y `→ minimax` (12,52%, segundo mayor accionista) (`funding`): Alibaba
+  es inversor documentado en los tres, con cifras y fechas concretas.
+- `g42 → openai` (`funding`): MGX (G42+Mubadala) coinvirtió en la Serie E de
+  6.600M$ de OpenAI, oct. 2024.
+- `concordia → openai/anthropic/deepseek/alibaba-qwen/minimax/spacexai` (`eval`):
+  los seis modelos (GPT, Claude, DeepSeek, Qwen, MiniMax, Grok) que Concordia AI
+  nombra explícitamente entre los que monitoriza en su Frontier AI Risk Monitoring
+  Platform (nov. 2025).
+- `metr → google-deepmind`, `metr → meta-msl` (`eval`): ambos participaron, junto
+  a Anthropic y OpenAI (ya conectados), en el ejercicio piloto de METR sobre
+  riesgos de desalineación en agentes internos (feb.-mar. 2026).
+- `africa-ai-council → au-continental-ai-strategy` (`network`): el Africa AI
+  Council está copresidido por la Comisión de la UA y la UIT para alinearse
+  con la estrategia continental.
+- `statement-2023 → openai/google-deepmind/anthropic` y `saferai →
+  anthropic-rsp`: ver entrada de más abajo (esta misma sesión, encontradas por el
+  usuario antes de pedir la auditoría completa).
+
+Dos organizaciones nuevas surgieron repetidamente en la investigación y quedan en
+`research/candidatos.md` sin añadir (Tencent —coinversor recurrente en Zhipu/
+Moonshot/MiniMax/DeepSeek, con su propio modelo Hunyuan— y Shanghai AI Lab
+—coautor junto a Concordia AI del trabajo que dio pie a las 6 aristas `eval`
+nuevas—), a la espera de aprobación explícita para crear nodo.
+
+Nodos sin ninguna arista que se investigaron pero para los que **no se encontró**
+relación documentada con el resto del mapa (más allá de compartir región, ya
+señalado en la sesión anterior): `india-aisi`, `asean-ai-safe`, `sdaia`, `cenia`,
+`au-continental-ai-strategy` (ahora sí conectado, ver arriba), `ai-safety-cape-town`.
+Comprobado explícitamente y descartado por falta de fuente: una relación directa
+SDAIA↔G42/TII (la cooperación Golfo-EE. UU. en chips es bilateral con Washington,
+no un acuerdo SDAIA-G42/TII en sí) y CENIA↔LANAIS/AI Safety Brazil (CENIA coordina
+LatamGPT con otras instituciones, ninguna de ellas es un nodo del mapa).
+
 ## 2026-09-14 (aristas que faltaban entre documentos y los labs que mencionan)
 El usuario notó que `statement-2023` describe en su propio `desc` que lo firmaron
 los CEOs de OpenAI, Google DeepMind y Anthropic, pero no tenía ninguna arista hacia
