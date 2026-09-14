@@ -236,13 +236,21 @@ function buildForceGraph(container, nodesIn, edgesIn){
     svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(k));
   });
 
+  // Búsqueda activa: al salir de un hover, clearHighlight debe volver al
+  // filtrado de la búsqueda (si lo hay), no siempre a opacidad plena — si no,
+  // basta pasar el ratón por un nodo para "reencender" todo el mapa y perder
+  // el resultado de la búsqueda.
+  let currentQuery = '';
   function highlight(d){
     const connIds = new Set([d.id]);
     links.forEach(l=>{ if(l.source.id===d.id) connIds.add(l.target.id); if(l.target.id===d.id) connIds.add(l.source.id); });
     nodeSel.style('opacity', n=>connIds.has(n.id)?1:0.15);
     linkSel.style('opacity', l=>(l.source.id===d.id||l.target.id===d.id)?1:0.04);
   }
-  function clearHighlight(){ nodeSel.style('opacity',1); linkSel.style('opacity',0.5); }
+  function clearHighlight(){
+    if(currentQuery){ applySearch(currentQuery); return; }
+    nodeSel.style('opacity',1); linkSel.style('opacity',0.5);
+  }
   function highlightEdge(d){
     nodeSel.style('opacity', n=>(n.id===d.source.id||n.id===d.target.id)?1:0.15);
     linkSel.style('opacity', l=>l===d?1:0.04);
@@ -280,11 +288,14 @@ function buildForceGraph(container, nodesIn, edgesIn){
       || (d.country||'').toLowerCase().includes(q)
       || (TYPE_LABEL[d.type]||d.type).toLowerCase().includes(q);
   }
-  container.querySelector('#fg-search').addEventListener('input', ev=>{
-    const q = ev.target.value.trim().toLowerCase();
+  function applySearch(q){
+    currentQuery = q;
     if(!q){ nodeSel.style('opacity',1); linkSel.style('opacity',0.5); return; }
     nodeSel.style('opacity', d=>matchesQuery(d,q)?1:0.1);
     linkSel.style('opacity', 0.04);
+  }
+  container.querySelector('#fg-search').addEventListener('input', ev=>{
+    applySearch(ev.target.value.trim().toLowerCase());
   });
   container.querySelector('#fg-zoomin').addEventListener('click', ()=>svg.transition().duration(200).call(zoom.scaleBy,1.3));
   container.querySelector('#fg-zoomout').addEventListener('click', ()=>svg.transition().duration(200).call(zoom.scaleBy,0.75));
