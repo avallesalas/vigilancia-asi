@@ -2,6 +2,36 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (SenseTime, compromisos AIIA/CAICT y análisis de Concordia AI)
+Cierre de los tres hilos abiertos al final de la sesión anterior:
+
+- **`sensetime`** (nodo nuevo, `frontier-lab`): fundada el 15 de oct. de 2014 en
+  Hong Kong por Tang Xiao'ou (†dic. 2023), Xu Li, Wang Xiaogang y Xu Bing. Pasa el
+  mismo criterio de frontera que los demás labs chinos: SenseNova V6.5 se acerca a
+  Gemini/GPT-5 en benchmarks (OpenCompass, SuperCLUE). A diferencia de los otros
+  ocho, tiene un historial de sanciones directamente relevante para un mapa de
+  vigilancia: Entity List de EE. UU. (2019) y sanciones del Tesoro (dic. 2021) por
+  el uso de sus algoritmos en la represión de la minoría uigur en Xinjiang. Arista
+  `sensetime → anthropic` (`extraction`, GTG-16012 del informe de sept. 2026: compra
+  de transcripciones de usuarios a proveedores externos, sin generar tráfico propio).
+- **`aiia-china-commitments`** (nodo nuevo, `document`): compromisos de seguridad de
+  la Artificial Intelligence Industry Alliance (AIIA/CAICT, dic. 2024), firmados por
+  DeepSeek, Alibaba y 15 empresas más — el equivalente chino, en paralelo, a los
+  Seoul Commitments. Aristas `→ deepseek` y `→ alibaba-qwen`. Nota de la propia
+  Carnegie Endowment recogida en el nodo: ninguna firmante los ha cumplido, y
+  DeepSeek estuvo "notoriamente ausente" de una segunda ronda en la WAIC — mismo
+  patrón de compromiso-sin-cumplimiento que ya vimos con MiniMax/01.AI en Seúl.
+- **`concordia → deepseek`** y **`concordia → moonshot-ai`** (`eval`): el informe
+  "State of AI Safety in China 2026" de Concordia AI (14 jul. 2026) destaca el paper
+  en Nature de DeepSeek-R1 y la model card de Kimi K2 de Moonshot como las
+  divulgaciones de seguridad más detalladas del sector — pero señala que los
+  modelos siguientes de ambas (DeepSeek-V4, Kimi K2.5) se publicaron sin ningún
+  resultado de evaluación de seguridad.
+
+`cnaisda` en sí sigue sin arista directa a ningún lab del mapa — confirmado que no
+tiene membresía de empresas, solo de think tanks (CCID); la entidad con relación
+documentada a labs es la AIIA/CAICT, una organización distinta.
+
 ## 2026-09-14 (nuevo tipo de arista "extraction": campañas de distillation contra Anthropic)
 Se añade un nodo (`xiaomi-mimo`, `frontier-lab`, investigado con el mismo criterio que
 los otros siete labs chinos: MiMo-V2.5-Pro, 8º en el Artificial Analysis Intelligence

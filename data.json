@@ -879,6 +879,35 @@
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/Xiaomi_MiMo",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "sensetime",
+      "name": "SenseTime",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2014-10",
+      "founded_precision": "month",
+      "leadership": [
+        "Xu Li (presidente y CEO)"
+      ],
+      "desc": "Empresa de IA fundada el 15 de octubre de 2014 en Hong Kong por el profesor Tang Xiao'ou (fallecido en diciembre de 2023) junto con Xu Li, Wang Xiaogang y Xu Bing, procedente del laboratorio de visión por computador de la Universidad China de Hong Kong. Su modelo insignia SenseNova V6.5 se sitúa entre los de mejor rendimiento comparado de China, cerca de Gemini y GPT-5 en varios benchmarks (OpenCompass, SuperCLUE). El Departamento de Comercio de EE. UU. la incluyó en su Entity List en 2019 y el Tesoro le impuso sanciones en diciembre de 2021, citando el uso de sus algoritmos en la vigilancia y represión de la minoría uigur en Xinjiang.",
+      "url": "https://www.sensetime.com",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/SenseTime",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "aiia-china-commitments",
+      "name": "Compromisos de seguridad de la AIIA/CAICT (dic. 2024)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2024-12",
+      "founded_precision": "month",
+      "desc": "Compromisos voluntarios de seguridad para IA de frontera (人工智能安全承诺), impulsados por la Artificial Intelligence Industry Alliance (AIIA) —consorcio industrial guiado por el Ministerio de Industria y Tecnología de la Información a través de CAICT— y anunciados en diciembre de 2024. Firmados por DeepSeek junto a otras dieciséis empresas chinas, entre ellas Alibaba y Tencent, en paralelo a los Frontier AI Safety Commitments de la Cumbre de Seúl. Según Carnegie Endowment, ninguna empresa firmante ha cumplido los compromisos hasta la fecha, y DeepSeek estuvo «notoriamente ausente» de una segunda ronda de firmas durante la WAIC (World AI Conference).",
+      "url": "not found",
+      "confidence": "verified",
+      "source": "https://ai-frontiers.org/articles/is-china-serious-about-ai-safety",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1574,6 +1603,51 @@
       "desc": "Anthropic documentó una campaña (GTG-16008) de más de 400.000 interacciones en 20 días de marzo y abril de 2026, en la que Xiaomi reenviaba a Claude conversaciones y sesiones de código de usuarios de sus propios modelos MiMo, a través de los harnesses de código OpenClaw y OpenCode.",
       "confidence": "verified",
       "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "sensetime",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16012 (2026)",
+      "desc": "Anthropic identificó una campaña (GTG-16012) en la que SenseTime compró transcripciones de interacciones de usuarios con modelos de frontera a proveedores de datos externos, en vez de generar tráfico propio directo.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "aiia-china-commitments",
+      "target": "deepseek",
+      "type": "network",
+      "label": "cofirmante (dic. 2024)",
+      "desc": "DeepSeek firmó los compromisos de seguridad de la AIIA/CAICT en diciembre de 2024, aunque según Carnegie Endowment estuvo notoriamente ausente de una segunda ronda de firmas durante la WAIC.",
+      "confidence": "verified",
+      "source_ref": "https://ai-frontiers.org/articles/is-china-serious-about-ai-safety"
+    },
+    {
+      "source": "aiia-china-commitments",
+      "target": "alibaba-qwen",
+      "type": "network",
+      "label": "cofirmante (dic. 2024)",
+      "desc": "Alibaba firmó los compromisos de seguridad de la AIIA/CAICT en diciembre de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://ai-frontiers.org/articles/is-china-serious-about-ai-safety"
+    },
+    {
+      "source": "concordia",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "análisis de transparencia de seguridad (jul. 2026)",
+      "desc": "El informe State of AI Safety in China 2026 de Concordia AI (14 de julio de 2026) destaca el paper revisado por pares en Nature de DeepSeek-R1 como una de las divulgaciones de seguridad más detalladas del sector hasta la fecha, pero señala que el modelo posterior DeepSeek-V4 se publicó sin ningún resultado de evaluación de seguridad.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/state-of-ai-safety-in-china-2026"
+    },
+    {
+      "source": "concordia",
+      "target": "moonshot-ai",
+      "type": "eval",
+      "label": "análisis de transparencia de seguridad (jul. 2026)",
+      "desc": "El informe State of AI Safety in China 2026 de Concordia AI (14 de julio de 2026) destaca la model card de Kimi K2 de Moonshot AI como una de las divulgaciones de seguridad más detalladas del sector hasta la fecha, pero señala que el modelo posterior Kimi K2.5 se publicó sin ningún resultado de evaluación de seguridad.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/state-of-ai-safety-in-china-2026"
     }
   ]
 }
