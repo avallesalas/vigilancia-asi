@@ -2,6 +2,17 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (la arista que sostiene la descripción de Concordia AI como "puente")
+El usuario notó que el `desc` de `concordia` dice que "actúa de puente entre el
+ecosistema chino y el internacional de seguridad de IA", pero las 6 aristas `eval`
+añadidas poco antes (Frontier AI Risk Monitoring Platform) van hacia *laboratorios*
+(openai, anthropic, deepseek...), no hacia el ecosistema *vigilante* internacional
+— evaluar a un lab occidental no es lo mismo que ser puente con la comunidad de
+seguridad de IA. Verificado con la propia web de GovAI: Brian Tse, fundador y CEO
+de Concordia AI, es Policy Affiliate de GovAI desde 2019. Añadida
+`concordia → govai` (`network`) — la conexión concreta que sostiene esa frase del
+`desc`, que antes no tenía ninguna arista propia detrás.
+
 ## 2026-09-14 (Tencent y Shanghai AI Lab: los dos candidatos de la auditoría, aprobados)
 El usuario aprobó añadir los dos candidatos que salieron de la auditoría de
 consistencia (ver entrada anterior). Dos nodos y 11 aristas:
