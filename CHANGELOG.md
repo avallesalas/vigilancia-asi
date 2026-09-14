@@ -2,6 +2,59 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (investigación profunda de las 18 aristas sin verificar: 11 pasan a verified)
+El usuario pidió una investigación "profunda y cuidadosa" de las 18 aristas
+`unverified` que quedaban en el backlog. Siguiendo la regla de no quedarse con la
+primera fuente plausible, cada una se buscó con al menos dos formulaciones
+distintas y se priorizó fuente primaria. Resultado: 11 confirmadas con cita
+concreta (pasan a `confidence: "verified"`), 6 confirmadas como genuinamente sin
+fuente (quedan `unverified`, detalle en `BACKLOG.md`), 1 sin cambios por falta de
+evidencia nueva.
+
+**Verificadas (11):**
+- `sff → miri` (`funding`): 1.607.000$ recomendados en la ronda 2025 de SFF
+  (46.000$ Main + 1.561.000$ Freedom), más 215.000$ de subvención especulativa
+  previa y 1.392.000$ de compromiso de igualación — cifra exacta de
+  survivalandflourishing.fund/2025/recommendations.
+- `book-iabi → controlai` (`narrative`): ControlAI presenta el libro de forma
+  destacada en la página de citas de su propia web (Buterin, Shear, Aaronson) y
+  coorganizó con PauseAI UK una fiesta de lanzamiento no oficial en Londres el
+  22 de sept. de 2025 — reemplaza la afirmación anterior sin fuente ("se le
+  atribuye la recomendación a su personal") por lo que sí está documentado.
+- `pauseai → controlai` (`weak` → `network`): el mismo evento conjunto de
+  lanzamiento del libro (22 sept. 2025, Londres).
+- `govai → cser` (`weak` → `network`): Allan Dafoe, fundador y presidente de
+  GovAI, figura como Research Affiliate en la propia web de CSER.
+- `cser → lcfi` (`weak` → `network`): LCFI se desarrolló dentro de CSER antes de
+  independizarse, y ambos mantienen el programa conjunto AI:FAR.
+- `govai → lcfi` (`weak` → `network`): coautoría de investigación entre Markus
+  Anderljung (GovAI) y Haydn Belfield (LCFI/CSER) en "Computing Power and the
+  Governance of Artificial Intelligence" (2024).
+- `aesia → isms` (`weak` → `network`): reunión documentada el 15 de oct. de 2024
+  entre el grupo de IA de ISMS Forum y el entonces director general de AESIA.
+- `cnaisda → concordia` (`weak` → `network`): Concordia AI fue invitada a un
+  seminario a puerta cerrada de CnAISDA en torno a la Cumbre de Acción sobre IA
+  de París (feb. 2025) — confirmado con el propio informe de impacto de
+  Concordia AI, no con un agregador.
+- `pauseai → openai`, `pauseai → anthropic`, `pauseai → google-deepmind`
+  (`protest`): fechas y ubicaciones concretas encontradas para cada uno —
+  12 feb. 2024 (sede de OpenAI, SF), 6 dic. 2024 (sede de Anthropic, SF) y
+  30 jun. 2025 (sede de Google DeepMind, Londres, la protesta más grande de
+  PauseAI hasta la fecha) — todas con fuente primaria de la propia PauseAI.
+
+**Confirmadas sin fuente tras búsqueda activa (6, detalle completo en
+`BACKLOG.md`):** `book-iabi → stopai`, `controlai → uk-aisi`,
+`controlai → us-aisi`, `orcg → lanas`, `lanas → ai-safety-brazil`,
+`lanas → cegia`.
+
+**Advertencia sobre `cesia → inesia`:** una búsqueda inicial produjo la frase
+"CeSIA dialoga con el Senado, el Ministerio de Defensa e INESIA", que resultó
+ser una síntesis de un resumen de búsqueda sin respaldo al rastrearla hasta sus
+fuentes primarias (cesia.org, aiforhumanity.eu, manifund.org, y el propio post
+que la mencionaba). Se descartó explícitamente en vez de escribirla en el mapa
+— exactamente el tipo de error que la regla de "no quedarse con la primera
+fuente" está pensada para atrapar.
+
 ## 2026-09-14 (la arista que sostiene la descripción de Concordia AI como "puente")
 El usuario notó que el `desc` de `concordia` dice que "actúa de puente entre el
 ecosistema chino y el internacional de seguridad de IA", pero las 6 aristas `eval`

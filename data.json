@@ -1193,10 +1193,10 @@
       "source": "sff",
       "target": "miri",
       "type": "funding",
-      "label": "financia",
-      "desc": "El Survival & Flourishing Fund apoya a MIRI como parte de su financiación a organizaciones centradas en reducir el riesgo existencial; no hay una fuente primaria disponible con el monto o el año exacto del grant.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "financia (1,6M$ recomendados en 2025)",
+      "desc": "El Survival & Flourishing Fund recomendó 1.607.000 dólares para MIRI en su ronda de 2025 (46.000$ en la vía Main, 1.561.000$ en la vía Freedom), además de una subvención especulativa previa de 215.000$ y un compromiso de igualación (matching) de 1.392.000$.",
+      "confidence": "verified",
+      "source_ref": "https://survivalandflourishing.fund/2025/recommendations"
     },
     {
       "source": "sff",
@@ -1229,10 +1229,10 @@
       "source": "book-iabi",
       "target": "controlai",
       "type": "narrative",
-      "label": "inspira el discurso",
-      "desc": "Se atribuye a ControlAI la recomendación de este libro a su personal y colaboradores, sin que exista una fuente primaria puntual que lo confirme.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "promueve el libro",
+      "desc": "ControlAI presenta el libro de forma destacada en la página de citas de su propia web, con respaldos de figuras como Vitalik Buterin, Emmet Shear y Scott Aaronson; además, PauseAI UK y ControlAI coorganizaron una fiesta de lanzamiento no oficial del libro en Londres el 22 de septiembre de 2025.",
+      "confidence": "verified",
+      "source_ref": "https://controlai.org/quotes"
     },
     {
       "source": "conjecture",
@@ -1273,11 +1273,11 @@
     {
       "source": "pauseai",
       "target": "controlai",
-      "type": "weak",
-      "label": "ambas hacen incidencia",
-      "desc": "Ambas organizaciones hacen cabildeo directo con legisladores, aunque no forman parte de la misma estructura ni existe una colaboración formal documentada entre ellas.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "coorganizan un evento conjunto (sept. 2025)",
+      "desc": "PauseAI UK y ControlAI coorganizaron una fiesta de lanzamiento no oficial del libro «If Anyone Builds It, Everyone Dies» en Londres el 22 de septiembre de 2025.",
+      "confidence": "verified",
+      "source_ref": "https://pauseai.substack.com/p/a-new-phase-for-pauseai"
     },
     {
       "source": "controlai",
@@ -1300,38 +1300,38 @@
     {
       "source": "govai",
       "target": "cser",
-      "type": "weak",
-      "label": "mismo entorno académico",
-      "desc": "GovAI (Oxford) y CSER (Cambridge) comparten el mismo polo académico británico de gobernanza y riesgo existencial de la IA, sin que exista evidencia de una colaboración institucional formal entre ambas.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "personal compartido (Allan Dafoe)",
+      "desc": "Allan Dafoe, fundador y presidente de GovAI, figura como Research Affiliate de CSER.",
+      "confidence": "verified",
+      "source_ref": "https://www.cser.ac.uk/team/allan-dafoe/"
     },
     {
       "source": "cser",
       "target": "lcfi",
-      "type": "weak",
-      "label": "mismo entorno académico",
-      "desc": "CSER y LCFI comparten sede en Cambridge, sin que exista evidencia de una colaboración institucional formal entre ambas.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "incubado en CSER; programa conjunto AI:FAR",
+      "desc": "La propuesta del LCFI se desarrolló en CSER antes de convertirse en un centro independiente; ambos mantienen el programa conjunto AI: Futures and Responsibility (AI:FAR), dirigido por Seán Ó hÉigeartaigh.",
+      "confidence": "verified",
+      "source_ref": "https://www.cser.ac.uk/work/leverhulme-centre-for-the-future-of-intelligence/"
     },
     {
       "source": "govai",
       "target": "lcfi",
-      "type": "weak",
-      "label": "mismo entorno académico",
-      "desc": "Parte del mismo ecosistema académico Oxford-Cambridge de estudios sobre IA avanzada.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "coautoría de investigación",
+      "desc": "Investigadores de GovAI (Markus Anderljung) y del LCFI/CSER (Haydn Belfield) son coautores del informe «Computing Power and the Governance of Artificial Intelligence» (2024).",
+      "confidence": "verified",
+      "source_ref": "https://arxiv.org/abs/2402.08797"
     },
     {
       "source": "aesia",
       "target": "isms",
-      "type": "weak",
-      "label": "mismo ecosistema español",
-      "desc": "Ambas operan en el espacio de gobernanza de IA en España, aunque con misiones distintas: supervisión estatal vs. cumplimiento normativo corporativo.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "reunión institucional (oct. 2024)",
+      "desc": "El grupo de IA de ISMS Forum (GIA) se reunió el 15 de octubre de 2024 con Ignasi Belda, entonces director general de AESIA, para abordar el funcionamiento de la agencia y el fomento del uso responsable de la IA.",
+      "confidence": "verified",
+      "source_ref": "https://master.ismsforum.es/noticia/colaboracion-entre-isms-forum-y-aesia-hacia-un-futuro-responsable-para-la-ia-en-espana/"
     },
     {
       "source": "ias-spain",
@@ -1426,11 +1426,11 @@
     {
       "source": "cnaisda",
       "target": "concordia",
-      "type": "weak",
-      "label": "ecosistema chino",
-      "desc": "Ambas forman parte del ecosistema chino de seguridad y gobernanza de IA, sirviendo de puente hacia la comunidad internacional.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "type": "network",
+      "label": "invitada a un seminario a puerta cerrada",
+      "desc": "Concordia AI fue invitada a un seminario a puerta cerrada organizado por CnAISDA, en torno a la serie de eventos de la Cumbre de Acción sobre IA de París (feb. 2025); en el evento público posterior, Andrew Yao citó el informe de Concordia AI sobre el estado de la seguridad de la IA en China.",
+      "confidence": "verified",
+      "source_ref": "https://concordia-ai.com/concordia-ai-2025-mid-year-impact-report/"
     },
     {
       "source": "us-aisi",
@@ -1571,28 +1571,28 @@
       "source": "pauseai",
       "target": "openai",
       "type": "protest",
-      "label": "protestas",
-      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra OpenAI.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "protesta (12 feb. 2024, sede de OpenAI en SF)",
+      "desc": "PauseAI y No AGI protestaron frente a la sede de OpenAI en San Francisco el 12 de febrero de 2024, exigiendo que la empresa rompiera relaciones con el Pentágono y detuviera el desarrollo de sistemas que superan las capacidades humanas.",
+      "confidence": "verified",
+      "source_ref": "https://pauseai.info/2024-february"
     },
     {
       "source": "pauseai",
       "target": "anthropic",
       "type": "protest",
-      "label": "protestas",
-      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra Anthropic.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "protesta (6 dic. 2024, sede de Anthropic en SF)",
+      "desc": "PauseAI convocó una protesta frente a la sede de Anthropic en San Francisco (548 Market St) el 6 de diciembre de 2024, señalando su papel en el desarrollo de IA cada vez más potente sin regulaciones de seguridad en vigor.",
+      "confidence": "verified",
+      "source_ref": "https://x.com/PauseAI/status/1861078595101212874"
     },
     {
       "source": "pauseai",
       "target": "google-deepmind",
       "type": "protest",
-      "label": "protestas",
-      "desc": "PauseAI ha organizado protestas frente a sedes de grandes laboratorios de IA, como parte de su repertorio habitual de acción directa; no hay una fecha o ubicación puntual documentada de una protesta específica contra Google DeepMind.",
-      "confidence": "unverified",
-      "source_ref": "not found"
+      "label": "protesta (30 jun. 2025, sede de Google DeepMind en Londres)",
+      "desc": "PauseAI celebró su mayor protesta hasta la fecha frente a la sede de Google DeepMind en Londres el 30 de junio de 2025, bajo el lema «Stick to your commitments».",
+      "confidence": "verified",
+      "source_ref": "https://pauseai.substack.com/p/we-held-the-largest-ai-safety-protest"
     },
     {
       "source": "stopai",
