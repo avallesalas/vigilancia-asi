@@ -2,6 +2,33 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (organismos de vigilancia en Asia, para equilibrar el mapa fuera del mundo anglosajón)
+El usuario pidió explícitamente buscar organismos (no más labs) en Asia para que el
+mapa no quede centrado solo en EE. UU./Reino Unido. Cuatro nodos nuevos:
+
+- **`baai`** (Beijing Academy of Artificial Intelligence, `type: research`) —
+  fundada en nov. de 2018 en Pekín, más antigua que `cnaisda` (2025) y una de sus
+  instituciones miembro. Publicó los Beijing AI Principles (2019) y organizó
+  IDAIS-Beijing (marzo 2024). Sancionada por EE. UU. en marzo de 2025 por su
+  vinculación con tecnología de doble uso militar.
+- **`idais-beijing-2024`** (`document`) — la declaración de consenso sobre líneas
+  rojas en IA de IDAIS-Beijing (9-11 marzo 2024), firmada por los premios Turing
+  Yoshua Bengio, Geoffrey Hinton y Andrew Yao junto a Fu Ying, Xue Lan y dirección
+  de BAAI. Arista `→ baai` (organizador) y `→ cnaisda` (`weak`: Yao y Xue Lan
+  firmaron esto un año antes de fundar CnAISDA — mismas personas, no alianza formal
+  entre las dos iniciativas).
+- **`india-aisi`** (IndiaAI Safety Institute, `type: gov`) — anunciado el 5 de
+  marzo de 2025 bajo la IndiaAI Mission (MeitY), modelo "hub and spoke"; llena el
+  hueco de India entre los AISI ya presentes (EE. UU., Reino Unido, Japón, Corea,
+  Singapur).
+- **`asean-ai-safe`** (ASEAN AI Safety Network, `type: network`) — declaración
+  adoptada el 26 de oct. de 2025 por los 10 estados miembros de la ASEAN,
+  secretaría en Kuala Lumpur (apertura prevista principios de 2026).
+
+Descartado por prematuro: el AI Safety Institute de Malasia (todavía un
+proyecto de ley/plan, no una institución operativa) — no se fabrica un nodo para
+algo que aún no existe.
+
 ## 2026-09-14 (SenseTime, compromisos AIIA/CAICT y análisis de Concordia AI)
 Cierre de los tres hilos abiertos al final de la sesión anterior:
 

@@ -908,6 +908,62 @@
       "confidence": "verified",
       "source": "https://ai-frontiers.org/articles/is-china-serious-about-ai-safety",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "baai",
+      "name": "Beijing Academy of Artificial Intelligence (BAAI)",
+      "type": "research",
+      "country": "China",
+      "founded": "2018-11",
+      "founded_precision": "month",
+      "leadership": [
+        "Wang Zhongyuan (presidente, desde jun. 2025)",
+        "Zhang Hongjiang (fundador)"
+      ],
+      "desc": "Instituto de investigación en IA fundado en noviembre de 2018 en Pekín bajo el patrocinio del Ministerio de Ciencia y Tecnología y el gobierno municipal, con Peking University, Tsinghua, la Academia China de Ciencias, Baidu, Xiaomi y ByteDance entre las instituciones fundadoras. Publicó los Beijing AI Principles en 2019 y organizó en marzo de 2024 IDAIS-Beijing, el diálogo internacional que produjo la declaración de consenso sobre líneas rojas en IA firmada por Yoshua Bengio, Geoffrey Hinton y Andrew Yao, entre otros. El Departamento de Comercio de EE. UU. la añadió a su lista de sanciones en marzo de 2025 por su vinculación con el desarrollo de tecnología de doble uso militar.",
+      "url": "https://www.baai.ac.cn",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Beijing_Academy_of_Artificial_Intelligence",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "idais-beijing-2024",
+      "name": "Declaración de consenso de IDAIS-Beijing (2024)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2024-03",
+      "founded_precision": "month",
+      "desc": "Declaración de consenso sobre líneas rojas en el desarrollo de la IA, producida en el diálogo IDAIS-Beijing (9-11 de marzo de 2024, Palacio de Verano, Pekín), coordinado por el Safe AI Forum. La firmaron 24 científicos y expertos en gobernanza, entre ellos los premios Turing Yoshua Bengio, Geoffrey Hinton y Andrew Yao, la exviceministra de Asuntos Exteriores china Fu Ying, el decano de Tsinghua Xue Lan, dirección de BAAI y funcionarios británicos. Identifica cinco líneas rojas (autorreplicación/automejora autónoma, búsqueda de poder, asistencia al desarrollo de armas, ciberataques y engaño) que la IA no debería cruzar.",
+      "url": "https://people.eecs.berkeley.edu/~russell/papers/IDAIS24-Beijing-Statement.pdf",
+      "confidence": "verified",
+      "source": "https://idais.ai/dialogues/",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "india-aisi",
+      "name": "IndiaAI Safety Institute",
+      "type": "gov",
+      "country": "India",
+      "founded": "2025-03",
+      "founded_precision": "month",
+      "desc": "Instituto de seguridad de IA anunciado el 5 de marzo de 2025 por el ministro Ashwini Vaishnaw, bajo el pilar «Safe & Trusted AI» de la IndiaAI Mission (lanzada el 7 de marzo de 2024) del Ministerio de Electrónica y Tecnologías de la Información (MeitY). Sigue un modelo «hub and spoke» que conecta academia, startups, industria y ministerios; en mayo de 2026 la Digital India Corporation seguía contratando a su director.",
+      "url": "https://indiaai.gov.in",
+      "confidence": "verified",
+      "source": "https://www.nextias.com/ca/current-affairs/05-03-2025/designing-india-ai-safety-institute",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "asean-ai-safe",
+      "name": "ASEAN AI Safety Network (ASEAN AI SAFE)",
+      "type": "network",
+      "country": "Sudeste Asiático (sede en Malasia)",
+      "founded": "2025-10",
+      "founded_precision": "month",
+      "desc": "Red regional adoptada el 26 de octubre de 2025 mediante una declaración de los diez estados miembros de la ASEAN, para coordinar cooperación en seguridad de IA, preparación regulatoria y salvaguardas. Su secretaría tendrá sede en Kuala Lumpur, Malasia, con apertura prevista a principios de 2026, supervisada por un consejo de gobierno de altos funcionarios de la ASEAN.",
+      "url": "not found",
+      "confidence": "verified",
+      "source": "https://asean.org/declaration-on-the-establishment-of-an-asean-ai-safety-network-asean-ai-safe/",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1648,6 +1704,24 @@
       "desc": "El informe State of AI Safety in China 2026 de Concordia AI (14 de julio de 2026) destaca la model card de Kimi K2 de Moonshot AI como una de las divulgaciones de seguridad más detalladas del sector hasta la fecha, pero señala que el modelo posterior Kimi K2.5 se publicó sin ningún resultado de evaluación de seguridad.",
       "confidence": "verified",
       "source_ref": "https://aisafetychina.substack.com/p/state-of-ai-safety-in-china-2026"
+    },
+    {
+      "source": "idais-beijing-2024",
+      "target": "baai",
+      "type": "network",
+      "label": "organizado con BAAI como anfitrión",
+      "desc": "IDAIS-Beijing se celebró en Pekín en marzo de 2024 con la dirección de BAAI entre los firmantes de la declaración de consenso resultante.",
+      "confidence": "verified",
+      "source_ref": "https://idais.ai/dialogues/"
+    },
+    {
+      "source": "idais-beijing-2024",
+      "target": "cnaisda",
+      "type": "weak",
+      "label": "figuras fundadoras compartidas",
+      "desc": "Andrew Yao y Xue Lan firmaron la declaración de consenso de IDAIS-Beijing en marzo de 2024, un año antes de encabezar la fundación de CnAISDA en febrero de 2025 — mismas personas, no una alianza formal entre ambas iniciativas.",
+      "confidence": "verified",
+      "source_ref": "https://idais.ai/dialogues/"
     }
   ]
 }
