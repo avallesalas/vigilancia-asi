@@ -2,6 +2,19 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (FLI AI Safety Index y evaluación conjunta de Kimi K3)
+4 aristas `eval` más, sin nodos nuevos:
+
+- `fli → zhipu-ai` (D-), `fli → alibaba-qwen` (D-), `fli → deepseek` (F): las tres
+  únicas empresas chinas entre las 9 evaluadas en el AI Safety Index de verano de
+  2026 (fuente: futureoflife.org/ai-safety-index-summer-2026). Confirmado que
+  moonshot-ai, minimax, bytedance-seed, tii y g42 **no** aparecen en ese informe —
+  ausencia real, no hueco de búsqueda.
+- `us-aisi → moonshot-ai`: evaluación conjunta UK AISI/CAISI de la capacidad
+  cibernética de Kimi K3 (jul. 2026) — muy por debajo de la frontera en general,
+  pero por delante de GLM-5.2 (Zhipu) en dos pruebas concretas, dato que matiza la
+  jerarquía interna entre labs chinos que ya apuntaba la evaluación de DeepSeek V4.
+
 ## 2026-09-14 (evaluaciones de AISI sobre labs chinos)
 Se añaden 4 aristas `eval` con fuente primaria directa (nist.gov, aisi.gov.uk), sin
 nodos nuevos:

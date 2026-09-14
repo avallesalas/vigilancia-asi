@@ -1441,6 +1441,42 @@
       "desc": "El UK AISI evaluó la capacidad cibernética de GLM-5.2 (Zhipu AI, jun. 2026) junto a DeepSeek V4-Pro: se comporta de forma similar a modelos cerrados de frontera lanzados entre 4 y 7 meses antes.",
       "confidence": "verified",
       "source_ref": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"
+    },
+    {
+      "source": "fli",
+      "target": "zhipu-ai",
+      "type": "eval",
+      "label": "califica en su AI Safety Index (D-, verano 2026)",
+      "desc": "El AI Safety Index de verano de 2026 de FLI evaluó a Z.ai (Zhipu AI) como una de las nueve empresas analizadas, con una nota D- (0,88 sobre 4).",
+      "confidence": "verified",
+      "source_ref": "https://futureoflife.org/ai-safety-index-summer-2026/"
+    },
+    {
+      "source": "fli",
+      "target": "alibaba-qwen",
+      "type": "eval",
+      "label": "califica en su AI Safety Index (D-, verano 2026)",
+      "desc": "El AI Safety Index de verano de 2026 de FLI evaluó a Alibaba Cloud como una de las nueve empresas analizadas, con una nota D- (0,87 sobre 4).",
+      "confidence": "verified",
+      "source_ref": "https://futureoflife.org/ai-safety-index-summer-2026/"
+    },
+    {
+      "source": "fli",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "califica en su AI Safety Index (F, verano 2026)",
+      "desc": "El AI Safety Index de verano de 2026 de FLI evaluó a DeepSeek como una de las nueve empresas analizadas, con nota F (0,47 sobre 4) — una de las tres empresas suspendidas junto a xAI y Mistral.",
+      "confidence": "verified",
+      "source_ref": "https://futureoflife.org/ai-safety-index-summer-2026/"
+    },
+    {
+      "source": "us-aisi",
+      "target": "moonshot-ai",
+      "type": "eval",
+      "label": "evaluación conjunta de capacidad cibernética (Kimi K3, jul. 2026)",
+      "desc": "El UK AISI y CAISI evaluaron conjuntamente la capacidad cibernética de Kimi K3 (lanzado el 16 de julio de 2026): quedó muy por debajo de los modelos más ciber-capaces de frontera (0/41 ejecuciones de código arbitrario, frente a una media de 20/41 de los modelos líderes), aunque superó a GLM-5.2 en dos pruebas (ExploitBench: 32% vs. 24%; rango cibernético TLO: paso 17 de 32 vs. paso 11).",
+      "confidence": "verified",
+      "source_ref": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities"
     }
   ]
 }
