@@ -2,6 +2,20 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (aristas que faltaban entre documentos y los labs que mencionan)
+El usuario notó que `statement-2023` describe en su propio `desc` que lo firmaron
+los CEOs de OpenAI, Google DeepMind y Anthropic, pero no tenía ninguna arista hacia
+esos tres nodos — solo la de autoría con `cais`. Añadidas las 3 aristas que
+faltaban (`network`, "signatario (CEO, mayo 2023)", confirmado con TIME/TechCrunch
+además de la fuente ya citada en el nodo).
+
+Auditoría rápida del resto de nodos `document` para buscar el mismo patrón (un lab
+mencionado en el texto sin arista): encontrada una más, `saferai → anthropic-rsp`
+(`eval`, "SaferAI publicó un análisis titulado 'Anthropic's responsible scaling
+policy update makes a step backwards'"), que ya estaba citada en el `desc` de
+`anthropic-rsp` sin arista propia. El resto de coincidencias de la auditoría eran
+falsos positivos (substrings como "metr" dentro de "parámetros").
+
 ## 2026-09-14 (documentos propios de Anthropic, OpenAI y Google DeepMind)
 Cierra el ítem del backlog "Añadir los documentos propios de los labs frontier".
 Tres nodos `document` nuevos, con arista `authorship` desde cada laboratorio (ya

@@ -1956,6 +1956,42 @@
       "desc": "Google DeepMind redacta y publica el Frontier Safety Framework como su propio marco de autogobernanza.",
       "confidence": "verified",
       "source_ref": "https://deepmind.google/frontier-safety/"
+    },
+    {
+      "source": "statement-2023",
+      "target": "openai",
+      "type": "network",
+      "label": "signatario (CEO, mayo 2023)",
+      "desc": "Sam Altman, CEO de OpenAI, firmó la Statement on AI Risk el 30 de mayo de 2023.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Statement_on_AI_Risk"
+    },
+    {
+      "source": "statement-2023",
+      "target": "google-deepmind",
+      "type": "network",
+      "label": "signatario (CEO, mayo 2023)",
+      "desc": "Demis Hassabis, CEO de Google DeepMind, firmó la Statement on AI Risk el 30 de mayo de 2023.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Statement_on_AI_Risk"
+    },
+    {
+      "source": "statement-2023",
+      "target": "anthropic",
+      "type": "network",
+      "label": "signatario (CEO, mayo 2023)",
+      "desc": "Dario Amodei, CEO de Anthropic, firmó la Statement on AI Risk el 30 de mayo de 2023.",
+      "confidence": "verified",
+      "source_ref": "https://en.wikipedia.org/wiki/Statement_on_AI_Risk"
+    },
+    {
+      "source": "saferai",
+      "target": "anthropic-rsp",
+      "type": "eval",
+      "label": "crítica a una actualización (2025)",
+      "desc": "SaferAI publicó un análisis titulado \"Anthropic's responsible scaling policy update makes a step backwards\", señalando un retroceso en una de las revisiones de la RSP.",
+      "confidence": "verified",
+      "source_ref": "https://www.safer-ai.org/anthropics-responsible-scaling-policy-update-makes-a-step-backwards"
     }
   ]
 }
