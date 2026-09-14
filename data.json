@@ -863,6 +863,22 @@
       "confidence": "verified",
       "source": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "xiaomi-mimo",
+      "name": "Xiaomi — MiMo",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2023-04",
+      "founded_precision": "month",
+      "leadership": [
+        "Luo Fuli (responsable del equipo de modelos de gran escala desde nov. 2025, exinvestigadora de DeepSeek)"
+      ],
+      "desc": "Equipo de modelos de gran escala de Xiaomi, constituido en abril de 2023 dentro de Xiaomi AI Lab. Lanzó su primer modelo de razonamiento, MiMo-7B, en abril de 2025; en 2026, ya bajo la dirección de Luo Fuli (fichada de DeepSeek en noviembre de 2025), MiMo-V2.5-Pro (1,02 billones de parámetros) se situó 8º en el Artificial Analysis Intelligence Index mundial y como modelo abierto líder en capacidades agénticas, con un rendimiento cercano al de GPT-5.2 y Claude Opus 4.6.",
+      "url": "https://mimo.xiaomi.com",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Xiaomi_MiMo",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1477,6 +1493,87 @@
       "desc": "El UK AISI y CAISI evaluaron conjuntamente la capacidad cibernética de Kimi K3 (lanzado el 16 de julio de 2026): quedó muy por debajo de los modelos más ciber-capaces de frontera (0/41 ejecuciones de código arbitrario, frente a una media de 20/41 de los modelos líderes), aunque superó a GLM-5.2 en dos pruebas (ExploitBench: 32% vs. 24%; rango cibernético TLO: paso 17 de 32 vs. paso 11).",
       "confidence": "verified",
       "source_ref": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities"
+    },
+    {
+      "source": "deepseek",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation (feb. 2026)",
+      "desc": "Anthropic documentó más de 150.000 interacciones de DeepSeek con Claude en una campaña de extracción no autorizada de razonamiento (cadena de pensamiento), en violación de los términos de servicio.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+    },
+    {
+      "source": "deepseek",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16001 (jul. 2026)",
+      "desc": "Anthropic identificó una segunda campaña (GTG-16001): más de 12,1 millones de interacciones observadas en 14 días de julio de 2026, con la misma técnica de reenvío encubierto usada por Moonshot AI para extraer transcripciones de cadena de pensamiento.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "moonshot-ai",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation (feb. 2026)",
+      "desc": "Anthropic documentó más de 3,4 millones de interacciones de Moonshot AI con Claude, a través de cientos de cuentas fraudulentas, en una campaña de extracción no autorizada de razonamiento.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+    },
+    {
+      "source": "moonshot-ai",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16002 (may.-jul. 2026)",
+      "desc": "Anthropic identificó una segunda campaña (GTG-16002): 23 millones de interacciones entre mayo y julio de 2026 a través de una red de 5.380 cuentas fraudulentas. Moonshot enrutaba parte de las peticiones de usuarios de Kimi hacia Claude sin informarles, presentando las respuestas de Claude como propias de Kimi.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "minimax",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation (feb. 2026)",
+      "desc": "Anthropic documentó más de 13 millones de interacciones de MiniMax con Claude en una campaña de extracción no autorizada de razonamiento.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+    },
+    {
+      "source": "minimax",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16003 (2026)",
+      "desc": "Anthropic identificó una segunda campaña (GTG-16003): una red de cuentas proxy operada a través de una empresa pantalla para recopilar interacciones entre usuarios y modelos de frontera, incluido Claude.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "alibaba-qwen",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16005 (may.-jul. 2026)",
+      "desc": "La mayor campaña de distillation documentada hasta la fecha por Anthropic: más de 151 millones de interacciones entre mayo y julio de 2026 (hasta 3 millones diarias), repartidas en más de 3.500 cuentas fraudulentas, dirigida a extraer razonamiento agéntico, ingeniería de software y capacidad lógica de Claude.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "zhipu-ai",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16006 (jun.-jul. 2026)",
+      "desc": "Anthropic documentó una campaña (GTG-16006) de más de 3,4 millones de interacciones en 17 días de junio y julio de 2026, con 273 cuentas fraudulentas rotativas: Zhipu reenviaba trazas de razonamiento capturadas de Claude a través de Claude mismo para depurarlas y usarlas como datos de entrenamiento.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    },
+    {
+      "source": "xiaomi-mimo",
+      "target": "anthropic",
+      "type": "extraction",
+      "label": "campaña de distillation GTG-16008 (mar.-abr. 2026)",
+      "desc": "Anthropic documentó una campaña (GTG-16008) de más de 400.000 interacciones en 20 días de marzo y abril de 2026, en la que Xiaomi reenviaba a Claude conversaciones y sesiones de código de usuarios de sus propios modelos MiMo, a través de los harnesses de código OpenClaw y OpenCode.",
+      "confidence": "verified",
+      "source_ref": "https://www.anthropic.com/threat-intelligence-report-september-2026"
     }
   ]
 }

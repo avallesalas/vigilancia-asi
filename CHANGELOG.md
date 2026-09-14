@@ -2,6 +2,34 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (nuevo tipo de arista "extraction": campañas de distillation contra Anthropic)
+Se añade un nodo (`xiaomi-mimo`, `frontier-lab`, investigado con el mismo criterio que
+los otros siete labs chinos: MiMo-V2.5-Pro, 8º en el Artificial Analysis Intelligence
+Index mundial, liderado por Luo Fuli, exinvestigadora de DeepSeek) y 9 aristas nuevas
+de un tipo que no existía en el esquema: `extraction` (color `--extraction:#FF3366`
+en `assets/style.css`, estilo propio en `EDGE_STYLE` de `app.js`, fila añadida a la
+leyenda de `index.html`) — la primera categoría del mapa que describe una acción
+hostil de un laboratorio contra otro, no vigilancia ni coordinación.
+
+Verificado contra los dos informes oficiales de Anthropic (no solo prensa):
+
+- **Informe del 23 feb. 2026** ("Detecting and preventing distillation attacks"):
+  DeepSeek (150.000+ interacciones), Moonshot AI (3,4M, cientos de cuentas
+  fraudulentas), MiniMax (13M) — combinadas, +16M interacciones vía ~24.000 cuentas.
+- **Informe de sept. 2026** ("threat-intelligence-report-september-2026"), 7 campañas
+  con código GTG: Alibaba/Qwen (GTG-16005, 151M interacciones may.-jul. 2026 — la
+  mayor campaña de distillation que Anthropic ha documentado nunca), Moonshot AI
+  (GTG-16002, 23M, 5.380 cuentas, enrutaba peticiones de Kimi a Claude sin avisar a
+  sus usuarios), DeepSeek (GTG-16001, 12,1M en 14 días de jul. 2026), Zhipu/Z.ai
+  (GTG-16006, 3,4M en 17 días jun.-jul. 2026, 273 cuentas rotativas), Xiaomi
+  (GTG-16008, 400.000+ en 20 días mar.-abr. 2026, vía harnesses OpenClaw/OpenCode),
+  MiniMax (GTG-16003, red de cuentas proxy vía empresa pantalla).
+
+**SenseTime** (GTG-16012 en el informe de septiembre, compra de transcripciones a
+proveedores de datos externos) queda **sin nodo ni arista** — no se investigó como
+`frontier-lab` con el mismo criterio que los demás; anotado en `BACKLOG.md` como
+candidato pendiente, no descartado.
+
 ## 2026-09-14 (FLI AI Safety Index y evaluación conjunta de Kimi K3)
 4 aristas `eval` más, sin nodos nuevos:
 

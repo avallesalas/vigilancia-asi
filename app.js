@@ -15,6 +15,7 @@ const EDGE_STYLE={
  capacity:{color:'var(--network)',dash:'none',w:1.4},
  eval:{color:'var(--policy)',dash:'1 3',w:1.2},
  protest:{color:'var(--activism)',dash:'3 4',w:1.4},
+ extraction:{color:'var(--extraction)',dash:'none',w:2},
 };
 
 fetch('data.json', {cache: 'no-cache'})

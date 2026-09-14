@@ -3,7 +3,7 @@
   --text:#E7EDF3; --muted:#7C8B9C;
   --research:#3FB6A8; --policy:#6C8FC7; --funding:#D9A441; --activism:#E0645A;
   --gov:#A78BFA; --compliance:#7FA66B; --doc:#C9CFD8; --network:#45C4E0;
-  --split:#F05A4E; --frontier:#C0392B;
+  --split:#F05A4E; --frontier:#C0392B; --extraction:#FF3366;
   --ok:#3FB6A8; --warn:#D9A441;
 }
 *{box-sizing:border-box;}
