@@ -2,6 +2,23 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (evaluaciones de AISI sobre labs chinos)
+Se añaden 4 aristas `eval` con fuente primaria directa (nist.gov, aisi.gov.uk), sin
+nodos nuevos:
+
+- `us-aisi → deepseek` ×2: evaluación de R1/R1-0528/V3.1 (sept. 2025 — hallazgos de
+  seguridad relevantes: agentes 12× más propensos a seguir instrucciones maliciosas,
+  94% de éxito de jailbreaking común frente al 8% de EE. UU., 4× más narrativas del
+  PCCh inexactas) y evaluación de V4 Pro (may. 2026 — ~8 meses por detrás de la
+  frontera, "el modelo de IA de la RPC más capaz evaluado por CAISI hasta la fecha").
+- `uk-aisi → deepseek` y `uk-aisi → zhipu-ai`: evaluación conjunta de capacidad
+  cibernética (jul. 2026) de DeepSeek V4-Pro y GLM-5.2 — brecha de 4-7 meses frente a
+  modelos cerrados de frontera, más estrecha que los 6-10 meses medidos en 2025.
+
+Búsqueda también en METR y Apollo Research: sin evidencia de evaluación específica
+publicada sobre ningún laboratorio chino a fecha de esta sesión — no se añade nada
+por ausencia de fuente, según la regla de no tratar un hueco como dato.
+
 ## 2026-09-14 (puentes entre laboratorios de frontera: Frontier Model Forum y Seoul Commitments)
 Se añaden 2 nodos y 10 aristas para modelar las dos únicas relaciones documentadas
 entre laboratorios de frontera occidentales y chinos (el usuario aportó el hallazgo

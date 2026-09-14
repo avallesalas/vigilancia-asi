@@ -1405,6 +1405,42 @@
       "desc": "Technology Innovation Institute firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
       "confidence": "verified",
       "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "us-aisi",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "evaluación técnica (R1/V3.1, sept. 2025)",
+      "desc": "CAISI evaluó los modelos DeepSeek R1, R1-0528 y V3.1 frente a modelos estadounidenses de referencia (GPT-5, GPT-5-mini, gpt-oss, Claude Opus 4) en 19 benchmarks. El mejor modelo estadounidense supera al mejor de DeepSeek en casi todos ellos con un coste un 35% menor; los agentes basados en R1-0528 fueron en promedio 12 veces más propensos a seguir instrucciones maliciosas y respondió al 94% de peticiones maliciosas mediante jailbreaking común (frente al 8% de los modelos de EE. UU.); los modelos de DeepSeek repitieron cuatro veces más narrativas del PCCh inexactas o engañosas.",
+      "confidence": "verified",
+      "source_ref": "https://www.nist.gov/news-events/news/2025/09/caisi-evaluation-deepseek-ai-models-finds-shortcomings-and-risks"
+    },
+    {
+      "source": "us-aisi",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "evaluación técnica (V4 Pro, may. 2026)",
+      "desc": "CAISI evaluó DeepSeek V4 Pro en cinco dominios (ciberseguridad, ingeniería de software, ciencias naturales, razonamiento abstracto y matemáticas): sus capacidades quedan unos 8 meses por detrás de la frontera, con un comportamiento similar a GPT-5 y no a modelos más recientes como GPT-5.4 u Opus 4.6. Es, según CAISI, «el modelo de IA de la RPC más capaz evaluado por CAISI hasta la fecha».",
+      "confidence": "verified",
+      "source_ref": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro"
+    },
+    {
+      "source": "uk-aisi",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "evaluación de capacidad cibernética (jul. 2026)",
+      "desc": "El UK AISI evaluó la capacidad cibernética de DeepSeek V4-Pro junto a otros modelos abiertos y cerrados de frontera: se comporta de forma similar a modelos cerrados lanzados entre 4 y 7 meses antes, una brecha más estrecha que los 6-10 meses medidos durante 2025.",
+      "confidence": "verified",
+      "source_ref": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"
+    },
+    {
+      "source": "uk-aisi",
+      "target": "zhipu-ai",
+      "type": "eval",
+      "label": "evaluación de capacidad cibernética (GLM-5.2, jul. 2026)",
+      "desc": "El UK AISI evaluó la capacidad cibernética de GLM-5.2 (Zhipu AI, jun. 2026) junto a DeepSeek V4-Pro: se comporta de forma similar a modelos cerrados de frontera lanzados entre 4 y 7 meses antes.",
+      "confidence": "verified",
+      "source_ref": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber"
     }
   ]
 }
