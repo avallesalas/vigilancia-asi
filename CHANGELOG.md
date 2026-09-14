@@ -2,6 +2,26 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (documentos propios de Anthropic, OpenAI y Google DeepMind)
+Cierra el ítem del backlog "Añadir los documentos propios de los labs frontier".
+Tres nodos `document` nuevos, con arista `authorship` desde cada laboratorio (ya
+se mencionaban en el `desc` de los propios nodos de los labs, pero no existían
+como ficha propia):
+
+- **`anthropic-rsp`** (Responsible Scaling Policy) — publicada el 19 sept. 2023,
+  niveles ASL-2/ASL-3/ASL-4+. SaferAI ha señalado retrocesos en alguna revisión
+  posterior (v2.1, v2.2).
+- **`openai-preparedness-framework`** — publicado en versión beta en dic. 2023,
+  reescrito como v2 el 15 abr. 2025 (AI Lab Watch documentó los cambios).
+- **`deepmind-frontier-safety-framework`** — publicado el 17 may. 2024, con
+  «niveles de capacidad crítica» (CCL); actualizado feb. 2025 y de nuevo 17 abr.
+  2026 (nuevos «niveles de capacidad rastreados», TCL).
+
+No se añadieron documentos equivalentes de otros labs (p. ej. el paper en Nature
+de DeepSeek-R1 o la model card de Kimi K2, ya mencionados en la arista
+`concordia → deepseek`/`moonshot-ai`) — el ítem del backlog pedía específicamente
+Anthropic/OpenAI/Google.
+
 ## 2026-09-14 (Meta y xAI como frontier-lab, con sus reorganizaciones de 2025-2026)
 A petición explícita del usuario, se reabre e investiga el ítem de Meta/xAI que
 había quedado cerrado sin investigar. Ambos han cambiado de forma sustancial desde
