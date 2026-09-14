@@ -26,7 +26,7 @@ p.sub{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted)
 .fg-svg{display:block;width:100%;height:auto;cursor:grab;background:radial-gradient(ellipse at 15% 0%,#0E141C 0%,var(--bg) 60%);}
 .fg-node{cursor:pointer;transition:opacity .15s;}
 .fg-node:hover circle,.fg-node:hover polygon,.fg-node:hover rect{filter:brightness(1.25);}
-.fg-node-label{font-family:'Space Grotesk',sans-serif;font-size:9px;font-weight:600;fill:var(--text);pointer-events:none;}
+.fg-node-label{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;fill:var(--text);pointer-events:none;}
 .fg-popup{position:absolute;z-index:5;max-width:380px;width:calc(100% - 24px);max-height:480px;overflow:auto;padding:16px 18px;background:var(--panel);border:1px solid #2A3A4C;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.5);}
 .fg-popup-close{position:absolute;top:8px;right:8px;width:22px;height:22px;background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;line-height:1;}
 #fg-popup-body{padding-right:20px;}
