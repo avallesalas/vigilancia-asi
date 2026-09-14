@@ -13,7 +13,9 @@ laboratorios de frontera que son su objeto.
 - `data.json` — nodos y aristas. **Única fuente de datos del mapa.**
 - `asi.html` — página divulgativa independiente ("¿Qué es la ASI?"), enlazada
   desde `index.html`. Contenido propio con cita y fuente primaria por
-  afirmación; no lee `data.json`.
+  afirmación; no lee `data.json`. Sus enlaces a nodos del mapa usan
+  `index.html?node=<id>` (ver "Enlaces desde asi.html a nodos del mapa" en
+  `CLAUDE.md`), que centra el zoom, resalta el nodo y abre su ficha.
 - `assets/asi.css` — estilos de `asi.html`, separados de `assets/style.css`.
 - `CHANGELOG.md` — qué cambió y qué se verificó en cada actualización.
 
