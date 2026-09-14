@@ -92,10 +92,11 @@ function render(DATA){
     if(meta.footer) document.getElementById('footer').textContent = meta.footer;
   }
 
-  buildForceGraph(document.getElementById('graph-wrap'), NODES, EDGES);
+  const focusId = new URLSearchParams(location.search).get('node');
+  buildForceGraph(document.getElementById('graph-wrap'), NODES, EDGES, focusId);
 }
 
-function buildForceGraph(container, nodesIn, edgesIn){
+function buildForceGraph(container, nodesIn, edgesIn, focusId){
   const nodes = nodesIn.map(n=>Object.assign({},n));
   const links = edgesIn.map(e=>Object.assign({},e));
   const byId = {}; nodes.forEach(n=>byId[n.id]=n);
@@ -320,6 +321,18 @@ function buildForceGraph(container, nodesIn, edgesIn){
   sim.on('end', ()=>{
     if(fitted) return;
     fitted = true;
+    const focusNode = focusId ? nodes.find(n=>n.id===focusId) : null;
+    if(focusNode){
+      const k = 1.4;
+      const tx = width/2 - k*focusNode.x, ty = height/2 - k*focusNode.y;
+      svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(k))
+        .on('end', ()=>{
+          highlight(focusNode);
+          const stageRect = stageEl.getBoundingClientRect();
+          showPopupAt(stageRect.width/2, stageRect.height/2, nodeDetailHTML(focusNode));
+        });
+      return;
+    }
     const pad = 40;
     const xs = nodes.map(d=>d.x), ys = nodes.map(d=>d.y);
     const x0 = Math.min(...xs)-pad, x1 = Math.max(...xs)+pad;

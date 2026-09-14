@@ -2,6 +2,26 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-15 (deep-linking a nodos del mapa + estandarización de los enlaces node-ref de asi.html)
+
+Los enlaces "↗ Nombre" de `asi.html` hacia el mapa llevaban siempre a
+`index.html` a secas — el lector tenía que buscar el nodo a mano entre los 71.
+Ahora:
+
+- **`site/app.js`**: `render()` lee `?node=<id>` de la URL y lo pasa a
+  `buildForceGraph`. Al terminar la simulación, si hay un nodo objetivo, la
+  vista hace zoom y centra sobre él (en vez del encuadre general de todo el
+  grafo), lo resalta atenuando el resto (reutilizando `highlight()`, la misma
+  lógica que ya se usaba en el hover) y abre su ficha automáticamente
+  (`showPopupAt` + `nodeDetailHTML`).
+- **`site/asi.html`**: los 22 enlaces `node-ref` pasan de `href="index.html"`
+  a `href="index.html?node=<id>"`, con el id real de cada nodo en `data.json`.
+
+Probado en local (`python3 -m http.server` + Claude in Chrome) con `?node=miri`
+y `?node=frontier-ai-risk-mgmt-framework`: ambos casos centran, resaltan y
+abren la ficha correctamente, incluido un nodo de documento en la banda
+superior (más estrecha) del layout.
+
 ## 2026-09-15 (nueva sección "Y mientras tanto, en China..." en asi.html + Frontier AI Risk Management Framework en el mapa)
 
 **`site/asi.html`:**
