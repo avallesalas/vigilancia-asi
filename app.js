@@ -153,9 +153,37 @@ function buildForceGraph(container, nodesIn, edgesIn){
     if(country.includes('Sudáfrica') || country.includes('África')) return 'africa';
     return null;
   }
+  const REGION_ORDER = ['usa','uk','europe','china','asia','gulf','latam','africa'];
+  // El reparto de la banda de abajo (organizaciones) usa posiciones fijas
+  // porque están representadas las 8 regiones. Los laboratorios de frontera
+  // solo existen en 3-4 de esas 8 (EE. UU./Reino Unido, China, Golfo) — con
+  // las mismas fracciones fijas se apelotonarían en el tercio izquierdo del
+  // panel en vez de ocupar todo su ancho. Para ellos se recalculan las
+  // fracciones solo entre las regiones que de verdad tienen algún nodo de
+  // ese nivel, repartidas de punta a punta.
+  function regionXFor(kindNodes){
+    const present = REGION_ORDER.filter(r=>kindNodes.some(n=>regionBucket(n.country)===r));
+    const map = {};
+    present.forEach((r,i)=>{ map[r] = present.length>1 ? 0.08 + (i/(present.length-1))*0.84 : 0.5; });
+    return map;
+  }
   const REGION_X = {usa:0.08, uk:0.20, europe:0.32, china:0.44, asia:0.56, gulf:0.68, latam:0.80, africa:0.92};
+  const LAB_REGION_X = regionXFor(nodes.filter(n=>n.type==='frontier-lab'));
+  // Anclar documentos y laboratorios todos al mismo width/2 los apelotona en
+  // el centro del panel en vez de repartirlos por todo su ancho. Los
+  // documentos, que en su mayoría son "Documento vivo"/"Manifiesto" sin país,
+  // se reparten por orden de aparición en un espaciado uniforme.
+  const docIds = nodes.filter(n=>n.type==='document').map(n=>n.id);
   function targetX(d){
-    if(d.type==='document' || d.type==='frontier-lab') return width/2;
+    if(d.type==='document'){
+      const i = docIds.indexOf(d.id);
+      const frac = docIds.length>1 ? i/(docIds.length-1) : 0.5;
+      return width*(0.08 + frac*0.84);
+    }
+    if(d.type==='frontier-lab'){
+      const b = regionBucket(d.country);
+      return width*(b && LAB_REGION_X[b]!=null ? LAB_REGION_X[b] : 0.5);
+    }
     const b = regionBucket(d.country);
     return b ? width*REGION_X[b] : width/2;
   }
