@@ -129,22 +129,47 @@ function buildForceGraph(container, nodesIn, edgesIn){
 
   // Grado de cada nodo (nº de aristas): los nodos sin ninguna arista no tienen
   // nada que los frene frente a la repulsión y salen despedidos lejos del
-  // resto — se anclan al centro con más fuerza que los que sí están conectados,
-  // cuya posición ya gobierna la estructura de enlaces.
+  // resto — se anclan a su objetivo con más fuerza que los que sí están
+  // conectados, cuya posición ya gobierna la estructura de enlaces.
   const degree = {}; nodes.forEach(n=>degree[n.id]=0);
   links.forEach(l=>{ degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
+
+  // Disposición en niveles: documentos arriba, laboratorios de frontera en
+  // medio, el resto de organizaciones (quién vigila) abajo — hace visible el
+  // eje "documento → laboratorio → vigilancia" que es la columna vertebral del
+  // mapa. Dentro del nivel de abajo (el más numeroso, ~45 de los 70 nodos), se
+  // subagrupa horizontalmente por región geográfica, para que la diversidad
+  // fuera del eje EE. UU./Reino Unido que se trabajó esta sesión también sea
+  // visible en el layout, no solo en los datos.
+  function regionBucket(country){
+    if(!country) return null;
+    if(country.includes('Reino Unido')) return 'uk';
+    if(country.includes('EE. UU.') || country.includes('Internacional')) return 'usa';
+    if(country.includes('España') || country.includes('Francia') || country.includes('Países Bajos')) return 'europe';
+    if(country.includes('China')) return 'china';
+    if(country.includes('Japón') || country.includes('Corea') || country.includes('Singapur') || country.includes('India') || country.includes('Sudeste Asiático')) return 'asia';
+    if(country.includes('Arabia Saudí') || country.includes('Emiratos')) return 'gulf';
+    if(country.includes('Brasil') || country.includes('Chile') || country.includes('LatAm')) return 'latam';
+    if(country.includes('Sudáfrica') || country.includes('África')) return 'africa';
+    return null;
+  }
+  const REGION_X = {usa:0.08, uk:0.20, europe:0.32, china:0.44, asia:0.56, gulf:0.68, latam:0.80, africa:0.92};
+  function targetX(d){
+    if(d.type==='document' || d.type==='frontier-lab') return width/2;
+    const b = regionBucket(d.country);
+    return b ? width*REGION_X[b] : width/2;
+  }
+  function targetY(d){
+    if(d.type==='document') return height*0.12;
+    if(d.type==='frontier-lab') return height*0.48;
+    return height*0.85;
+  }
 
   const sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(d=>d.id).distance(150).strength(0.4))
     .force('charge', d3.forceManyBody().strength(-480))
-    .force('center', d3.forceCenter(width/2, height/2))
-    // Un par de nodos con un solo enlace entre sí (p. ej. dos organismos con una
-    // única relación documentada, sin más conexiones al resto del mapa) se
-    // comporta como un mini-clúster que la repulsión aleja igual que a un nodo
-    // aislado — no basta con distinguir grado 0 de "conectado"; el anclaje debe
-    // debilitarse gradualmente cuantas más aristas tenga cada nodo.
-    .force('x', d3.forceX(width/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
-    .force('y', d3.forceY(height/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
+    .force('x', d3.forceX(targetX).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
+    .force('y', d3.forceY(targetY).strength(0.4))
     .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?42:d.type==='document'?40:34).iterations(2));
 
   const linkGroup = g.append('g').selectAll('g').data(links).join('g');
