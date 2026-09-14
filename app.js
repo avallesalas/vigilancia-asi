@@ -168,7 +168,12 @@ function buildForceGraph(container, nodesIn, edgesIn){
   const sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links).id(d=>d.id).distance(150).strength(0.4))
     .force('charge', d3.forceManyBody().strength(-480))
-    .force('x', d3.forceX(targetX).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
+    // Documentos y laboratorios llevan un anclaje horizontal fijo (no basado en
+    // grado): si no, los labs muy conectados —Anthropic, OpenAI...— se dejan
+    // arrastrar por sus aristas hacia el clúster EE. UU./Reino Unido de la
+    // banda de abajo, y toda la columna de arriba deriva a la izquierda en vez
+    // de quedarse centrada sobre el reparto regional de las organizaciones.
+    .force('x', d3.forceX(targetX).strength(d=>(d.type==='document'||d.type==='frontier-lab') ? 0.35 : Math.max(0.02, 0.3/(1+degree[d.id]))))
     .force('y', d3.forceY(targetY).strength(0.4))
     .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?42:d.type==='document'?40:34).iterations(2));
 
