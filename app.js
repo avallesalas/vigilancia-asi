@@ -135,8 +135,8 @@ function buildForceGraph(container, nodesIn, edgesIn){
   links.forEach(l=>{ degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
 
   const sim = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(links).id(d=>d.id).distance(110).strength(0.45))
-    .force('charge', d3.forceManyBody().strength(-380))
+    .force('link', d3.forceLink(links).id(d=>d.id).distance(150).strength(0.4))
+    .force('charge', d3.forceManyBody().strength(-480))
     .force('center', d3.forceCenter(width/2, height/2))
     // Un par de nodos con un solo enlace entre sí (p. ej. dos organismos con una
     // única relación documentada, sin más conexiones al resto del mapa) se
@@ -145,7 +145,7 @@ function buildForceGraph(container, nodesIn, edgesIn){
     // debilitarse gradualmente cuantas más aristas tenga cada nodo.
     .force('x', d3.forceX(width/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
     .force('y', d3.forceY(height/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
-    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:d.type==='document'?32:26).iterations(2));
+    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?42:d.type==='document'?40:34).iterations(2));
 
   const linkGroup = g.append('g').selectAll('g').data(links).join('g');
   const linkHit = linkGroup.append('line')
