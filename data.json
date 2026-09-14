@@ -3,7 +3,7 @@
     "title": "Quién vigila a la superinteligencia",
     "subtitle": "mapa navegable — busca, arrastra los nodos, pasa el ratón para resaltar conexiones, clic para ver el detalle",
     "footer": "Mapa no exhaustivo. Cada ficha indica si el dato está verificado con fuente primaria o no; los vínculos de financiación reflejan el papel histórico de estos fondos en el ecosistema, no necesariamente una subvención vigente.",
-    "last_updated": "2026-09-13"
+    "last_updated": "2026-09-14"
   },
   "panels": [
     {
@@ -704,6 +704,136 @@
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/Statement_on_AI_Risk",
       "last_checked": "2026-09-13"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2023-07",
+      "founded_precision": "month",
+      "leadership": [
+        "Liang Wenfeng (fundador y CEO)"
+      ],
+      "desc": "Laboratorio de IA fundado en julio de 2023 en Hangzhou por Liang Wenfeng, financiado por su fondo de cobertura cuantitativo High-Flyer, dedicado a la investigación en IA general más allá del trading. El lanzamiento en enero de 2025 de su modelo de razonamiento R1 —comparable a o1 de OpenAI a una fracción del coste de entrenamiento declarado— provocó una caída bursátil en el sector tecnológico estadounidense y consolidó a DeepSeek como referencia global de la IA china.",
+      "url": "https://www.deepseek.com",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/DeepSeek",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "alibaba-qwen",
+      "name": "Alibaba Cloud — Qwen (Tongyi Lab)",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2023-04",
+      "founded_precision": "month",
+      "leadership": [
+        "Zhou Jingren (arquitecto jefe de IA de Alibaba Group, al frente de Tongyi Lab desde abr. 2026)"
+      ],
+      "desc": "División de modelos de fundación de Alibaba Cloud, responsable de la familia Qwen (Tongyi Qianwen), presentada en abril de 2023 y con más de 400 modelos publicados en abierto desde entonces. En 2026 Alibaba reestructuró su liderazgo de IA tras la salida de varias figuras clave del equipo original de Qwen, elevando Tongyi a unidad de negocio propia; su modelo insignia Qwen3.8-Max, de 2,4 billones de parámetros, se presenta como de rendimiento cercano a la frontera.",
+      "url": "https://qwen.ai",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Qwen",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "moonshot-ai",
+      "name": "Moonshot AI",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2023-03",
+      "founded_precision": "month",
+      "leadership": [
+        "Yang Zhilin (CEO, cofundador)"
+      ],
+      "desc": "Laboratorio de IA fundado en marzo de 2023 en Pekín por Yang Zhilin, Zhou Xinyu y Wu Yuxin, antiguos compañeros en la Universidad de Tsinghua. Desarrolla la familia de modelos Kimi; en julio de 2026 lanzó Kimi K3, descrito como el modelo de pesos abiertos más grande publicado hasta la fecha (2,8 billones de parámetros), y alcanzó una valoración de 35.000 millones de dólares, la segunda más alta entre las IA privadas chinas tras DeepSeek.",
+      "url": "https://www.moonshot.ai",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Moonshot_AI",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "zhipu-ai",
+      "name": "Zhipu AI (Z.ai)",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2019-06",
+      "founded_precision": "month",
+      "leadership": [
+        "Zhang Peng (CEO)",
+        "Tang Jie (cofundador, figura científica de referencia)"
+      ],
+      "desc": "Laboratorio de IA nacido en junio de 2019 como spin-off del Knowledge Engineering Group (KEG) de la Universidad de Tsinghua, fundado por los profesores Tang Jie y Li Juanzi. Desarrolla la familia de modelos GLM; se rebautizó internacionalmente como Z.ai en julio de 2025 y en enero de 2026 salió a bolsa en Hong Kong, la primera empresa de modelos de fundación en cotizar en ningún mercado del mundo.",
+      "url": "https://z.ai",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Z.ai",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2021-12",
+      "founded_precision": "month",
+      "leadership": [
+        "Yan Junjie (presidente y CEO, cofundador)"
+      ],
+      "desc": "Laboratorio de IA con sede en Shanghái fundado en diciembre de 2021 por antiguos investigadores de SenseTime, entre ellos Yan Junjie (CEO), Yang Bin y Zhou Yucong. Desarrolla modelos multimodales (serie M) y productos de consumo como Hailuo AI y Talkie; salió a bolsa en Hong Kong en enero de 2026, convirtiendo a Yan Junjie en multimillonario.",
+      "url": "https://www.minimax.io",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/MiniMax_(company)",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "bytedance-seed",
+      "name": "ByteDance Seed",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": 2023,
+      "founded_precision": "year",
+      "leadership": [
+        "Wu Yonghui (responsable de Seed AI Lab desde feb. 2025)"
+      ],
+      "desc": "Grupo de investigación de IA de frontera de ByteDance, creado a principios de 2023 con equipos en Pekín, Singapur y Palo Alto, dedicado a explorar nuevos enfoques hacia la inteligencia general. Desarrolla la familia de modelos Seed que da soporte a Doubao, el asistente de IA de ByteDance con mayor base de usuarios de China (345 millones de usuarios mensuales en marzo de 2026); ByteDance presupuestó unos 23.000 millones de dólares para IA en 2026.",
+      "url": "https://seed.bytedance.com/en/",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/ByteDance",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "tii",
+      "name": "Technology Innovation Institute (TII) — Falcon",
+      "type": "frontier-lab",
+      "country": "Emiratos Árabes Unidos",
+      "founded": "2020-05",
+      "founded_precision": "month",
+      "leadership": [
+        "Najwa Aaraj (CEO)",
+        "Faisal Al Bannai (presidente de TII y secretario general de ATRC, con rango ministerial)"
+      ],
+      "desc": "Instituto de investigación aplicada de Abu Dabi, pilar del Advanced Technology Research Council (ATRC), fundado en mayo de 2020. Cubre varias disciplinas (computación cuántica, robótica, criptografía) pero su unidad de IA generativa produce la familia de modelos abiertos Falcon, lanzada en 2023, que ha llegado a situarse entre los mejores modelos de código abierto del mundo (Falcon-180B). Su comercialización corre a cargo de AI71, una joint venture con G42 creada en marzo de 2024.",
+      "url": "https://www.tii.ae",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Technology_Innovation_Institute",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "g42",
+      "name": "G42 (Group 42)",
+      "type": "funding",
+      "country": "Emiratos Árabes Unidos",
+      "founded": 2018,
+      "founded_precision": "year",
+      "leadership": [
+        "Peng Xiao (CEO grupal, fundador)"
+      ],
+      "desc": "Holding emiratí de infraestructura e inversión en IA fundado en 2018, con el fondo soberano Mubadala como accionista de referencia. En abril de 2024 Microsoft invirtió 1.500 millones de dólares a cambio de una participación minoritaria y un puesto en el consejo, tras que G42 aceptara ante el gobierno de EE. UU. reducir sus vínculos con empresas chinas —incluida una participación en ByteDance— como condición del acuerdo. Coordina, entre otras filiales, AI71 (comercialización de Falcon, joint venture con TII) y el fondo de inversión MGX.",
+      "url": "https://www.g42.ai",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/G42_(company)",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1147,6 +1277,15 @@
       "desc": "Miembros de Stop AI han sido arrestados bloqueando las puertas de las oficinas de OpenAI como forma de desobediencia civil — parte fundacional de su repertorio táctico, documentada en cobertura de prensa (Fortune, SF Standard) y en su propia página de Wikipedia.",
       "confidence": "verified",
       "source_ref": "https://en.wikipedia.org/wiki/Stop_AI"
+    },
+    {
+      "source": "tii",
+      "target": "g42",
+      "type": "network",
+      "label": "joint venture (AI71)",
+      "desc": "TII y G42 crearon en marzo de 2024 la joint venture AI71 para comercializar la familia de modelos Falcon en clientes empresariales y gubernamentales.",
+      "confidence": "verified",
+      "source_ref": "https://www.tii.ae/news/abu-dhabis-advanced-technology-research-council-launches-ai71-new-ai-company-pioneering"
     }
   ]
 }

@@ -2,6 +2,33 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (laboratorios frontier de Asia y el mundo árabe)
+Se añaden 8 nodos `frontier-lab`/`funding` y 1 arista, investigados y aprobados en
+bloque desde `research/candidatos.md`:
+
+- China: `deepseek`, `alibaba-qwen` (Alibaba Cloud — Qwen / Tongyi Lab),
+  `moonshot-ai`, `zhipu-ai` (Z.ai), `minimax`, `bytedance-seed`. Los seis pasan el
+  criterio de "frontera" por benchmarks públicos comparados directamente con
+  GPT/Claude/Gemini o por estatus de "AI Tiger" chino.
+- Emiratos Árabes Unidos: `tii` (Technology Innovation Institute, familia Falcon,
+  `frontier-lab`) y `g42` (Group 42, holding de cómputo/inversión soberana,
+  `type: "funding"` — no encaja perfectamente en ninguna categoría existente, ver
+  nota en el commit). Arista `tii → g42` (`network`, joint venture AI71, marzo 2024).
+
+Descartados por no cumplir el criterio de frontera (ambición/capital sin capacidad de
+frontera construida de forma independiente, o modelo de escala regional pequeña):
+Sakana AI (Japón), Naver/LG AI Research (Corea del Sur), HUMAIN (Arabia Saudí), Jais
+(MBZUAI/Core42) y ALLaM (SDAIA) — ver `research/descartados.md`.
+
+También se descarta definitivamente el candidato CEGIA (Ayuntamiento de València),
+propuesto el 2026-09-13: el usuario decidió no añadirlo al mapa.
+
+Nota de esquema: los 8 nodos nuevos **no** llevan campo `panel` — se confirmó que
+`site/app.js` ya no usa ese campo para nada (el mapa es un grafo de fuerza D3 puro,
+sin agrupación visual regional); los nodos antiguos que aún lo llevan son resto
+muerto, sin limpiar en esta sesión para no mezclar ese cambio de esquema con la
+adición de datos.
+
 ## 2026-09-14 (nueva página "Qué es la ASI")
 Se añade `site/asi.html`, página divulgativa independiente enlazada desde el
 mapa, que explica qué es la ASI, por qué se plantea como riesgo y qué hace
