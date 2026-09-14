@@ -2,6 +2,61 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-15 (nueva sección "Y mientras tanto, en China..." en asi.html + Frontier AI Risk Management Framework en el mapa)
+
+**`site/asi.html`:**
+- Reescritos varios párrafos de "Qué es la ASI" y del argumento de "Objetivos
+  mal especificados" y "Dificultad de verificación" a petición del usuario,
+  con dos ejemplos nuevos verificados: el caso de CoastRunners (OpenAI,
+  "Faulty Reward Functions in the Wild", dic. 2016) y el paper de
+  "Alignment Faking in Large Language Models" (Anthropic/Redwood Research,
+  dic. 2024).
+- Añadido un contraargumento al episodio "slow down" de 2026: la crítica de
+  que ralentizar de forma coordinada pidiendo supervisión gubernamental
+  beneficia a quien ya lidera la carrera ("regulatory capture"), con cita de
+  Simon Sharwood en The Register (14 de sept. de 2026) y el detalle de que
+  las restricciones de exportación de chips a China que propone Amodei dan
+  a la propuesta un efecto competitivo geográfico concreto.
+- **Nueva sección "Y mientras tanto, en China..."**, entre "Quién lo
+  cuestiona y por qué" y "Qué hace el resto del mapa" (con su entrada en los
+  dos índices, de escritorio y móvil): cubre el giro de la comunidad técnica
+  y política china hacia el vocabulario de riesgo catastrófico desde
+  IDAIS-Beijing (marzo de 2024, con la exviceministra Fu Ying entre las
+  firmantes), la institucionalización vía CnAISDA (feb. 2025) y el Frontier
+  AI Risk Management Framework de Shanghai AI Lab/Concordia AI, y el diálogo
+  bilateral EE. UU.-China sobre seguridad de IA previsto para mediados de
+  sept. de 2026 tras dos años sin contacto oficial (Taipei Times/Bloomberg
+  Opinion, 15 de sept. de 2026).
+- Corregido un error propio: había escrito que CnAISDA se fundó en junio de
+  2025, tomado de una síntesis de búsqueda no verificada; la fecha correcta,
+  ya confirmada en `data.json`, es febrero de 2025 (Cumbre de Acción sobre
+  IA de París).
+
+**`site/data.json`:**
+- Nuevo nodo `frontier-ai-risk-mgmt-framework` (documento): el marco de
+  gestión de riesgo catastrófico de Shanghai AI Lab/Concordia AI, que ya se
+  mencionaba de pasada en la ficha de `shanghai-ai-lab` pero no tenía nodo
+  propio, a diferencia de compromisos equivalentes como
+  `seoul-frontier-ai-commitments`. Se documentan sus tres versiones: v1.0
+  (25 jul. 2025), v1.5 (25 feb. 2026) y v2.0 (19 jul. 2026, WAIC 2026).
+- 2 aristas de coautoría (`frontier-ai-risk-mgmt-framework` → `shanghai-ai-lab`,
+  `frontier-ai-risk-mgmt-framework` → `concordia`).
+- 6 aristas `eval` (`shanghai-ai-lab` → `deepseek`, `meta-msl`,
+  `alibaba-qwen`, `anthropic`, `google-deepmind`, `openai`), a partir de la
+  Tabla 2 del informe técnico del framework (arXiv 2507.16534), que evalúa
+  17 modelos de 7 desarrolladores. Mistral AI, el séptimo desarrollador
+  evaluado, se queda fuera por no tener nodo en el mapa.
+- Corregida una arista existente (`shanghai-ai-lab` → `concordia`) que
+  databa la coautoría del framework en noviembre de 2025, mezclándolo con
+  la Frontier AI Risk Monitoring Platform (que sí es de esa fecha); ahora
+  la arista se refiere solo a la Monitoring Platform, y la coautoría del
+  framework queda representada por las dos aristas nuevas del punto
+  anterior.
+
+Todo lo anterior se investigó y volcó primero en `research/candidatos.md`
+para aprobación explícita del usuario antes de tocar `data.json`, siguiendo
+el flujo de este proyecto; el archivo queda vacío de nuevo tras aprobarse.
+
 ## 2026-09-14 (rediseño de la disposición visual del grafo — sin cambios de datos)
 Con el mapa ya en 70 nodos, el grafo de fuerza "libre" se había vuelto difícil de
 leer (apelotonado en el centro, con algún nodo disparado lejos). Serie de ajustes
