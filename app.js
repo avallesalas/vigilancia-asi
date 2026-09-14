@@ -99,7 +99,11 @@ function buildForceGraph(container, nodesIn, edgesIn){
   const nodes = nodesIn.map(n=>Object.assign({},n));
   const links = edgesIn.map(e=>Object.assign({},e));
   const byId = {}; nodes.forEach(n=>byId[n.id]=n);
-  const width = 1200, height = 760;
+  // El espacio de simulación crece con el número de nodos (referencia: 1200x760
+  // para ~40) para que el grafo tenga sitio para respirar y no se apelotone en
+  // el centro; el ajuste de zoom al final del layout encuadra el resultado.
+  const scale = Math.sqrt(nodes.length/40);
+  const width = Math.round(1200*scale), height = Math.round(760*scale);
 
   container.innerHTML = `
     <div class="fg-toolbar">
@@ -123,11 +127,20 @@ function buildForceGraph(container, nodesIn, edgesIn){
   const zoom = d3.zoom().scaleExtent([0.35,3]).on('zoom', ev=>g.attr('transform', ev.transform));
   svg.call(zoom);
 
+  // Grado de cada nodo (nº de aristas): los nodos sin ninguna arista no tienen
+  // nada que los frene frente a la repulsión y salen despedidos lejos del
+  // resto — se anclan al centro con más fuerza que los que sí están conectados,
+  // cuya posición ya gobierna la estructura de enlaces.
+  const degree = {}; nodes.forEach(n=>degree[n.id]=0);
+  links.forEach(l=>{ degree[l.source]=(degree[l.source]||0)+1; degree[l.target]=(degree[l.target]||0)+1; });
+
   const sim = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(links).id(d=>d.id).distance(78).strength(0.55))
-    .force('charge', d3.forceManyBody().strength(-230))
+    .force('link', d3.forceLink(links).id(d=>d.id).distance(110).strength(0.45))
+    .force('charge', d3.forceManyBody().strength(-380))
     .force('center', d3.forceCenter(width/2, height/2))
-    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:d.type==='document'?32:26));
+    .force('x', d3.forceX(width/2).strength(d=>degree[d.id]?0.02:0.3))
+    .force('y', d3.forceY(height/2).strength(d=>degree[d.id]?0.02:0.3))
+    .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:d.type==='document'?32:26).iterations(2));
 
   const linkGroup = g.append('g').selectAll('g').data(links).join('g');
   const linkHit = linkGroup.append('line')
@@ -205,6 +218,22 @@ function buildForceGraph(container, nodesIn, edgesIn){
     linkHit.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
     linkSel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
     nodeSel.attr('transform',d=>`translate(${d.x},${d.y})`);
+  });
+
+  // Al enfriarse la simulación, encuadra el resultado real (que puede ser más
+  // ancho/alto que el viewBox base) en vez de dejar la vista inicial recortada
+  // o con espacio vacío — el zoom/pan interactivo sigue disponible después.
+  let fitted = false;
+  sim.on('end', ()=>{
+    if(fitted) return;
+    fitted = true;
+    const pad = 40;
+    const xs = nodes.map(d=>d.x), ys = nodes.map(d=>d.y);
+    const x0 = Math.min(...xs)-pad, x1 = Math.max(...xs)+pad;
+    const y0 = Math.min(...ys)-pad, y1 = Math.max(...ys)+pad;
+    const k = Math.max(0.35, Math.min(3, 0.95*Math.min(width/(x1-x0), height/(y1-y0))));
+    const tx = width/2 - k*(x0+x1)/2, ty = height/2 - k*(y0+y1)/2;
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(k));
   });
 
   function highlight(d){
