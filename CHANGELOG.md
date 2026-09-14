@@ -2,6 +2,33 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (rediseño de la disposición visual del grafo — sin cambios de datos)
+Con el mapa ya en 70 nodos, el grafo de fuerza "libre" se había vuelto difícil de
+leer (apelotonado en el centro, con algún nodo disparado lejos). Serie de ajustes
+en `site/app.js`/`site/assets/style.css`, ninguno toca `data.json`:
+
+- Etiquetas de nodo más grandes (9px → 12px) y más espacio entre nodos
+  (distancia de enlace y repulsión al alza) para compensar.
+- **Disposición en tres paneles fijos**, a petición del usuario (con boceto):
+  documentos arriba, laboratorios de frontera en medio, el resto de
+  organizaciones abajo — visualiza el eje documento → laboratorio → vigilancia.
+  Cada nodo lleva un *clamp* duro de posición en cada tick (no solo una fuerza
+  suave): no puede salir de su panel aunque un enlace tire hacia otra capa.
+- Dentro de cada panel, reparto horizontal de punta a punta por región
+  geográfica (derivada de `country`). Los documentos (sin país real en su
+  mayoría) se reparten por orden de aparición; los laboratorios recalculan las
+  fracciones de región solo entre las regiones que de verdad tienen algún
+  laboratorio, para no apelotonarse en el tercio del panel que les
+  correspondería con las fracciones fijas de la banda de abajo (que sí cubre
+  las 8 regiones).
+- Corregido un bug de la primera versión de esta disposición: documentos y
+  laboratorios derivaban hacia la izquierda (arrastrados por sus aristas hacia
+  el clúster EE. UU./Reino Unido) en vez de quedarse centrados/repartidos.
+
+Detalle completo de la lógica en `CLAUDE.md`, sección "Disposición visual del
+grafo". Cada paso se probó en local (`python3 -m http.server` + Claude in
+Chrome) antes de publicar.
+
 ## 2026-09-14 (investigación profunda de las 18 aristas sin verificar: 11 pasan a verified)
 El usuario pidió una investigación "profunda y cuidadosa" de las 18 aristas
 `unverified` que quedaban en el backlog. Siguiendo la regla de no quedarse con la
