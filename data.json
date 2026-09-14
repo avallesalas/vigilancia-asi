@@ -834,6 +834,35 @@
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/G42_(company)",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "frontier-model-forum",
+      "name": "Frontier Model Forum",
+      "type": "network",
+      "country": "Internacional (sede en EE. UU.)",
+      "founded": "2023-07",
+      "founded_precision": "month",
+      "leadership": [
+        "Chris Meserole (director ejecutivo)"
+      ],
+      "desc": "Organismo industrial sin ánimo de lucro anunciado el 26 de julio de 2023 por Anthropic, Google, Microsoft y OpenAI, dedicado a coordinar la seguridad técnica entre laboratorios de IA de frontera: buenas prácticas compartidas, investigación de seguridad y canal de información hacia gobiernos y sociedad civil. Amazon y Meta se unieron el 20 de mayo de 2024. Ningún laboratorio chino ha sido miembro en ningún momento.",
+      "url": "https://www.frontiermodelforum.org",
+      "confidence": "verified",
+      "source": "https://www.frontiermodelforum.org/about-us/",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "seoul-frontier-ai-commitments",
+      "name": "Frontier AI Safety Commitments (Cumbre de Seúl, 2024)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2024-05",
+      "founded_precision": "month",
+      "desc": "Compromiso voluntario firmado el 21 de mayo de 2024 en la Cumbre de IA de Seúl: 16 empresas se comprometieron a evaluar riesgos catastróficos de sus modelos de frontera, publicar un marco de seguridad propio y compartir información con gobiernos. Zhipu AI fue la única empresa china entre esos 16 firmantes originales; el resto de laboratorios chinos, pese a estar invitados, estuvieron ausentes (Carnegie Endowment). Una actualización posterior del documento oficial, recogida en febrero de 2025 antes de la Cumbre de IA de París, añadió a la lista Magic, MiniMax, 01.AI y NVIDIA — MiniMax y 01.AI son los otros dos laboratorios chinos que se sumaron, aunque ninguno de los dos llegó a publicar el marco de seguridad que el compromiso exige.",
+      "url": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+      "confidence": "verified",
+      "source": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1286,6 +1315,96 @@
       "desc": "TII y G42 crearon en marzo de 2024 la joint venture AI71 para comercializar la familia de modelos Falcon en clientes empresariales y gubernamentales.",
       "confidence": "verified",
       "source_ref": "https://www.tii.ae/news/abu-dhabis-advanced-technology-research-council-launches-ai71-new-ai-company-pioneering"
+    },
+    {
+      "source": "frontier-model-forum",
+      "target": "anthropic",
+      "type": "network",
+      "label": "miembro fundador (jul. 2023)",
+      "desc": "Anthropic es miembro fundador del Frontier Model Forum, anunciado el 26 de julio de 2023 junto con Google, Microsoft y OpenAI.",
+      "confidence": "verified",
+      "source_ref": "https://www.frontiermodelforum.org/updates/announcing-the-frontier-model-forum/"
+    },
+    {
+      "source": "frontier-model-forum",
+      "target": "openai",
+      "type": "network",
+      "label": "miembro fundador (jul. 2023)",
+      "desc": "OpenAI es miembro fundador del Frontier Model Forum, anunciado el 26 de julio de 2023 junto con Anthropic, Google y Microsoft.",
+      "confidence": "verified",
+      "source_ref": "https://www.frontiermodelforum.org/updates/announcing-the-frontier-model-forum/"
+    },
+    {
+      "source": "frontier-model-forum",
+      "target": "google-deepmind",
+      "type": "network",
+      "label": "miembro fundador (jul. 2023)",
+      "desc": "Google es miembro fundador del Frontier Model Forum, anunciado el 26 de julio de 2023 junto con Anthropic, Microsoft y OpenAI.",
+      "confidence": "verified",
+      "source_ref": "https://www.frontiermodelforum.org/updates/announcing-the-frontier-model-forum/"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "anthropic",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024)",
+      "desc": "Anthropic firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "openai",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024)",
+      "desc": "OpenAI firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "google-deepmind",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024)",
+      "desc": "Google DeepMind firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "zhipu-ai",
+      "type": "weak",
+      "label": "cofirmante — única china en la lista original (Seúl, 2024)",
+      "desc": "Zhipu AI fue la única empresa china entre los 16 firmantes originales de mayo de 2024; el resto de laboratorios chinos invitados no firmaron esa primera lista (Carnegie Endowment). Un compromiso puntual firmado en un evento, no una alianza operativa con el resto de firmantes.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "minimax",
+      "type": "weak",
+      "label": "cofirmante — añadido tras la lista original (~feb. 2025)",
+      "desc": "MiniMax se sumó a los Frontier AI Safety Commitments en una ampliación posterior a la lista original de Seúl, recogida en el documento oficial en febrero de 2025 antes de la Cumbre de IA de París, junto con 01.AI, Magic y NVIDIA. Pese al compromiso, no llegó a publicar el marco de seguridad que el documento exige.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "g42",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024)",
+      "desc": "G42 firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "tii",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024)",
+      "desc": "Technology Innovation Institute firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
     }
   ]
 }

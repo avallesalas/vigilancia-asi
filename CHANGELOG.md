@@ -2,6 +2,33 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (puentes entre laboratorios de frontera: Frontier Model Forum y Seoul Commitments)
+Se añaden 2 nodos y 10 aristas para modelar las dos únicas relaciones documentadas
+entre laboratorios de frontera occidentales y chinos (el usuario aportó el hallazgo
+inicial con fuentes; se verificó cada dato contra la fuente primaria antes de escribir
+la ficha, y se corrigió un matiz):
+
+- **`frontier-model-forum`** (`type: network`) — organismo anunciado el 26 de julio
+  de 2023 por Anthropic, Google, Microsoft y OpenAI; Amazon y Meta se unieron el 20
+  de mayo de 2024. Ningún laboratorio chino es miembro. Aristas hacia `anthropic`,
+  `openai` y `google-deepmind` (miembros fundadores; Amazon/Meta no son nodos en
+  el mapa todavía).
+- **`seoul-frontier-ai-commitments`** (`type: document`) — compromiso voluntario de
+  la Cumbre de IA de Seúl, 21 de mayo de 2024, 16 firmantes. Aristas hacia
+  `anthropic`, `openai`, `google-deepmind`, `g42` y `tii` (`network`, cofirmantes) y
+  hacia `zhipu-ai` y `minimax` (`weak`, con matiz: Zhipu fue la única china en la
+  lista *original*, no la norma del ecosistema chino — el resto de laboratorios
+  chinos invitados no firmaron, según Carnegie Endowment).
+
+**Corrección respecto al hallazgo aportado por el usuario:** la lista de firmantes no
+se cerró en mayo de 2024. El documento oficial de gov.uk (actualizado feb. de 2025,
+antes de la Cumbre de IA de París) muestra 4 firmantes añadidos después: Magic,
+MiniMax, 01.AI y NVIDIA — es decir, **MiniMax y 01.AI son dos laboratorios chinos
+adicionales que también se sumaron**, aunque más tarde y sin llegar a publicar el
+marco de seguridad que el compromiso les exigía. Como `minimax` ya es un nodo del
+mapa, se añadió esa arista con esa nota; `01.AI` no está en el mapa, no se creó nodo
+para no hacerlo solo por esta relación.
+
 ## 2026-09-14 (laboratorios frontier de Asia y el mundo árabe)
 Se añaden 8 nodos `frontier-lab`/`funding` y 1 arista, investigados y aprobados en
 bloque desde `research/candidatos.md`:
