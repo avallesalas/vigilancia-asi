@@ -2,6 +2,27 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (Tencent y Shanghai AI Lab: los dos candidatos de la auditoría, aprobados)
+El usuario aprobó añadir los dos candidatos que salieron de la auditoría de
+consistencia (ver entrada anterior). Dos nodos y 11 aristas:
+
+- **`tencent`** (Tencent — Hunyuan, `frontier-lab`): división de modelos de
+  fundación presentada en sept. 2023; Hunyuan-3 (2026) es un MoE de 295.000M de
+  parámetros. Aristas `funding` hacia `zhipu-ai` (1,58% tras salida a bolsa),
+  `minimax` (2,58%) y `moonshot-ai` (uno de los primeros inversores) — todas
+  `confidence: "verified"`. La arista `→ deepseek` se añade con
+  **`confidence: "unverified"`**, tal y como se advirtió en `candidatos.md`: la
+  ronda estaba en negociación en abril de 2026 (Alibaba se retiró, Tencent entró
+  como minoritario) sin que se haya confirmado el cierre final ni el porcentaje.
+- **`shanghai-ai-lab`** (`research`, fundado 2020): coautor junto a Concordia AI
+  del Frontier AI Risk Management Framework y la Frontier AI Risk Monitoring
+  Platform (nov. 2025). Arista `→ concordia` (coautoría) y las mismas 6 aristas
+  `eval` que ya tiene Concordia hacia openai/anthropic/deepseek/alibaba-qwen/
+  minimax/spacexai (Shanghai AI Lab es coautor del mismo trabajo, no una entidad
+  separada que llegó por su cuenta a las mismas conclusiones).
+
+El mapa queda en 70 nodos y 128 aristas.
+
 ## 2026-09-14 (auditoría completa de consistencia: 17 aristas nuevas)
 El usuario pidió recorrer todo `data.json`, verificar con fuentes primarias que no
 faltan aristas relevantes entre los nodos existentes, y anotar como candidatos

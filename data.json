@@ -1126,6 +1126,39 @@
       "confidence": "verified",
       "source": "https://deepmind.google/blog/introducing-the-frontier-safety-framework/",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "tencent",
+      "name": "Tencent — Hunyuan",
+      "type": "frontier-lab",
+      "country": "China",
+      "founded": "2023-09",
+      "founded_precision": "month",
+      "leadership": [
+        "Ma Huateng / Pony Ma (fundador, presidente y CEO de Tencent)",
+        "Dowson Tong (SEVP, CEO de Cloud and Smart Industries Group — liderazgo operativo de Hunyuan)"
+      ],
+      "desc": "División de modelos de fundación de Tencent (fundada como compañía en 1998), presentada el 7 de septiembre de 2023 en la Tencent Global Digital Ecosystem Summit. Hunyuan-3 (2026) es un modelo de mezcla de expertos de 295.000 millones de parámetros. Tencent es además uno de los inversores más activos en el ecosistema chino de IA de frontera, con participación en las rondas de Zhipu AI, Moonshot AI y MiniMax.",
+      "url": "https://hunyuan.tencent.com",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Tencent",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "shanghai-ai-lab",
+      "name": "Shanghai Artificial Intelligence Laboratory (Shanghai AI Lab)",
+      "type": "research",
+      "country": "China",
+      "founded": 2020,
+      "founded_precision": "year",
+      "leadership": [
+        "Zhou Bowen (director; exvicepresidente senior de JD.com, exdirector de investigación de IA en Watson Group de IBM)"
+      ],
+      "desc": "Institución de investigación de nivel nacional fundada en 2020 en Shanghái. Sus investigadores han sido autores principales de seis evaluaciones de seguridad de IA de frontera, más que cualquier otro grupo de investigación chino. Coautora, junto a Concordia AI, del Frontier AI Risk Management Framework v1.0 y de la Frontier AI Risk Monitoring Platform (nov. 2025), que evalúa modelos de 15 desarrolladores en riesgos de ofensiva cibernética, biológicos, químicos y de pérdida de control.",
+      "url": "not found",
+      "confidence": "verified",
+      "source": "https://merics.org/en/comment/profile-shanghai-ai-lab-driving-both-ai-safety-and-development",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -2181,6 +2214,105 @@
       "desc": "El Africa AI Council está copresidido por la Comisión de la Unión Africana y la UIT para garantizar la alineación estratégica con la Continental AI Strategy, en su fase de implementación desde 2025.",
       "confidence": "verified",
       "source_ref": "https://techreviewafrica.com/news/6362/african-union-smart-africa-align-efforts-to-promote-continental-ai-strategy"
+    },
+    {
+      "source": "tencent",
+      "target": "zhipu-ai",
+      "type": "funding",
+      "label": "inversor (1,58% tras salida a bolsa)",
+      "desc": "Tencent participó en la ronda Serie B4 de Zhipu AI en 2024 con 200 millones de yuanes; mantiene una participación del 1,58% tras su salida a bolsa en Hong Kong.",
+      "confidence": "verified",
+      "source_ref": "https://www.scmp.com/tech/big-tech/article/3362013/moonshot-enflame-how-tencent-betting-big-chinas-ai-champions"
+    },
+    {
+      "source": "tencent",
+      "target": "minimax",
+      "type": "funding",
+      "label": "inversor desde la Serie A (2,58%)",
+      "desc": "Tencent invierte en MiniMax desde su ronda Serie A; mantiene una participación del 2,58% tras su salida a bolsa en Hong Kong.",
+      "confidence": "verified",
+      "source_ref": "https://www.scmp.com/tech/big-tech/article/3362013/moonshot-enflame-how-tencent-betting-big-chinas-ai-champions"
+    },
+    {
+      "source": "tencent",
+      "target": "moonshot-ai",
+      "type": "funding",
+      "label": "uno de los primeros inversores",
+      "desc": "Tencent fue uno de los primeros inversores de Moonshot AI y participó en la ampliación de la Serie B (ago. 2024), la Serie C y la ronda de febrero de 2026.",
+      "confidence": "verified",
+      "source_ref": "https://www.scmp.com/tech/big-tech/article/3362013/moonshot-enflame-how-tencent-betting-big-chinas-ai-champions"
+    },
+    {
+      "source": "tencent",
+      "target": "deepseek",
+      "type": "funding",
+      "label": "inversor minoritario (ronda sin cierre confirmado)",
+      "desc": "Tencent y Alibaba negociaron en abril de 2026 entrar en la primera ronda de financiación externa de DeepSeek (valoración >20.000 M$); Tencent propuso hasta un 20% de participación, que DeepSeek rechazó por ceder demasiado control. En la ronda de mayo de 2026, Alibaba se retiró y Tencent entró como inversor financiero minoritario sin injerencia técnica — no se ha confirmado el cierre final ni el porcentaje exacto.",
+      "confidence": "unverified",
+      "source_ref": "https://www.bloomberg.com/news/articles/2026-04-22/deepseek-in-talks-to-raise-at-20-billion-value-the-information"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "openai",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a GPT entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "anthropic",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a Claude entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "deepseek",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a DeepSeek entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "alibaba-qwen",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a Qwen entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "minimax",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a MiniMax entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "spacexai",
+      "type": "eval",
+      "label": "monitoriza en su Frontier AI Risk Monitoring Platform (nov. 2025)",
+      "desc": "Shanghai AI Lab incluye a Grok entre los modelos que monitoriza, junto a Concordia AI, en su Frontier AI Risk Monitoring Platform (lanzada el 11 de noviembre de 2025), la primera de este tipo en China centrada en riesgos catastróficos.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
+    },
+    {
+      "source": "shanghai-ai-lab",
+      "target": "concordia",
+      "type": "network",
+      "label": "coautoría del Frontier AI Risk Management Framework (nov. 2025)",
+      "desc": "Shanghai AI Lab y Concordia AI publicaron juntos el Frontier AI Risk Management Framework v1.0 y la Frontier AI Risk Monitoring Platform en noviembre de 2025.",
+      "confidence": "verified",
+      "source_ref": "https://aisafetychina.substack.com/p/10-key-insights-from-concordia-ais"
     }
   ]
 }
