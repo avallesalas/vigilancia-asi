@@ -2,6 +2,35 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (organismos de vigilancia en Latinoamérica, África y Arabia Saudí)
+Continuación del equilibrio geográfico del mapa. Seis nodos nuevos, sin aristas
+(no encontré relaciones documentadas entre ellos y el resto del mapa que pasaran
+el listón de fuente puntual, más allá de coexistir en la misma región):
+
+- **`sdaia`** (Saudi Data & AI Authority, `gov`) — creada por decreto real el 30
+  de agosto de 2019, dependiente del primer ministro saudí; primera pieza de
+  gobernanza del mundo árabe más allá de EAU. Su foco es estrategia/gobernanza
+  nacional, no evaluación de riesgo catastrófico al estilo AISI — lo señalo en el
+  propio `desc` para no insinuar una equivalencia que no existe.
+- **`cenia`** (Centro Nacional de Inteligencia Artificial, Chile, `research`) —
+  fundado nov. 2021 por 4 universidades, financiado por ANID; primera pieza
+  chilena del mapa (hasta ahora solo Brasil/España-con-foco-LatAm).
+- **`au-continental-ai-strategy`** (`document`) — estrategia aprobada por el
+  Consejo Ejecutivo de la Unión Africana, 18-19 jul. 2024, Accra.
+- **`africa-ai-council`** (`network`) — consejo de 15 miembros de Smart Africa,
+  presentado el 17 de nov. de 2025 en Conakry.
+- **`ai-safety-cape-town`** (`network`, Sudáfrica) y **`ilina-program`**
+  (`research`, panafricano) — primeras piezas de base en África; ambos con
+  `founded: null` porque no localicé fecha de fundación citable (mismo criterio
+  que `ai-safety-bcn`/`lanas`, no se estimó ni se inventó).
+
+Investigado y **no añadido** por prematuro: el bill PL 2338/2023 de Brasil (aún en
+la Cámara de Diputados, sin ANPD operando como regulador de IA todavía), la
+CONAIA de México (aún proyecto de ley) y el borrador de política de IA de
+Sudáfrica — ninguno es una institución operativa hoy. También confirmado, citando
+Brookings: "no dedicated AI safety research/policy centre has been established
+[in Africa] yet" — un hueco real del ecosistema, no un error de búsqueda.
+
 ## 2026-09-14 (organismos de vigilancia en Asia, para equilibrar el mapa fuera del mundo anglosajón)
 El usuario pidió explícitamente buscar organismos (no más labs) en Asia para que el
 mapa no quede centrado solo en EE. UU./Reino Unido. Cuatro nodos nuevos:

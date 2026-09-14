@@ -964,6 +964,93 @@
       "confidence": "verified",
       "source": "https://asean.org/declaration-on-the-establishment-of-an-asean-ai-safety-network-asean-ai-safe/",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "sdaia",
+      "name": "Saudi Data & AI Authority (SDAIA)",
+      "type": "gov",
+      "country": "Arabia Saudí",
+      "founded": "2019-08",
+      "founded_precision": "month",
+      "leadership": [
+        "Abdullah bin Sharaf Alghamdi (presidente, con rango ministerial, desde su creación)"
+      ],
+      "desc": "Autoridad nacional saudí de datos e IA, creada por decreto real el 30 de agosto de 2019, con dependencia directa del primer ministro. Su mandato incluye la estrategia nacional de IA, la gobernanza de datos y el despliegue de IA en el sector público; coordina dos organismos afiliados creados por el mismo decreto, la National Data Management Office (NDMO) y el National Center for Artificial Intelligence (NCAI). Su foco es de gobernanza y estrategia nacional, no evaluación de riesgo catastrófico al estilo de los AISI occidentales.",
+      "url": "https://sdaia.gov.sa",
+      "confidence": "verified",
+      "source": "https://regulations.ai/regulations/saudi-arabia-2019-08-sdaia-establishment",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "cenia",
+      "name": "Centro Nacional de Inteligencia Artificial (CENIA)",
+      "type": "research",
+      "country": "Chile",
+      "founded": "2021-11",
+      "founded_precision": "month",
+      "desc": "Centro de investigación en IA fundado en noviembre de 2021 por cuatro universidades chilenas (Universidad de Chile, Pontificia Universidad Católica, Universidad Técnica Federico Santa María y Universidad Adolfo Ibáñez), financiado como centro basal por la Agencia Nacional de Investigación y Desarrollo (ANID). Combina investigación científica, transferencia tecnológica con la industria y el Estado, y divulgación; lideró el primer índice regional de IA de Latinoamérica.",
+      "url": "https://cenia.cl",
+      "confidence": "verified",
+      "source": "https://www.latercera.com/que-pasa/noticia/que-es-y-que-hace-el-centro-nacional-de-inteligencia-artificial-que-hay-en-chile/56B5477LXREZVJJ25ZHZ5WBATI/",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "au-continental-ai-strategy",
+      "name": "Estrategia Continental de IA de la Unión Africana",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2024-07",
+      "founded_precision": "month",
+      "desc": "Estrategia continental aprobada por el Consejo Ejecutivo de la Unión Africana en su 45ª sesión ordinaria, Accra (Ghana), 18-19 de julio de 2024. Define un plan por fases (2025-2030): la Fase I (2025-2026) se centra en marcos de gobernanza, estrategias nacionales, movilización de recursos y desarrollo de capacidades. Entre sus cinco ejes incluye explícitamente «reducir el riesgo de la IA mediante gobernanza», junto a inclusión, infraestructura, colaboración público-privada y cooperación internacional.",
+      "url": "https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy",
+      "confidence": "verified",
+      "source": "https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "africa-ai-council",
+      "name": "Africa AI Council (Smart Africa)",
+      "type": "network",
+      "country": "África (coordinado por Smart Africa)",
+      "founded": "2025-11",
+      "founded_precision": "month",
+      "desc": "Consejo de 15 miembros creado por el consejo de administración de Smart Africa —coalición de 40 países africanos— y presentado el 17 de noviembre de 2025 en Conakry (Guinea), durante la Cumbre Global de IA para África organizada con el C4IR de Ruanda. Combina ministros de TIC y altos cargos de Argelia, Chad, Kenia, Nigeria, Ruanda, Togo y Zimbabue con representantes independientes de Microsoft, Google, InstaDeep, la Fundación Gates y la Universidad de Pretoria. Su mandato es orientación estratégica, adopción ética de la IA y desarrollo de capacidades — no evaluación técnica de riesgo.",
+      "url": "https://smartafrica.org",
+      "confidence": "verified",
+      "source": "https://smartafrica.org/the-smart-africas-board-unveils-the-inaugural-africa-ai-council-to-lead-the-continents-ai-transformation/",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "ai-safety-cape-town",
+      "name": "AI Safety Cape Town",
+      "type": "network",
+      "country": "Sudáfrica",
+      "founded": null,
+      "founded_precision": null,
+      "leadership": [
+        "Benjamin Sturgeon (director de tecnología y cofundador)"
+      ],
+      "desc": "Organización de base en Ciudad del Cabo dedicada a ampliar la comunidad de personas que trabajan en seguridad de IA: fellowships en política, gobernanza e investigación técnica, un club de lectura semanal de papers, y talleres en conferencias como Deep Learning IndabaX y SACAIR. Forma parte de un ecosistema sudafricano más amplio que incluye AI Safety South Africa y el Cape Institute for Safe AI.",
+      "url": "https://www.aisafetyct.com",
+      "confidence": "verified",
+      "source": "https://www.aisafetyct.com/about",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "ilina-program",
+      "name": "ILINA Program",
+      "type": "research",
+      "country": "África (panafricano)",
+      "founded": null,
+      "founded_precision": null,
+      "leadership": [
+        "Cecil Abungu (coordinador)"
+      ],
+      "desc": "Programa panafricano que forma a jóvenes investigadores en riesgos catastróficos globales, con foco en IA, a través de un seminario anual y una fellowship de investigación junior; documentado activo desde 2023 (su primer research paper es de ese año). Coordina respuestas al riesgo de IA en África en colaboración con la Universidad de Ciudad del Cabo y el Global Centre on AI Governance; varios de sus antiguos becarios han pasado a programas como la fellowship de investigación de GovAI.",
+      "url": "https://www.ilinaprogram.org",
+      "confidence": "verified",
+      "source": "https://www.ilinaprogram.org/",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
