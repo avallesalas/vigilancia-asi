@@ -138,8 +138,13 @@ function buildForceGraph(container, nodesIn, edgesIn){
     .force('link', d3.forceLink(links).id(d=>d.id).distance(110).strength(0.45))
     .force('charge', d3.forceManyBody().strength(-380))
     .force('center', d3.forceCenter(width/2, height/2))
-    .force('x', d3.forceX(width/2).strength(d=>degree[d.id]?0.02:0.3))
-    .force('y', d3.forceY(height/2).strength(d=>degree[d.id]?0.02:0.3))
+    // Un par de nodos con un solo enlace entre sí (p. ej. dos organismos con una
+    // única relación documentada, sin más conexiones al resto del mapa) se
+    // comporta como un mini-clúster que la repulsión aleja igual que a un nodo
+    // aislado — no basta con distinguir grado 0 de "conectado"; el anclaje debe
+    // debilitarse gradualmente cuantas más aristas tenga cada nodo.
+    .force('x', d3.forceX(width/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
+    .force('y', d3.forceY(height/2).strength(d=>Math.max(0.02, 0.3/(1+degree[d.id]))))
     .force('collide', d3.forceCollide(d=>d.type==='frontier-lab'?34:d.type==='document'?32:26).iterations(2));
 
   const linkGroup = g.append('g').selectAll('g').data(links).join('g');
