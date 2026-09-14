@@ -2,6 +2,31 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-14 (Meta y xAI como frontier-lab, con sus reorganizaciones de 2025-2026)
+A petición explícita del usuario, se reabre e investiga el ítem de Meta/xAI que
+había quedado cerrado sin investigar. Ambos han cambiado de forma sustancial desde
+su fundación original — el nodo refleja el estado actual (sept. 2026), con la
+genealogía en el `desc`, igual que ya se hizo con `google-deepmind`:
+
+- **`meta-msl`** (Meta Superintelligence Labs) — Meta reorganizó toda su IA de
+  frontera el 30 de junio de 2025: Zuckerberg invirtió 14.300 M$ en el 49% de
+  Scale AI para traer a su CEO, Alexandr Wang, como primer chief AI officer.
+  FAIR (el equipo que Meta tenía desde 2013, con Yann LeCun a la cabeza) pasó a
+  ser una de las cuatro divisiones internas de MSL; LeCun dejó Meta el 20 de
+  nov. de 2025 en desacuerdo con la nueva dirección.
+- **`spacexai`** (antes xAI) — SpaceX adquirió xAI en feb. de 2026 (250.000 M$);
+  en mayo de 2026 Musk anunció su disolución como empresa independiente, y en
+  julio de 2026 se completó el rebranding a SpaceXAI. Todos los cofundadores
+  originales de xAI se han ido.
+
+Aristas nuevas: ambos ya estaban conectados al resto del mapa antes de que
+existieran sus nombres actuales — `frontier-model-forum → meta-msl` (Meta se unió
+en mayo de 2024, como compañía, un año antes de MSL) y `seoul-frontier-ai-commitments
+→ meta-msl` / `→ spacexai` (ambos cofirmantes originales de Seúl, 2024). También
+`fli → meta-msl` (D+) y `fli → spacexai` (F), las dos calificaciones que faltaban
+del AI Safety Index de verano 2026 (las 9 empresas evaluadas quedan así todas
+representadas en el mapa).
+
 ## 2026-09-14 (organismos de vigilancia en Latinoamérica, África y Arabia Saudí)
 Continuación del equilibrio geográfico del mapa. Seis nodos nuevos, sin aristas
 (no encontré relaciones documentadas entre ellos y el resto del mapa que pasaran

@@ -1051,6 +1051,39 @@
       "confidence": "verified",
       "source": "https://www.ilinaprogram.org/",
       "last_checked": "2026-09-14"
+    },
+    {
+      "id": "meta-msl",
+      "name": "Meta Superintelligence Labs (MSL)",
+      "type": "frontier-lab",
+      "country": "EE. UU.",
+      "founded": "2025-06",
+      "founded_precision": "month",
+      "leadership": [
+        "Alexandr Wang (chief AI officer, al frente de MSL desde jun. 2025)"
+      ],
+      "desc": "Organización de IA de frontera de Meta, creada el 30 de junio de 2025 tras que Zuckerberg fichara a Alexandr Wang (CEO de Scale AI) como primer chief AI officer de la compañía, invirtiendo 14.300 millones de dólares en una participación del 49% en Scale AI para asegurar su liderazgo. Se divide en cuatro equipos: TBD Lab (modelos de lenguaje, dirigido por Wang), FAIR (investigación fundamental, el equipo que Meta tenía desde 2013), Products and Applied Research y MSL Infra. Yann LeCun, científico jefe de IA desde el origen de FAIR, dejó Meta el 20 de noviembre de 2025 en desacuerdo con la nueva dirección, para fundar Advanced Machine Intelligence Labs.",
+      "url": "https://ai.meta.com",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/Meta_Superintelligence_Labs",
+      "last_checked": "2026-09-14"
+    },
+    {
+      "id": "spacexai",
+      "name": "SpaceXAI (antes xAI)",
+      "type": "frontier-lab",
+      "country": "EE. UU.",
+      "founded": "2023-03",
+      "founded_precision": "month",
+      "leadership": [
+        "Elon Musk (fundador, CEO de SpaceX)",
+        "Michael Nicolls (presidente, desde abr. 2026)"
+      ],
+      "desc": "Laboratorio de IA fundado como xAI el 9 de marzo de 2023 por Elon Musk, para desarrollar el modelo Grok como alternativa a lo que Musk calificó de sesgo ideológico en otros modelos generativos. SpaceX adquirió xAI en febrero de 2026 (operación valorada en 250.000 millones de dólares); en mayo de 2026 Musk anunció la disolución de xAI como empresa independiente, y en julio de 2026 se completó el cambio de marca a SpaceXAI, división de IA de SpaceX. Todos los cofundadores originales de xAI han dejado la compañía.",
+      "url": "https://x.ai",
+      "confidence": "verified",
+      "source": "https://en.wikipedia.org/wiki/SpaceXAI",
+      "last_checked": "2026-09-14"
     }
   ],
   "edges": [
@@ -1809,6 +1842,51 @@
       "desc": "Andrew Yao y Xue Lan firmaron la declaración de consenso de IDAIS-Beijing en marzo de 2024, un año antes de encabezar la fundación de CnAISDA en febrero de 2025 — mismas personas, no una alianza formal entre ambas iniciativas.",
       "confidence": "verified",
       "source_ref": "https://idais.ai/dialogues/"
+    },
+    {
+      "source": "frontier-model-forum",
+      "target": "meta-msl",
+      "type": "network",
+      "label": "miembro (desde may. 2024, como Meta)",
+      "desc": "Meta se unió al Frontier Model Forum el 20 de mayo de 2024, junto con Amazon — más de un año antes de que existiera Meta Superintelligence Labs (jun. 2025), la organización que hoy concentra el desarrollo de IA de frontera de la compañía.",
+      "confidence": "verified",
+      "source_ref": "https://www.frontiermodelforum.org/updates/amazon-and-meta-join-the-frontier-model-forum-to-promote-ai-safety/"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "meta-msl",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024, como Meta)",
+      "desc": "Meta firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024, como compañía — antes de la creación de Meta Superintelligence Labs.",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "seoul-frontier-ai-commitments",
+      "target": "spacexai",
+      "type": "network",
+      "label": "cofirmante (Seúl, 2024, como xAI)",
+      "desc": "xAI firmó los Frontier AI Safety Commitments en la Cumbre de IA de Seúl, mayo de 2024, antes de su absorción en SpaceX como SpaceXAI (2026).",
+      "confidence": "verified",
+      "source_ref": "https://www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safety-commitments-ai-seoul-summit-2024"
+    },
+    {
+      "source": "fli",
+      "target": "meta-msl",
+      "type": "eval",
+      "label": "califica en su AI Safety Index (D+, verano 2026)",
+      "desc": "El AI Safety Index de verano de 2026 de FLI evaluó a Meta como una de las nueve empresas analizadas, con nota D+ (1,32 sobre 4).",
+      "confidence": "verified",
+      "source_ref": "https://futureoflife.org/ai-safety-index-summer-2026/"
+    },
+    {
+      "source": "fli",
+      "target": "spacexai",
+      "type": "eval",
+      "label": "califica en su AI Safety Index (F, verano 2026)",
+      "desc": "El AI Safety Index de verano de 2026 de FLI evaluó a xAI como una de las nueve empresas analizadas, con nota F (0,65 sobre 4).",
+      "confidence": "verified",
+      "source_ref": "https://futureoflife.org/ai-safety-index-summer-2026/"
     }
   ]
 }
