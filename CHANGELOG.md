@@ -2,6 +2,27 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-17 (añade Mistral AI como laboratorio de frontera)
+
+Mistral AI no tenía ficha propia en el mapa — solo aparecía mencionado de
+pasada en la `desc` de DeepSeek (AI Safety Index de FLI). Añadido:
+
+- **Nodo `mistral`** (`type: "frontier-lab"`, `confidence: "verified"`):
+  fundado en abril de 2023 en París por Arthur Mensch, Guillaume Lample y
+  Timothée Lacroix. Verificado fecha/fundadores/sede contra mistral.ai/about
+  y en.wikipedia.org/wiki/Mistral_AI.
+- **Arista `fli -> mistral`** (`eval`): nota F (0,33 sobre 4) en el AI Safety
+  Index de verano 2026 de FLI — la más baja de las nueve empresas evaluadas.
+  Verificado contra futureoflife.org/ai-safety-index-summer-2026.
+- **Arista `seoul-frontier-ai-commitments -> mistral`** (`network`):
+  cofirmante original de los Frontier AI Safety Commitments (Cumbre de Seúl,
+  mayo 2024). Verificado contra la lista oficial de firmantes en gov.uk.
+
+Descartado tras comprobación explícita (sin arista): Mistral no es miembro
+del Frontier Model Forum; ni Arthur Mensch ni nadie de Mistral firmó el CAIS
+Statement on AI Risk (2023); sin evidencia de evaluación publicada de
+modelos de Mistral por METR, Apollo Research, US AISI o UK AISI.
+
 ## 2026-09-15 (deep-linking a nodos del mapa + estandarización de los enlaces node-ref de asi.html)
 
 Los enlaces "↗ Nombre" de `asi.html` hacia el mapa llevaban siempre a
