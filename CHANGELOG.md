@@ -2,6 +2,20 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-21 (añade el llamamiento "A Call for Control of Frontier AI Models")
+
+- **Nodo `call-control-frontier-ai-2026`** (`type: "document"`,
+  `confidence: "verified"`): llamamiento firmado el 21 de septiembre de 2026,
+  durante la semana de alto nivel de la Asamblea General de la ONU, por jefes
+  de Estado o de Gobierno de 21 países más la Comisión Europea, pidiendo
+  supervisión humana de la IA, pruebas de seguridad obligatorias pre-despliegue
+  y una posible institución internacional de verificación. Verificado contra
+  la fuente primaria (presidencia de Finlandia, presidentti.fi) tras confirmar
+  que una noticia de EFE sobre el mismo hecho no era accesible directamente.
+  Sin aristas: el texto del llamamiento no nombra a ninguna empresa ni
+  laboratorio de IA, así que no hay base textual para enlazarlo a nodos de
+  laboratorios de frontera.
+
 ## 2026-09-17 (añade Mistral AI como laboratorio de frontera)
 
 Mistral AI no tenía ficha propia en el mapa — solo aparecía mencionado de

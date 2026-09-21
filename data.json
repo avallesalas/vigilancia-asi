@@ -1190,6 +1190,19 @@
       "confidence": "verified",
       "source": "https://concordia-ai.com/research/frontier-ai-risk-management-framework/",
       "last_checked": "2026-09-15"
+    },
+    {
+      "id": "call-control-frontier-ai-2026",
+      "name": "A Call for Control of Frontier AI Models (2026)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2026-09",
+      "founded_precision": "month",
+      "desc": "Llamamiento publicado el 21 de septiembre de 2026, durante la semana de alto nivel de la Asamblea General de la ONU, y firmado por jefes de Estado o de Gobierno de 21 países (Alemania, Australia, Bahréin, Canadá, Dinamarca, Emiratos Árabes Unidos, España, Estonia, Finlandia, Irlanda, Islandia, Kazajistán, Kenia, Letonia, Moldavia, Noruega, Países Bajos, Singapur, Sudáfrica y Turquía) más la presidenta de la Comisión Europea, Ursula von der Leyen. Pide que la IA permanezca bajo dirección, supervisión y control humanos, protocolos de seguridad transparentes con pruebas obligatorias previas al despliegue evaluadas por terceros independientes, estándares comunes entre gobiernos, y que los estados miembros de la ONU exploren la creación de una institución internacional para fijar estándares, permitir verificación y convocar a los estados cuando se crucen umbrales de capacidad. El texto no nombra a ninguna empresa ni laboratorio de IA en concreto. Estados Unidos, Reino Unido y China no lo firmaron.",
+      "url": "https://www.presidentti.fi/en/a-call-for-control-of-frontier-ai-models/",
+      "confidence": "verified",
+      "source": "https://www.presidentti.fi/en/a-call-for-control-of-frontier-ai-models/",
+      "last_checked": "2026-09-21"
     }
   ],
   "edges": [
