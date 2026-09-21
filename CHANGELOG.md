@@ -2,6 +2,18 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-09-21 (limpieza de estilo en asi.html)
+
+No afecta a datos. Se pasó la prosa de `asi.html` por la guía de estilo de
+ofertas técnicas de G2, aplicando solo la regla de puntuación (nada de
+vocabulario ni patrones estructurales, que están pensados para otro
+registro): las 10 rayas (—) del texto se sustituyeron por paréntesis, punto
+y frase nueva o dos puntos según el caso; se cambió "ecosistema" (vocabulario
+prohibido en esa guía) por "conjunto de organizaciones" en la sección de
+China; se corrigió un `</p>` suelto sobrante al final de la página. Regla
+documentada en `CLAUDE.md` ("Estilo de prosa en asi.html") para que no haga
+falta repetir la revisión en cada sesión futura.
+
 ## 2026-09-21 (añade el llamamiento "A Call for Control of Frontier AI Models")
 
 - **Nodo `call-control-frontier-ai-2026`** (`type: "document"`,
