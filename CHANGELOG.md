@@ -2,6 +2,20 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-10-09 (LawZero)
+
+Nodo nuevo `lawzero` (`research`, Canadá, anunciado el 3 de junio de 2025) y dos
+aristas de financiación (`fli -> lawzero`, `coefficient-giving -> lawzero`).
+Verificado en la nota de lanzamiento de lawzero.org: fecha de anuncio, sede,
+misión (Scientist AI) y los donantes iniciales. Sin cifras de financiación:
+la prensa (Globe and Mail, CBC, The Logic) habla de 150 M CAD de Canadá y
+100 M€ de Alemania en septiembre de 2026, pero no hay comunicado oficial y el
+artículo de Transformer da otra cifra (">200 M$"). Sin `leadership`: el cargo
+de Bengio aparece como "President and Scientific Director" (2025) y como
+"co-president" (Transformer, Byline Times, Wikipedia). El `summary` enlaza el artículo de opinión de Bengio en Transformer
+(8-oct-2026), leído entero (HTML descargado) para contrastar la frase. `country: "Canadá"` no tiene
+región en `regionBucket()`, así que el nodo se coloca centrado en su panel.
+
 ## 2026-09-21 (limpieza de estilo en asi.html)
 
 No afecta a datos. Se pasó la prosa de `asi.html` por la guía de estilo de

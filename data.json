@@ -3,7 +3,7 @@
     "title": "Quién vigila a la superinteligencia",
     "subtitle": "mapa navegable — busca, arrastra los nodos, pasa el ratón para resaltar conexiones, clic para ver el detalle",
     "footer": "Mapa no exhaustivo. Cada ficha indica si el dato está verificado con fuente primaria o no; los vínculos de financiación reflejan el papel histórico de estos fondos en el ecosistema, no necesariamente una subvención vigente.",
-    "last_updated": "2026-09-14"
+    "last_updated": "2026-10-09"
   },
   "panels": [
     {
@@ -1203,6 +1203,20 @@
       "confidence": "verified",
       "source": "https://www.presidentti.fi/en/a-call-for-control-of-frontier-ai-models/",
       "last_checked": "2026-09-21"
+    },
+    {
+      "id": "lawzero",
+      "name": "LawZero",
+      "type": "research",
+      "country": "Canadá",
+      "founded": "2025-06",
+      "founded_precision": "month",
+      "desc": "Organización sin ánimo de lucro con sede en Montreal, anunciada en junio de 2025 por Yoshua Bengio. Desarrolla «Scientist AI», sistemas de IA no agénticos pensados para comprender el mundo en lugar de actuar en él y que podrían supervisar a agentes de IA. Incubada en Mila.",
+      "summary": "En un artículo de opinión publicado en Transformer el 8 de octubre de 2026, <a href=\"https://www.transformernews.ai/p/yoshua-bengio-if-you-prioritize-safety-leave-frontier-ai-companies\" target=\"_blank\" rel=\"noopener\">«If you prioritize safety, leave frontier AI companies»</a>, Bengio pide a quienes trabajan en laboratorios de frontera y de verdad priorizan la seguridad que los abandonen, y propone como destino los institutos de seguridad de la IA, organizaciones con una misión afín o LawZero, que según él no responde ante accionistas.",
+      "url": "https://lawzero.org",
+      "confidence": "verified",
+      "source": "https://lawzero.org/en/news/yoshua-bengio-launches-lawzero-new-nonprofit-advancing-safe-design-ai",
+      "last_checked": "2026-10-09"
     }
   ],
   "edges": [
@@ -2456,6 +2470,24 @@
       "desc": "GPT-4o y o4-mini fueron evaluados en el informe técnico del Frontier AI Risk Management Framework v1.0.",
       "confidence": "verified",
       "source_ref": "https://arxiv.org/abs/2507.16534"
+    },
+    {
+      "source": "fli",
+      "target": "lawzero",
+      "type": "funding",
+      "label": "financió durante la incubación (2025)",
+      "desc": "Future of Life Institute figura entre los donantes que financiaron LawZero durante su fase de incubación, según su nota de lanzamiento. No se indica importe.",
+      "confidence": "verified",
+      "source_ref": "https://lawzero.org/en/news/yoshua-bengio-launches-lawzero-new-nonprofit-advancing-safe-design-ai"
+    },
+    {
+      "source": "coefficient-giving",
+      "target": "lawzero",
+      "type": "funding",
+      "label": "financió durante la incubación (2025)",
+      "desc": "Open Philanthropy (hoy Coefficient Giving) figura entre los donantes que financiaron LawZero durante su fase de incubación, según su nota de lanzamiento. No se indica importe.",
+      "confidence": "verified",
+      "source_ref": "https://lawzero.org/en/news/yoshua-bengio-launches-lawzero-new-nonprofit-advancing-safe-design-ai"
     }
   ]
 }
