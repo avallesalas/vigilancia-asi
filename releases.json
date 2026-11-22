@@ -1,0 +1,172 @@
+{
+  "_comment": "Notas de versión para changelog.html: qué ha cambiado en el mapa, contado para quien lo usa. Lenguaje llano, sin ids ni jerga de datos. El registro técnico completo (fuentes, verificaciones, descartes) sigue en CHANGELOG.md. 'nodes' son ids reales de data.json. Del más reciente al más antiguo.",
+  "releases": [
+    {
+      "date": "2026-11-22",
+      "title": "Otoño de 2026: demandas, una ley contra la superinteligencia y nuevos institutos",
+      "summary": "Revisión de todo lo ocurrido entre septiembre y noviembre de 2026. Entran en el mapa los primeros pleitos contra los laboratorios, una ley presentada en el Congreso de EE. UU., la Oficina Europea de IA y tres institutos nuevos.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "La demanda de noviembre de 2026 contra Anthropic, OpenAI, Google, Meta y la división de IA de SpaceX, que pide congelar sus modelos en el nivel actual, a través de una de las organizaciones demandantes.", "nodes": ["alliance-secure-ai"] },
+            { "text": "LASST, la organización de abogados que demandó a OpenAI en septiembre y que representa a los demandantes de noviembre.", "nodes": ["lasst"] },
+            { "text": "La MisAnthropic Statement, que declara que Anthropic «no es una empresa de IA segura», con enlaces a las organizaciones cuya dirección la firma.", "nodes": ["misanthropic-statement"] },
+            { "text": "El Ban Artificial Superintelligence Act, el proyecto de ley de Casar y Sanders para prohibir la superinteligencia, y el respaldo de MIRI.", "nodes": ["ban-asi-act-2026"] },
+            { "text": "El marco de seguridad de Meta para la superinteligencia.", "nodes": ["meta-superintelligence-scaling-framework"] },
+            { "text": "La Oficina Europea de IA, el primer organismo de la Unión Europea en el mapa, que desde agosto de 2026 puede multar a los proveedores de modelos de propósito general.", "nodes": ["eu-ai-office"] },
+            { "text": "Tres institutos nuevos: RESI y AVERI, ambos financiados por Coefficient Giving, y el Frontier Security Institute, creado por el Center for AI Safety.", "nodes": ["resi", "averi", "frontier-security-institute"] }
+          ]
+        },
+        {
+          "kind": "updated",
+          "items": [
+            { "text": "La ficha de la Responsible Scaling Policy de Anthropic describía una versión ya superada; ahora explica la versión 3, reescrita en febrero de 2026, y las críticas que ha recibido.", "nodes": ["anthropic-rsp"] },
+            { "text": "Nombres nuevos: xAI aparece como SpaceXSI y el instituto de evaluación de EE. UU. como CAISSI.", "nodes": ["spacexai", "us-aisi"] },
+            { "text": "LawZero recoge la financiación anunciada por Canadá y Alemania y el cargo de Yoshua Bengio.", "nodes": ["lawzero"] },
+            { "text": "La ronda de financiación de DeepSeek ya está cerrada; la participación de Tencent sigue sin confirmar.", "nodes": ["deepseek", "tencent"] },
+            { "text": "La relación entre METR y Anthropic añade la evaluación de noviembre sobre cuánto se ha acelerado la investigación de Anthropic.", "nodes": ["metr"] }
+          ]
+        },
+        {
+          "kind": "improved",
+          "items": [
+            { "text": "Nuevo tipo de vínculo, «demanda judicial», con su propia línea para distinguirlo de las protestas.", "nodes": [] },
+            { "text": "Dos páginas nuevas: Noticias, con lo que ha pasado en cada periodo y sus fuentes, y esta de cambios.", "nodes": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "title": "LawZero, el proyecto de Yoshua Bengio",
+      "summary": "Entra en el mapa la organización con la que Bengio desarrolla una IA no agéntica pensada para supervisar a otras.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "LawZero, con sede en Montreal, y sus primeros financiadores: Future of Life Institute y Coefficient Giving.", "nodes": ["lawzero", "fli", "coefficient-giving"] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Un llamamiento de 21 jefes de Estado en la ONU",
+      "summary": "Se añade el primer documento firmado por gobiernos que pide controlar los modelos de frontera.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "«A Call for Control of Frontier AI Models», firmado por jefes de Estado o de Gobierno de 21 países y la Comisión Europea durante la Asamblea General de la ONU: pide supervisión humana, pruebas de seguridad obligatorias antes del despliegue y una posible institución internacional de verificación.", "nodes": ["call-control-frontier-ai-2026"] }
+          ]
+        },
+        {
+          "kind": "improved",
+          "items": [
+            { "text": "Revisión de estilo de la página «Qué es la ASI».", "nodes": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Mistral AI entra en el mapa",
+      "summary": "El principal laboratorio europeo tiene por fin ficha propia.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "Mistral AI, fundado en París en 2023, con su nota en el AI Safety Index de FLI (una F, la más baja de las nueve empresas evaluadas) y su firma de los compromisos de Seúl de 2024.", "nodes": ["mistral"] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "title": "Enlaces directos a cada ficha y China en «Qué es la ASI»",
+      "summary": "Los enlaces de la página explicativa llevan ahora directamente a la organización en el mapa, y la página gana una sección sobre China.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "El marco chino de gestión de riesgos de la IA de frontera, de Shanghai AI Lab y Concordia AI, con las evaluaciones que hace de seis laboratorios.", "nodes": ["frontier-ai-risk-mgmt-framework", "shanghai-ai-lab", "concordia"] },
+            { "text": "Sección «Y mientras tanto, en China...» en la página «Qué es la ASI».", "nodes": [] }
+          ]
+        },
+        {
+          "kind": "updated",
+          "items": [
+            { "text": "Corregida la fecha de la colaboración entre Shanghai AI Lab y Concordia AI, que mezclaba dos trabajos distintos.", "nodes": ["shanghai-ai-lab"] }
+          ]
+        },
+        {
+          "kind": "improved",
+          "items": [
+            { "text": "Cualquier enlace puede abrir el mapa centrado en una organización, con su ficha abierta. Los enlaces «↗» de «Qué es la ASI» y de Noticias ya funcionan así.", "nodes": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "title": "El mapa sale del mundo anglosajón",
+      "summary": "El mapa pasa de 40 a más de 70 organizaciones: laboratorios de China y los Emiratos, organismos de Asia, África y América Latina, y los documentos de seguridad de los propios laboratorios.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "Laboratorios de frontera chinos.", "nodes": ["deepseek", "alibaba-qwen", "moonshot-ai", "zhipu-ai", "minimax", "bytedance-seed", "xiaomi-mimo", "sensetime", "tencent"] },
+            { "text": "Laboratorios y fondos de los Emiratos Árabes Unidos.", "nodes": ["tii", "g42"] },
+            { "text": "Meta y xAI como laboratorios de frontera, con sus reorganizaciones de 2025 y 2026.", "nodes": ["meta-msl", "spacexai"] },
+            { "text": "Los marcos de seguridad de Anthropic, OpenAI y Google DeepMind.", "nodes": ["anthropic-rsp", "openai-preparedness-framework", "deepmind-frontier-safety-framework"] },
+            { "text": "Los puentes entre laboratorios: el Frontier Model Forum, los compromisos de Seúl y su equivalente chino.", "nodes": ["frontier-model-forum", "seoul-frontier-ai-commitments", "aiia-china-commitments"] },
+            { "text": "Organismos de Asia.", "nodes": ["baai", "idais-beijing-2024", "india-aisi", "asean-ai-safe", "shanghai-ai-lab"] },
+            { "text": "Organismos de África, América Latina y Arabia Saudí.", "nodes": ["africa-ai-council", "au-continental-ai-strategy", "ai-safety-cape-town", "ilina-program", "cenia", "sdaia"] },
+            { "text": "Nuevo tipo de vínculo, «extracción de capacidad»: las campañas en las que laboratorios chinos usaron masivamente a Claude para entrenar sus modelos, según los informes de Anthropic.", "nodes": [] },
+            { "text": "Las evaluaciones de los institutos de EE. UU. y el Reino Unido sobre modelos chinos y las notas del AI Safety Index de FLI.", "nodes": ["us-aisi", "uk-aisi", "fli"] }
+          ]
+        },
+        {
+          "kind": "updated",
+          "items": [
+            { "text": "17 relaciones que faltaban entre organizaciones que ya estaban en el mapa, por ejemplo la escisión de Anthropic desde OpenAI o los CEO que firmaron la declaración de 2023 sobre el riesgo de la IA.", "nodes": ["anthropic", "statement-2023"] },
+            { "text": "11 relaciones que estaban sin confirmar pasan a tener fuente primaria, entre ellas las protestas de PauseAI ante OpenAI, Anthropic y Google DeepMind.", "nodes": ["pauseai"] }
+          ]
+        },
+        {
+          "kind": "improved",
+          "items": [
+            { "text": "El mapa se ordena en tres franjas: documentos arriba, laboratorios de frontera en medio y quién los vigila abajo, repartidos por región.", "nodes": [] },
+            { "text": "Nueva página «Qué es la ASI», que explica qué es la superinteligencia, por qué se considera un riesgo y quién lo discute.", "nodes": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "title": "Primera versión del mapa navegable",
+      "summary": "El prototipo se convierte en un mapa interactivo de 40 organizaciones y 49 relaciones, con cada dato marcado como verificado o sin verificar.",
+      "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "Mapa interactivo: buscador, zoom, arrastrar nodos, resaltar conexiones al pasar el ratón y ficha de cada organización o relación con su fuente.", "nodes": [] },
+            { "text": "Las 40 fichas quedan verificadas con fuente primaria.", "nodes": [] }
+          ]
+        },
+        {
+          "kind": "updated",
+          "items": [
+            { "text": "La declaración de 2023 sobre el riesgo de la IA es sólo del Center for AI Safety, no también de FLI.", "nodes": ["statement-2023", "cais"] },
+            { "text": "CnAISDA se fundó en febrero de 2025, no en junio.", "nodes": ["cnaisda"] },
+            { "text": "La red latinoamericana se llama LANAIS, no LANAS.", "nodes": ["lanas"] },
+            { "text": "Demis Hassabis ya no es CEO de Google DeepMind desde agosto de 2026.", "nodes": ["google-deepmind"] },
+            { "text": "CeSIA: las cifras de premios Nobel que respaldan su campaña difieren según la fuente; ahora se citan todas.", "nodes": ["cesia"] },
+            { "text": "Revisión de redacción de todas las fichas: fuera superlativos sin fuente y afirmaciones más rotundas de lo que respaldan las fuentes.", "nodes": [] }
+          ]
+        }
+      ]
+    }
+  ]
+}

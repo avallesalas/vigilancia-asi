@@ -2,10 +2,13 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
-## 2026-11-22 (páginas nuevas: Noticias y Cambios en el mapa)
+## 2026-11-22 (páginas nuevas: Noticias y Novedades del mapa)
 
-- **`changelog.html`** ("Cambios en el mapa"): muestra este CHANGELOG leyéndolo
-  en tiempo de ejecución, con índice lateral por mes. Sin contenido propio.
+- **`changelog.html`** ("Novedades del mapa") + **`releases.json`**: notas de
+  versión en lenguaje llano, una por fecha (7 versiones, del 13-sep al
+  22-nov-2026), resumidas a partir de este CHANGELOG sin añadir datos nuevos.
+  Una primera versión mostraba este CHANGELOG tal cual; el usuario la descartó
+  por demasiado técnica, y pidió no enlazar al registro técnico.
 - **`noticias.html`** + **`news.json`**: "qué ha pasado en el mundo AGI", con
   índice lateral por periodos. Primer periodo, sept.–nov. 2026, con 12 noticias
   sacadas de la revisión de hoy; cada una enlaza a sus nodos del mapa y a sus

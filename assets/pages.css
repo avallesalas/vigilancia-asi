@@ -23,15 +23,20 @@
 .news-sources{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);line-height:1.7;}
 .asi-content .news-sources a{font-family:'JetBrains Mono',monospace;font-size:11.5px;}
 
-/* ---- changelog (Markdown renderizado) ---- */
-.cl-entry{scroll-margin-top:24px;margin-bottom:40px;}
-.asi-content .cl-entry h2{font-size:17px;line-height:1.4;}
-.cl-entry h2 .cl-date{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--research);margin-bottom:4px;}
-.asi-content .cl-entry p,.asi-content .cl-entry li{font-size:14px;line-height:1.7;}
-.cl-entry ul,.cl-entry ol{padding-left:20px;margin:0 0 14px;max-width:70ch;}
-.cl-entry li{margin-bottom:8px;}
-.cl-entry code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--panel);border:1px solid var(--panel-border);border-radius:4px;padding:0 4px;overflow-wrap:anywhere;}
-.cl-entry pre{background:var(--panel);border:1px solid var(--panel-border);border-radius:8px;padding:12px;overflow-x:auto;}
-.cl-entry pre code{border:none;padding:0;}
-.cl-intro{color:var(--muted);}
-.asi-content .cl-entry a{overflow-wrap:anywhere;}
+/* ---- novedades del mapa (notas de versión) ---- */
+.asi-toc .toc-date{display:block;color:#4B5A6B;font-size:10.5px;margin-bottom:1px;}
+.asi-toc li.active .toc-date{color:var(--research);opacity:.7;}
+.asi-content p.rel-stats{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);margin:-8px 0 32px;}
+.rel{scroll-margin-top:24px;margin-bottom:56px;}
+.asi-content p.rel-date{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--research);margin:0 0 6px;}
+.rel-latest{font-size:10px;color:var(--bg);background:var(--research);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px;}
+.asi-content .rel h2{font-size:20px;line-height:1.35;}
+.asi-content p.rel-summary{font-size:15.5px;color:var(--text);}
+.asi-content h3.rel-kind{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;margin:22px 0 10px;display:flex;align-items:center;gap:8px;color:var(--muted);}
+.rel-kind::before{content:'';width:8px;height:8px;border-radius:2px;background:var(--muted);}
+.rel-kind.k-new::before{background:var(--research);}
+.rel-kind.k-updated::before{background:var(--funding);}
+.rel-kind.k-improved::before{background:var(--policy);}
+.rel-list{list-style:none;padding:0;margin:0 0 8px;max-width:68ch;}
+.rel-list li{font-size:14.5px;line-height:1.65;padding:0 0 12px 14px;border-left:1px solid var(--panel-border);margin-bottom:10px;}
+.rel-list .news-nodes{margin:8px 0 0;}
