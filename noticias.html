@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noticias: quién vigila a la superinteligencia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/asi.css">
+<link rel="stylesheet" href="assets/pages.css">
+</head>
+<body>
+<div class="asi-body">
+
+  <nav class="asi-toc" id="toc">
+    <a class="back" href="index.html">← Volver al mapa</a>
+    <p class="asi-toc-title">Periodos</p>
+    <ol id="toc-list"></ol>
+  </nav>
+
+  <a class="back-mobile" href="index.html">← Volver al mapa</a>
+  <details class="asi-toc-mobile">
+    <summary>Periodos</summary>
+    <ol id="toc-list-mobile"></ol>
+  </details>
+
+  <main class="asi-content">
+    <h1 id="page-title">Noticias</h1>
+    <p class="sub">qué ha pasado en el mundo de la AGI y la superinteligencia, con sus fuentes</p>
+    <div class="page-nav">
+      <a href="index.html">← Mapa</a>
+      <a href="asi.html">Qué es la ASI</a>
+      <a href="changelog.html">Cambios en el mapa</a>
+    </div>
+    <div id="news"><p class="page-status">Cargando noticias…</p></div>
+    <div class="asi-back-footer"><a href="index.html">← Volver al mapa</a></div>
+  </main>
+</div>
+
+<script>
+(function () {
+  const MONTHS = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const MONTHS_SHORT = ['ene.','feb.','mar.','abr.','may.','jun.','jul.','ago.','sept.','oct.','nov.','dic.'];
+
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function fmtDate(d) {
+    const [y, m, day] = d.split('-');
+    const mi = parseInt(m, 10) - 1;
+    return day ? `${parseInt(day, 10)} ${MONTHS_SHORT[mi]} ${y}` : `${MONTHS[mi]} de ${y}`;
+  }
+
+  function monthKey(d) { return d.slice(0, 7); }
+  function monthLabel(k) {
+    const [y, m] = k.split('-');
+    const name = MONTHS[parseInt(m, 10) - 1];
+    return `${name.charAt(0).toUpperCase()}${name.slice(1)} de ${y}`;
+  }
+
+  function render(news, nodeNames) {
+    const periods = news.periods || [];
+    const wanted = new URLSearchParams(location.search).get('periodo');
+    const period = periods.find(p => p.id === wanted) || periods[0];
+    const out = document.getElementById('news');
+    if (!period) { out.innerHTML = '<p class="page-status">Todavía no hay noticias.</p>'; return; }
+
+    document.title = `Noticias ${period.label}: quién vigila a la superinteligencia`;
+    document.getElementById('page-title').textContent = `Noticias: ${period.title || period.label}`;
+
+    // Agrupa por mes, de más reciente a más antiguo.
+    const items = [...period.items].sort((a, b) => b.date.localeCompare(a.date));
+    const groups = [];
+    for (const it of items) {
+      const k = monthKey(it.date);
+      let g = groups[groups.length - 1];
+      if (!g || g.key !== k) { g = { key: k, items: [] }; groups.push(g); }
+      g.items.push(it);
+    }
+
+    // Índice lateral: todos los periodos; el activo despliega sus meses.
+    const tocHtml = periods.map(p => {
+      const active = p === period;
+      const sub = active
+        ? `<ol>${groups.map(g => `<li><a href="#m-${g.key}">${esc(monthLabel(g.key))}<span class="toc-count">(${g.items.length})</span></a></li>`).join('')}</ol>`
+        : '';
+      return `<li class="${active ? 'active' : ''}"><a href="?periodo=${encodeURIComponent(p.id)}">${esc(p.label)}<span class="toc-count">(${p.items.length})</span></a>${sub}</li>`;
+    }).join('');
+    document.getElementById('toc-list').innerHTML = tocHtml;
+    document.getElementById('toc-list-mobile').innerHTML = tocHtml;
+
+    let html = period.intro ? `<p>${esc(period.intro)}</p>` : '';
+    for (const g of groups) {
+      html += `<h2 class="news-month" id="m-${g.key}">${esc(monthLabel(g.key))}</h2>`;
+      for (const it of g.items) {
+        const conf = it.confidence === 'verified'
+          ? '<span class="badge cbadge verified">verificado</span>'
+          : '<span class="badge cbadge unverified">sin verificar</span>';
+        const nodes = (it.nodes || []).filter(id => {
+          if (!nodeNames[id]) { console.warn('[noticias] id de nodo inexistente en data.json:', id); return false; }
+          return true;
+        }).map(id => `<a class="node-ref" href="index.html?node=${encodeURIComponent(id)}" title="Ver ${esc(nodeNames[id])} en el mapa">↗ ${esc(nodeNames[id])}</a>`).join('');
+        const sources = (it.sources || []).map(s =>
+          s.url === 'not found' ? `<span class="not-found">${esc(s.label)}: not found</span>`
+            : `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(' · ');
+        html += `<article class="news-item">
+          <div class="news-head"><span class="news-date">${esc(fmtDate(it.date))}</span>${conf}</div>
+          <h3>${esc(it.title)}</h3>
+          <p>${esc(it.body)}</p>
+          ${nodes ? `<div class="news-nodes">${nodes}</div>` : ''}
+          <div class="news-sources">Fuentes: ${sources || '<span class="not-found">not found</span>'}</div>
+        </article>`;
+      }
+    }
+    out.innerHTML = html;
+    if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+  }
+
+  Promise.all([
+    fetch('news.json').then(r => r.json()),
+    fetch('data.json').then(r => r.json()).catch(() => ({ nodes: [] }))
+  ]).then(([news, data]) => {
+    const names = {};
+    for (const n of data.nodes || []) names[n.id] = n.name;
+    render(news, names);
+  }).catch(err => {
+    console.error(err);
+    document.getElementById('news').innerHTML =
+      '<p class="page-status">No se pudieron cargar las noticias (news.json). Si abres el fichero en local, sírvelo con un servidor HTTP.</p>';
+  });
+})();
+</script>
+</body>
+</html>

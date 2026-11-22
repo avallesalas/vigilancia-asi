@@ -2,6 +2,24 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-22 (páginas nuevas: Noticias y Cambios en el mapa)
+
+- **`changelog.html`** ("Cambios en el mapa"): muestra este CHANGELOG leyéndolo
+  en tiempo de ejecución, con índice lateral por mes. Sin contenido propio.
+- **`noticias.html`** + **`news.json`**: "qué ha pasado en el mundo AGI", con
+  índice lateral por periodos. Primer periodo, sept.–nov. 2026, con 12 noticias
+  sacadas de la revisión de hoy; cada una enlaza a sus nodos del mapa y a sus
+  fuentes, y hereda el `confidence` del nodo o arista que respalda el mismo
+  hecho (la ronda de DeepSeek queda `unverified`, como la arista
+  `tencent -> deepseek`). Fuentes nuevas buscadas para la página: el comunicado
+  de ISED Canadá del 16-sep-2026 sobre LawZero y el post de lanzamiento de RESI
+  en LessWrong. La crítica de The Midas Project al marco de Meta se deja fuera
+  de la noticia por no tener URL localizada; el número de ciudades de la marcha
+  del 14-nov tampoco se da, porque la prensa da cifras distintas.
+- **`index.html`**: enlaces a las dos páginas bajo el subtítulo; ambas enlazan
+  de vuelta al mapa. Sin cambios en el grafo.
+- **`CLAUDE.md`**: documenta las dos páginas y el esquema de `news.json`.
+
 ## 2026-11-22 (revisión sept.–nov. 2026, segunda tanda: 6 nodos nuevos, 4 correcciones)
 
 Todo aprobado por el usuario tras exponer las fuentes. Verificado esta sesión:

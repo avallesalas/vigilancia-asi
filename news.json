@@ -1,0 +1,137 @@
+{
+  "_comment": "Noticias para noticias.html. Mismas reglas que data.json: cada noticia lleva fuente real (nunca inventada) y confidence. 'nodes' son ids reales de data.json (se muestran como enlaces al mapa). 'date' es YYYY-MM-DD o YYYY-MM si sólo se conoce el mes. Los periodos se listan del más reciente al más antiguo.",
+  "periods": [
+    {
+      "id": "2026-sep-nov",
+      "label": "Sept.–nov. 2026",
+      "title": "Septiembre a noviembre de 2026",
+      "intro": "Qué ha pasado en el mundo de la AGI y la superinteligencia entre septiembre y noviembre de 2026: demandas contra los laboratorios, leyes, nuevos institutos y evaluaciones externas. Recopilado en la investigación del mapa del 22 de noviembre de 2026.",
+      "items": [
+        {
+          "date": "2026-11-18",
+          "title": "Más de un centenar de firmantes declaran que Anthropic «no es una empresa de IA segura»",
+          "body": "La MisAnthropic Statement se difunde en vísperas de la salida a bolsa de Anthropic. Sostiene que la empresa advierte de que una IA capaz de mejorarse a sí misma podría concentrar poder y escapar al control humano mientras compite por construirla, y que «ha debilitado discretamente sus compromisos de seguridad». Entre los firmantes, que aparecen con su cargo y no en nombre de sus organizaciones, está la dirección de CAIS, Future of Life Institute, MIRI, PauseAI, ControlAI y CeSIA. El comunicado de CAIS añade que Anthropic abandonó sus compromisos unilaterales de pausa; el texto vigente de su Responsible Scaling Policy mantiene compromisos de retrasar el desarrollo, aunque condicionados a la posición de la competencia.",
+          "nodes": ["misanthropic-statement", "anthropic", "anthropic-rsp", "cais"],
+          "sources": [
+            { "label": "misanthropicstatement.com", "url": "https://misanthropicstatement.com/" },
+            { "label": "Comunicado de CAIS", "url": "https://safe.ai/news/anthropic-is-not-a-safe-ai-company" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-11-17",
+          "title": "DeepSeek cierra su segunda ronda de financiación externa",
+          "body": "Según Caixin, DeepSeek cerró su segunda ronda de financiación externa, de unos 100.000 millones de yuanes (unos 15.000 M$), con cambios registrales del 17 de noviembre. Una sociedad que agrupa a los nuevos inversores toma en torno al 17,3% de la empresa.",
+          "nodes": ["deepseek"],
+          "sources": [
+            { "label": "Caixin Global (20-nov-2026)", "url": "https://www.caixinglobal.com/2026-11-20/deepseek-closes-100-billion-yuan-funding-round-102506825.html" }
+          ],
+          "confidence": "unverified"
+        },
+        {
+          "date": "2026-11-14",
+          "title": "Marchas por un tratado internacional sobre la IA durante la cumbre de APEC",
+          "body": "El movimiento Stop The AI Race convoca marchas en varias ciudades, coincidiendo con la reunión entre Trump y Xi en la cumbre de APEC, para pedir un tratado internacional sobre la IA. La coalición incluye a Irreplaceable (una de las demandantes del 12 de noviembre), Evitable, PauseAI Canada, Pause IA, PauseAI Germany y People for a Pause.",
+          "nodes": [],
+          "sources": [
+            { "label": "aitreatymarch.org", "url": "https://aitreatymarch.org/" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-11-12",
+          "title": "Cuatro organizaciones demandan a cinco laboratorios para congelar sus modelos",
+          "body": "Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI demandan ante el Tribunal Superior de California (condado de San Francisco) a Anthropic, OpenAI, Google, Meta y la división de IA de SpaceX, al amparo de la ley californiana de competencia desleal. Piden prohibirles desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. LASST figura, junto a Platkin LLP y Gerstein Harrow LLP, entre los abogados de los demandantes. En la demanda, el antiguo xAI figura como SpaceX Super Intelligence LLC y SpaceX Super Intelligence Corp.",
+          "nodes": ["alliance-secure-ai", "lasst", "anthropic", "openai", "google-deepmind", "meta-msl", "spacexai"],
+          "sources": [
+            { "label": "Demanda presentada (PDF, Platkin LLP)", "url": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-11-05",
+          "title": "METR estima que Anthropic ha acelerado 1,9 veces su ritmo de mejora de capacidades",
+          "body": "Tras una evaluación con amplio acceso interno (agosto a octubre de 2026, sin acceso a modelos no públicos), METR estima que el ritmo de mejora de capacidades de Anthropic se ha acelerado 1,9 veces (intervalo del 95%: 1,5 a 2,8) desde octubre de 2025. Atribuye en torno al 80% de esa aceleración al uso de IA en la propia investigación y descarta que se deba a más cómputo de entrenamiento. Anthropic censuró en la versión pública la mayoría de las pruebas que METR consideraba más informativas.",
+          "nodes": ["metr", "anthropic"],
+          "sources": [
+            { "label": "METR (5-nov-2026)", "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-10",
+          "title": "El instituto de evaluación de IA de EE. UU. pasa a llamarse CAISSI",
+          "body": "Desde octubre de 2026, la web del NIST presenta al antiguo US AI Safety Institute, renombrado CAISI en junio de 2025, como Center for Advancing Innovation and Standards for Super Intelligence (CAISSI).",
+          "nodes": ["us-aisi"],
+          "sources": [
+            { "label": "NIST: CAISSI", "url": "https://www.nist.gov/caissi" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-10-08",
+          "title": "Bengio pide a quien priorice la seguridad que deje los laboratorios de frontera",
+          "body": "En un artículo de opinión en Transformer, «If you prioritize safety, leave frontier AI companies», Yoshua Bengio pide a quienes trabajan en laboratorios de frontera y de verdad priorizan la seguridad que los abandonen. Propone como destino los institutos de seguridad de la IA, organizaciones con una misión afín o LawZero, que según él no responde ante accionistas.",
+          "nodes": ["lawzero"],
+          "sources": [
+            { "label": "Transformer (8-oct-2026)", "url": "https://www.transformernews.ai/p/yoshua-bengio-if-you-prioritize-safety-leave-frontier-ai-companies" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-10-02",
+          "title": "Meta publica la versión 2.1 de su Superintelligence Scaling Framework",
+          "body": "El marco de autogobernanza de Meta frente a riesgos catastróficos (químico y biológico, ciberseguridad y pérdida de control) añade requisitos de contención para evitar que un modelo escape de su entorno durante el entrenamiento y la evaluación, consideraciones específicas para la publicación de pesos abiertos y el anuncio de un comité del consejo de administración dedicado a la IA.",
+          "nodes": ["meta-superintelligence-scaling-framework", "meta-msl"],
+          "sources": [
+            { "label": "Blog de Meta (2-oct-2026)", "url": "https://research.meta.ai/blog/developing-capable-models-responsibly" },
+            { "label": "Texto del marco", "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-09-29",
+          "title": "LASST demanda a OpenAI por el acceso no autorizado de sus agentes a sistemas ajenos",
+          "body": "La organización de litigio de interés público LASST demanda ante el Tribunal Superior de California (condado de San Francisco) a OpenAI Group PBC y OpenAI Foundation por el acceso no autorizado de agentes de IA de OpenAI a sistemas de un tercero. Pide prohibir a OpenAI acceder, directamente o mediante sus agentes, a sistemas informáticos sin autorización.",
+          "nodes": ["lasst", "openai"],
+          "sources": [
+            { "label": "LASST: la demanda", "url": "https://lasst.org/in-the-courts/hugging-face-complaint" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-09-23",
+          "title": "Casar y Sanders presentan una ley para prohibir la superinteligencia; MIRI la respalda",
+          "body": "El Ban Artificial Superintelligence Act, presentado en el Congreso de EE. UU. por el representante Greg Casar y el senador Bernie Sanders, prohibiría desarrollar o desplegar superinteligencia artificial, pausaría el desarrollo de IA avanzada hasta que funcione un nuevo Departamento de IA con rango ministerial y declararía política de EE. UU. buscar acuerdos internacionales que la prohíban. MIRI lo respaldó ese mismo día como «la primera ley que hemos visto con posibilidades de detener esta amenaza» y propuso cambios, entre ellos el seguimiento de chips de IA.",
+          "nodes": ["ban-asi-act-2026", "miri"],
+          "sources": [
+            { "label": "Nota de prensa de Greg Casar", "url": "https://casar.house.gov/media/press-releases/news-casar-sanders-introduce-legislation-create-new-federal-agency-ban" },
+            { "label": "Posición de MIRI (LessWrong)", "url": "https://www.lesswrong.com/posts/jszKCKwvzfmsNetNZ/miri-s-position-on-the-ban-artificial-superintelligence-act" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-09-16",
+          "title": "Canadá y Alemania anuncian financiación pública para LawZero",
+          "body": "Los gobiernos de Canadá y Alemania anuncian su intención de aportar 150 millones de dólares canadienses y 100 millones de euros, respectivamente, a LawZero, la organización de Yoshua Bengio que desarrolla «Scientist AI». La parte alemana está pendiente de notificación a la Comisión Europea.",
+          "nodes": ["lawzero"],
+          "sources": [
+            { "label": "Comunicado de ISED Canadá", "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/09/canada-and-germany-invest-in-lawzero-to-build-a-new-approach-to-safe-sovereign-ai.html" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-09-16",
+          "title": "Nace RESI, un instituto para una superinteligencia segura por diseño",
+          "body": "Los criptógrafos del MIT Shafi Goldwasser y Vinod Vaikuntanathan y Adam Tauman Kalai, que procede de OpenAI, presentan el Institute for Responsible Superintelligence, sin ánimo de lucro y con sede en Cambridge (Massachusetts). Su objetivo es sentar las bases científicas para que una superinteligencia sea segura por diseño. Declara estar financiado por Coefficient Giving, Schmidt Sciences y AISTOF.",
+          "nodes": ["resi", "coefficient-giving"],
+          "sources": [
+            { "label": "Post de lanzamiento (LessWrong)", "url": "https://www.lesswrong.com/posts/BZHEczCfkD7ntC76t/launching-resi-the-institute-for-responsible" },
+            { "label": "resi.org", "url": "https://resi.org/" }
+          ],
+          "confidence": "verified"
+        }
+      ]
+    }
+  ]
+}
