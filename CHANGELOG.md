@@ -2,6 +2,15 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-22 (documentación de las páginas nuevas)
+
+No afecta a datos ni al mapa publicado. `site/README.md` describe Noticias,
+Novedades del mapa, sus JSON y `assets/pages.css`. `.gitignore` ignora
+`.claude/worktrees/`, para que `publish.sh` no se bloquee si hay un worktree
+abierto. `BACKLOG.md`: el fallo de los enlaces a nodos en Safari afecta
+también a las páginas nuevas, y queda pendiente añadir a Noticias la cumbre
+ONU-Barbados de Bridgetown (23-nov-2026) cuando se celebre.
+
 ## 2026-11-22 (páginas nuevas: Noticias y Novedades del mapa)
 
 - **`changelog.html`** ("Novedades del mapa") + **`releases.json`**: notas de

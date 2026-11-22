@@ -17,7 +17,19 @@ laboratorios de frontera que son su objeto.
   `index.html?node=<id>` (ver "Enlaces desde asi.html a nodos del mapa" en
   `CLAUDE.md`), que centra el zoom, resalta el nodo y abre su ficha.
 - `assets/asi.css` — estilos de `asi.html`, separados de `assets/style.css`.
-- `CHANGELOG.md` — qué cambió y qué se verificó en cada actualización.
+- `noticias.html` + `news.json` — página "Noticias": qué ha pasado en el mundo
+  AGI en cada periodo, con fuente por noticia y enlaces a los nodos del mapa.
+  Los datos están en `news.json`, no en el HTML.
+- `changelog.html` + `releases.json` — página "Novedades del mapa": notas de
+  versión en lenguaje llano, una por fecha. Los datos están en `releases.json`.
+- `assets/pages.css` — estilos propios de Noticias y Novedades (reutilizan el
+  esqueleto de `assets/asi.css`).
+- `CHANGELOG.md` — registro técnico: qué cambió y qué se verificó en cada
+  actualización. No lo enlaza ninguna página; las notas de versión públicas
+  están en `releases.json`.
+
+Esquema y reglas de `news.json` y `releases.json`: sección "Páginas de Noticias
+y Novedades del mapa" de `CLAUDE.md` (repo de trabajo).
 
 ## Datos y verificación
 
@@ -33,5 +45,5 @@ Si encuentras un error, abre una issue con la fuente que lo contradice.
 python3 -m http.server 8000   # http://localhost:8000
 ```
 
-Un servidor es necesario: `app.js` carga `data.json` con `fetch`, que no funciona
-abriendo el fichero con `file://`.
+Un servidor es necesario: `app.js`, `noticias.html` y `changelog.html` cargan
+sus JSON con `fetch`, que no funciona abriendo el fichero con `file://`.
