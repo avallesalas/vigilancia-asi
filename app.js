@@ -15,6 +15,7 @@ const EDGE_STYLE={
  capacity:{color:'var(--network)',dash:'none',w:1.4},
  eval:{color:'var(--policy)',dash:'1 3',w:1.2},
  protest:{color:'var(--activism)',dash:'3 4',w:1.4},
+ litigation:{color:'var(--activism)',dash:'none',w:1.8},
  extraction:{color:'var(--extraction)',dash:'none',w:2},
 };
 
@@ -146,7 +147,7 @@ function buildForceGraph(container, nodesIn, edgesIn, focusId){
     if(!country) return null;
     if(country.includes('Reino Unido')) return 'uk';
     if(country.includes('EE. UU.') || country.includes('Internacional')) return 'usa';
-    if(country.includes('España') || country.includes('Francia') || country.includes('Países Bajos')) return 'europe';
+    if(country.includes('España') || country.includes('Francia') || country.includes('Países Bajos') || country.includes('Unión Europea')) return 'europe';
     if(country.includes('China')) return 'china';
     if(country.includes('Japón') || country.includes('Corea') || country.includes('Singapur') || country.includes('India') || country.includes('Sudeste Asiático')) return 'asia';
     if(country.includes('Arabia Saudí') || country.includes('Emiratos')) return 'gulf';

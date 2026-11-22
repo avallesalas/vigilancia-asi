@@ -2,6 +2,117 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-22 (revisión sept.–nov. 2026, segunda tanda: 6 nodos nuevos, 4 correcciones)
+
+Todo aprobado por el usuario tras exponer las fuentes. Verificado esta sesión:
+
+- **`us-aisi`**: `name` pasa a "US AISI / CAISI / CAISSI"; el `desc` añade que
+  desde octubre de 2026 la web del NIST (nist.gov/caissi) lo llama Center for
+  Advancing Innovation and Standards for Super Intelligence. Las noticias del
+  NIST usan CAISI hasta el 17-sep y CAISSI desde el 16-oct. No se cita el
+  motivo (orden ejecutiva 14434): su texto no se pudo leer.
+- **`lawzero`**: `leadership` ("fundador y director científico") e intención
+  de financiación de Canadá (150 M CAD) y Alemania (100 M€, pendiente de
+  notificación a la Comisión), según el comunicado de ISED Canadá del
+  16-sep-2026. Las cifras de prensa (300 M$, 220 M$) se descartan.
+- **`spacexai`**: `name` pasa a "SpaceXSI (antes xAI / SpaceXAI)"; el `desc`
+  cita las razones sociales de la demanda del 12-nov-2026 (SpaceX Super
+  Intelligence LLC / Corp.). El `id` no cambia.
+- **Nodo nuevo `misanthropic-statement`** (`document`, nov. 2026). Texto y
+  firmantes leídos en misanthropicstatement.com (al menos 129 nombres visibles;
+  la lista sigue tras "See more", la prensa dio 92 el primer día); comunicado
+  de CAIS del 18-nov. La afirmación de CAIS de que Anthropic abandonó sus
+  compromisos de pausa se atribuye a CAIS y se contrasta con el texto de la RSP
+  v3.4 (apéndice A). Aristas: `-> anthropic` (`weak`) y `network` "firmada por
+  su dirección" hacia `cais`, `fli`, `miri`, `pauseai`, `controlai` y `cesia`
+  (los firmantes aparecen con su cargo, no en nombre de sus organizaciones).
+- **Nodo nuevo `frontier-security-institute`** (`policy`, jun. 2026) +
+  arista `cais -> frontier-security-institute`; `cais.leadership` añade a
+  Devin Kim (presidente desde jun. 2026). Fuentes: comunicado de CAIS del
+  2-jun-2026 y frontiersecurityinstitute.org. Tensión recogida en la arista:
+  CAIS lo llama "Frontier Security Institute at CAIS", pero la web del
+  instituto se presenta como think tank independiente y no menciona a CAIS.
+- **Nodo nuevo `eu-ai-office`** (`gov`, Unión Europea, ene. 2024). Fuentes:
+  digital-strategy.ec.europa.eu (página de la AI Office y Decisión de creación,
+  publicada el 24-ene-2024) y comunicado IP/26/1714 (31-jul-2026), leído entero.
+  Sin aristas: no hay todavía acciones públicas de la AI Office contra un
+  laboratorio concreto.
+- **`site/app.js`**: `regionBucket()` asigna "Unión Europea" a la región
+  `europe`. Decisión del usuario.
+- **Nodo nuevo `ban-asi-act-2026`** (`document`, EE. UU., sept. 2026) +
+  arista `miri -> ban-asi-act-2026` (`advocacy`). Fuentes: nota de prensa de
+  Greg Casar (23-sep-2026) y post de MIRI (Aaron Scher, 23-sep-2026). Sin
+  números de proyecto (H.R. 10538 / S. 5493 según buscadores): congress.gov y
+  GovTrack devolvieron 403.
+- **Nodo nuevo `lasst`** (`activism`, EE. UU.) + aristas `lasst -> openai`
+  (`litigation`, demanda propia fechada el 29-sep-2026, PDF de lasst.org leído
+  con markitdown) y `lasst -> alliance-secure-ai` (`network`, representación
+  legal en la demanda del 12-nov). `founded: null`: la web sólo dice que Tyler
+  Whitmer dejó Effective Ventures a finales de 2023 "to start LASST".
+- **Nodo nuevo `meta-superintelligence-scaling-framework`** (`document`) +
+  arista `meta-msl -> ...` (`authorship`). Fuentes: PDF de la v2.1 (oct. 2026,
+  leído con markitdown) y post de Meta del 2-oct-2026; críticas de The Midas
+  Project (2-oct-2026) en el `summary`. `founded: null`: el PDF dice que antes
+  se titulaba "Frontier AI Framework" y Midas que se llamaba "Advanced AI
+  Scaling Framework" (v2); la genealogía de versiones no está comprobada.
+- **Arista `metr -> anthropic`**: ampliada con la evaluación de METR del
+  5-nov-2026 sobre la aceleración de la I+D en Anthropic (1,9x, ~80% atribuido
+  a la IA, mayoría de la evidencia censurada por Anthropic). `source_ref` pasa
+  al informe de noviembre; el de marzo (revisión del informe de sabotaje,
+  https://metr.org/blog/2026-03-12-sabotage-risk-report-opus-4-6-review/)
+  sigue descrito en el `desc`.
+
+## 2026-11-22 (demanda contra cinco laboratorios: Alliance for Secure AI + tipo de arista `litigation`)
+
+- **Nodo nuevo `alliance-secure-ai`** (`activism`, Washington D. C., 2025) y
+  **cinco aristas** hacia `anthropic`, `openai`, `google-deepmind`, `meta-msl`
+  y `spacexai`. Verificado contra la demanda presentada el 12-nov-2026 ante el
+  Tribunal Superior de California (condado de San Francisco), leída entera
+  (PDF de platkinllp.com descargado por el usuario, convertido con markitdown):
+  partes, razones sociales, base legal (Unfair Competition Law) y petición
+  literal. Sede, año y misión de la Alliance: párrs. 44-46 de la demanda; CEO:
+  comunicado de la propia Alliance. Las aristas a `google-deepmind` y
+  `meta-msl` se apoyan en que la demanda dice que Google y Meta actúan
+  "through" esas unidades; el `desc` de cada arista nombra la entidad demandada.
+  Los otros tres demandantes (Irreplaceable, Public Citizen, Heat Initiative)
+  se citan en el `desc`, no como nodos: no son organizaciones centradas en el
+  riesgo de la IA avanzada.
+- **`site/app.js`**: nuevo tipo de arista `litigation` en `EDGE_STYLE` (color
+  de activismo, línea continua de 1,8), para distinguir acciones judiciales de
+  `protest` (discontinua). Decisión del usuario.
+
+## 2026-11-22 (revisión de cambios sept.–nov. 2026: RSP, DeepSeek, RESI, AVERI)
+
+- **`anthropic-rsp`**: `summary` reescrito por completo y `desc` actualizado.
+  El texto anterior describía la RSP v2.x (ASL-2 como "estándar actual", última
+  revisión v2.2) y había quedado obsoleto: la v3.0 (24-feb-2026) es una
+  reescritura completa y la vigente es la v3.4 (8-jul-2026). Verificado leyendo
+  el PDF de la v3.4 (convertido con markitdown), la página de versiones de
+  anthropic.com/responsible-scaling-policy, el post de Anthropic sobre la v3 y
+  el análisis de GovAI (5-mar-2026). Matiz comprobado en el texto: GovAI dice que
+  la v3 "ya no da a entender que pausará"; el apéndice A sí mantiene
+  compromisos de retrasar el desarrollo, pero condicionados a la posición de
+  la competencia. El `summary` recoge ambas cosas. `source` pasa a la página de
+  la política (antes, el post de lanzamiento de 2023).
+- **`anthropic`**: el `desc` decía que la RSP "define niveles de riesgo (ASL) y
+  medidas de seguridad crecientes"; ajustado a la v3 para que nodo y documento
+  no se contradigan.
+- **Arista `tencent -> deepseek`**: la ronda ya está cerrada (Caixin, 20-nov-2026:
+  ~100.000 M de yuanes, cambios registrales del 17-nov, ~17,3% para una sociedad
+  de nuevos inversores). Se quita "(ronda sin cierre confirmado)" del `label`,
+  se elimina la afirmación no sostenida de una "ronda de mayo de 2026" y
+  `source_ref` pasa a Caixin. Sigue `unverified`: el porcentaje de Tencent sólo
+  aparece en el resumen automático de Caixin, no en el texto del artículo.
+- **Nodo nuevo `resi`** (Institute for Responsible Superintelligence, `research`,
+  Cambridge, MA). Fundadores, sede, misión y financiadores verificados en
+  resi.org; año 2026 corroborado por el post de lanzamiento de Adam Kalai en
+  LessWrong (16-sep-2026). + arista `coefficient-giving -> resi` (verified,
+  resi.org).
+- **Nodo nuevo `averi`** (AI Verification and Evaluation Research Institute,
+  `policy`, EE. UU., ene. 2026). Verificado en el post de lanzamiento de Miles
+  Brundage (15-ene-2026) y en averi.org/team (Brundage, director ejecutivo).
+  + arista `coefficient-giving -> averi` (verified, mismo post).
+
 ## 2026-10-09 (LawZero)
 
 Nodo nuevo `lawzero` (`research`, Canadá, anunciado el 3 de junio de 2025) y dos

@@ -3,7 +3,7 @@
     "title": "Quién vigila a la superinteligencia",
     "subtitle": "mapa navegable — busca, arrastra los nodos, pasa el ratón para resaltar conexiones, clic para ver el detalle",
     "footer": "Mapa no exhaustivo. Cada ficha indica si el dato está verificado con fuente primaria o no; los vínculos de financiación reflejan el papel histórico de estos fondos en el ecosistema, no necesariamente una subvención vigente.",
-    "last_updated": "2026-10-09"
+    "last_updated": "2026-11-22"
   },
   "panels": [
     {
@@ -137,7 +137,8 @@
       "founded": 2022,
       "founded_precision": "year",
       "leadership": [
-        "Dan Hendrycks (director ejecutivo, cofundador)"
+        "Dan Hendrycks (director ejecutivo, cofundador)",
+        "Devin Kim (presidente, desde jun. 2026)"
       ],
       "id": "cais",
       "name": "Center for AI Safety",
@@ -148,7 +149,7 @@
       "url": "https://safe.ai",
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/Center_for_AI_Safety",
-      "last_checked": "2026-09-13"
+      "last_checked": "2026-11-22"
     },
     {
       "founded": 2014,
@@ -189,15 +190,15 @@
       "founded": null,
       "founded_precision": null,
       "id": "us-aisi",
-      "name": "US AISI / CAISI",
+      "name": "US AISI / CAISI / CAISSI",
       "type": "gov",
       "panel": "usa",
       "country": "EE. UU.",
-      "desc": "Instituto gubernamental de evaluación de IA alojado en el NIST, creado en 2023. En junio de 2025 el Secretario de Comercio Howard Lutnick anunció su renombramiento a Center for AI Standards and Innovation (CAISI), con un giro de foco desde \"safety\" hacia riesgos demostrables (ciberseguridad, bioseguridad, armas químicas) y representación de intereses estadounidenses frente a regulación extranjera.",
+      "desc": "Instituto gubernamental de evaluación de IA alojado en el NIST, creado en 2023. En junio de 2025 el Secretario de Comercio Howard Lutnick anunció su renombramiento a Center for AI Standards and Innovation (CAISI), con un giro de foco desde \"safety\" hacia riesgos demostrables (ciberseguridad, bioseguridad, armas químicas) y representación de intereses estadounidenses frente a regulación extranjera. Desde octubre de 2026 figura en la web del NIST como Center for Advancing Innovation and Standards for Super Intelligence (CAISSI).",
       "url": "https://www.nist.gov/caisi",
       "confidence": "verified",
       "source": "https://www.nist.gov/caisi",
-      "last_checked": "2026-09-13"
+      "last_checked": "2026-11-22"
     },
     {
       "founded": "2021-01",
@@ -211,7 +212,7 @@
       "type": "frontier-lab",
       "panel": "usa",
       "country": "EE. UU.",
-      "desc": "Laboratorio de IA de frontera fundado en enero de 2021 por ocho exempleados de OpenAI. Su marco de autogobernanza interna es la Responsible Scaling Policy (RSP): define niveles de riesgo (ASL) y medidas de seguridad crecientes a medida que sus modelos ganan capacidad. Es objeto de evaluación externa de METR, Apollo Research, el US AISI y de calificación en el AI Safety Index de FLI (primer puesto, C+, verano 2026).",
+      "desc": "Laboratorio de IA de frontera fundado en enero de 2021 por ocho exempleados de OpenAI. Su marco de autogobernanza interna es la Responsible Scaling Policy (RSP), reescrita en 2026 en torno a umbrales de capacidad, informes de riesgo periódicos y una hoja de ruta de seguridad pública. Es objeto de evaluación externa de METR, Apollo Research, el US AISI y de calificación en el AI Safety Index de FLI (primer puesto, C+, verano 2026).",
       "url": "https://www.anthropic.com",
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/Anthropic",
@@ -1070,7 +1071,7 @@
     },
     {
       "id": "spacexai",
-      "name": "SpaceXAI (antes xAI)",
+      "name": "SpaceXSI (antes xAI / SpaceXAI)",
       "type": "frontier-lab",
       "country": "EE. UU.",
       "founded": "2023-03",
@@ -1079,11 +1080,11 @@
         "Elon Musk (fundador, CEO de SpaceX)",
         "Michael Nicolls (presidente, desde abr. 2026)"
       ],
-      "desc": "Laboratorio de IA fundado como xAI el 9 de marzo de 2023 por Elon Musk, para desarrollar el modelo Grok como alternativa a lo que Musk calificó de sesgo ideológico en otros modelos generativos. SpaceX adquirió xAI en febrero de 2026 (operación valorada en 250.000 millones de dólares); en mayo de 2026 Musk anunció la disolución de xAI como empresa independiente, y en julio de 2026 se completó el cambio de marca a SpaceXAI, división de IA de SpaceX. Todos los cofundadores originales de xAI han dejado la compañía.",
+      "desc": "Laboratorio de IA fundado como xAI el 9 de marzo de 2023 por Elon Musk, para desarrollar el modelo Grok como alternativa a lo que Musk calificó de sesgo ideológico en otros modelos generativos. SpaceX adquirió xAI en febrero de 2026 (operación valorada en 250.000 millones de dólares); en mayo de 2026 Musk anunció la disolución de xAI como empresa independiente, y en julio de 2026 se completó el cambio de marca a SpaceXAI, división de IA de SpaceX. Todos los cofundadores originales de xAI han dejado la compañía. En la demanda presentada en noviembre de 2026 contra los principales laboratorios figura como SpaceX Super Intelligence LLC y SpaceX Super Intelligence Corp., las entidades que desarrollan Grok.",
       "url": "https://x.ai",
       "confidence": "verified",
       "source": "https://en.wikipedia.org/wiki/SpaceXAI",
-      "last_checked": "2026-09-14"
+      "last_checked": "2026-11-22"
     },
     {
       "id": "anthropic-rsp",
@@ -1092,12 +1093,12 @@
       "country": "Documento vivo",
       "founded": "2023-09",
       "founded_precision": "month",
-      "summary": "Marco de autogobernanza de Anthropic que define niveles de seguridad de IA (ASL, por AI Safety Level) en una escala inspirada en los niveles de bioseguridad. ASL-2 describe el estándar actual (modelos con capacidades peligrosas incipientes pero de baja utilidad práctica, como los propios Claude); ASL-3 exige medidas de seguridad más estrictas —controles de ciberseguridad reforzados y pruebas adversariales— para modelos que aumenten sustancialmente el riesgo de mal uso o muestren autonomía relevante; ASL-4 en adelante permanece deliberadamente sin definir en detalle, a la espera de que esos modelos existan. Se ha revisado varias veces desde su publicación (v2.1 en 2025, con un nuevo umbral de capacidad para desarrollo CBRN; v2.2, una revisión menor sobre insiders con acceso comprometido).",
-      "desc": "Publicada originalmente el 19 de septiembre de 2023 — el marco de autogobernanza que Anthropic cita en su propia ficha (nodo `anthropic`). Es objeto de escrutinio externo: SaferAI ha señalado retrocesos en alguna de sus actualizaciones.",
+      "summary": "Las versiones 1 y 2 (2023-2025) se basaban en compromisos condicionales: «niveles de seguridad de IA» (ASL, por AI Safety Level) con listas de salvaguardas obligatorias, y el compromiso de no entrenar ni desplegar modelos sin las salvaguardas adecuadas. La versión 3.0 (24 de febrero de 2026) separa lo que Anthropic se compromete a hacer como empresa, haga lo que haga la competencia, de unas recomendaciones más ambiciosas para el conjunto de la industria que dice no poder asumir unilateralmente. Ambas se ordenan por umbrales de capacidad: armas químicas o biológicas (no novedosas y novedosas), sistemas desalineados con acceso a activos sensibles y automatización de la I+D en ámbitos clave, empezando por la propia IA. Para los niveles futuros sustituye las listas de controles ASL por la exigencia de argumentar de forma sólida que el riesgo está contenido; el término ASL sigue describiendo las protecciones actuales (los modelos desplegados mantienen las protecciones ASL-3). Añade una Frontier Safety Roadmap de objetivos públicos en seguridad, alineamiento, salvaguardas y política, que el propio texto define como metas y no como compromisos firmes, e Informes de Riesgo publicados cada 3-6 meses con algunas partes omitidas, sujetos a revisión externa obligatoria cuando cubren modelos que cruzan el umbral de I+D automatizada y omiten información importante para valorar el riesgo, o cuando lo pide el Long-Term Benefit Trust. El compromiso de retrasar el desarrollo pasa a depender de la competencia (apéndice A): Anthropic se obliga a frenar si va claramente en cabeza con un modelo muy capaz, o si todos sus competidores ya contienen el riesgo, y dice que «consideraría seriamente» pausar en otros casos. GovAI (Oxford) valora que los informes y la hoja de ruta aportan transparencia, pero advierte que la nueva versión ya no da a entender que la empresa pausará si no puede mantener el riesgo en niveles aceptables y que sigue dependiendo en gran medida de la autoevaluación.",
+      "desc": "Publicada originalmente el 19 de septiembre de 2023, es el marco de autogobernanza de Anthropic frente a riesgos catastróficos. En febrero de 2026 se reescribió por completo (v3.0); la versión vigente es la 3.4, en vigor desde el 8 de julio de 2026. Es objeto de escrutinio externo: SaferAI ha señalado retrocesos en alguna de sus actualizaciones.",
       "url": "https://www.anthropic.com/responsible-scaling-policy",
       "confidence": "verified",
-      "source": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
-      "last_checked": "2026-09-14"
+      "source": "https://www.anthropic.com/responsible-scaling-policy",
+      "last_checked": "2026-11-22"
     },
     {
       "id": "openai-preparedness-framework",
@@ -1211,12 +1212,151 @@
       "country": "Canadá",
       "founded": "2025-06",
       "founded_precision": "month",
-      "desc": "Organización sin ánimo de lucro con sede en Montreal, anunciada en junio de 2025 por Yoshua Bengio. Desarrolla «Scientist AI», sistemas de IA no agénticos pensados para comprender el mundo en lugar de actuar en él y que podrían supervisar a agentes de IA. Incubada en Mila.",
+      "desc": "Organización sin ánimo de lucro con sede en Montreal, anunciada en junio de 2025 por Yoshua Bengio. Desarrolla «Scientist AI», sistemas de IA no agénticos pensados para comprender el mundo en lugar de actuar en él y que podrían supervisar a agentes de IA. Incubada en Mila. En septiembre de 2026 los gobiernos de Canadá y Alemania anunciaron su intención de aportar 150 millones de dólares canadienses y 100 millones de euros, respectivamente; la parte alemana está pendiente de notificación a la Comisión Europea.",
       "summary": "En un artículo de opinión publicado en Transformer el 8 de octubre de 2026, <a href=\"https://www.transformernews.ai/p/yoshua-bengio-if-you-prioritize-safety-leave-frontier-ai-companies\" target=\"_blank\" rel=\"noopener\">«If you prioritize safety, leave frontier AI companies»</a>, Bengio pide a quienes trabajan en laboratorios de frontera y de verdad priorizan la seguridad que los abandonen, y propone como destino los institutos de seguridad de la IA, organizaciones con una misión afín o LawZero, que según él no responde ante accionistas.",
       "url": "https://lawzero.org",
       "confidence": "verified",
       "source": "https://lawzero.org/en/news/yoshua-bengio-launches-lawzero-new-nonprofit-advancing-safe-design-ai",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-22",
+      "leadership": [
+        "Yoshua Bengio (fundador y director científico)"
+      ]
+    },
+    {
+      "id": "resi",
+      "name": "RESI (Institute for Responsible Superintelligence)",
+      "type": "research",
+      "country": "EE. UU.",
+      "founded": 2026,
+      "founded_precision": "year",
+      "leadership": [
+        "Shafi Goldwasser (cofundadora)",
+        "Adam Tauman Kalai (cofundador)",
+        "Vinod Vaikuntanathan (cofundador)"
+      ],
+      "desc": "Instituto de investigación sin ánimo de lucro con sede en Cambridge (Massachusetts), fundado en 2026 por los criptógrafos Shafi Goldwasser y Vinod Vaikuntanathan, del MIT, y por Adam Tauman Kalai, que procede de OpenAI. Su objetivo es sentar las bases científicas para que una superinteligencia sea segura por diseño.",
+      "url": "https://resi.org/",
+      "confidence": "verified",
+      "source": "https://resi.org/",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "averi",
+      "name": "AVERI (AI Verification and Evaluation Research Institute)",
+      "type": "policy",
+      "country": "EE. UU.",
+      "founded": "2026-01",
+      "founded_precision": "month",
+      "leadership": [
+        "Miles Brundage (director ejecutivo, cofundador; antes en el equipo de políticas de OpenAI)"
+      ],
+      "desc": "Think tank estadounidense sin ánimo de lucro, lanzado en enero de 2026, que promueve auditorías independientes de terceros sobre los modelos de IA de frontera y trabaja en estándares para ellas.",
+      "url": "https://averi.org",
+      "confidence": "verified",
+      "source": "https://milesbrundage.substack.com/p/the-launch-of-averi",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "alliance-secure-ai",
+      "name": "The Alliance for Secure AI",
+      "type": "activism",
+      "country": "EE. UU.",
+      "founded": 2025,
+      "founded_precision": "year",
+      "leadership": [
+        "Brendan Steinhauser (fundador y CEO)"
+      ],
+      "desc": "Organización sin ánimo de lucro estadounidense, con sede en Washington D. C. y creada en 2025, que informa al público sobre los riesgos de la IA avanzada, incluido el de que los sistemas más avanzados escapen al control humano. En noviembre de 2026 fue una de las cuatro organizaciones que demandaron a Anthropic, Google, Meta, OpenAI y la división de IA de SpaceX para congelar sus modelos en el nivel de capacidad de ese momento.",
+      "url": "https://secureainow.org",
+      "confidence": "verified",
+      "source": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "misanthropic-statement",
+      "name": "The MisAnthropic Statement (2026)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2026-11",
+      "founded_precision": "month",
+      "desc": "Declaración pública difundida en noviembre de 2026, en vísperas de la salida a bolsa de Anthropic, con más de un centenar de firmantes. Sostiene que Anthropic advierte de que una IA capaz de mejorarse a sí misma podría concentrar poder y escapar al control humano mientras compite por construirla, que «ha debilitado discretamente sus compromisos de seguridad» y que «no es una empresa de IA segura». No formula una petición concreta.",
+      "summary": "El comunicado del Center for AI Safety que la acompaña añade que Anthropic debilitó en febrero de 2026 su Responsible Scaling Policy, abandonando según CAIS sus compromisos unilaterales de pausa, y que presionó contra leyes estatales de seguridad de IA. El texto vigente de la RSP mantiene compromisos de retrasar el desarrollo, aunque condicionados a la posición de la competencia. Entre los firmantes, que aparecen con su cargo y no en nombre de sus organizaciones, están la dirección de CAIS, Future of Life Institute, MIRI, PauseAI, ControlAI y CeSIA, junto a Stuart Russell, Steven Pinker, Judea Pearl, Igor Babuschkin (cofundador de xAI) y Guillaume Verdon.",
+      "url": "https://misanthropicstatement.com/",
+      "confidence": "verified",
+      "source": "https://misanthropicstatement.com/",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "frontier-security-institute",
+      "name": "Frontier Security Institute (FSI)",
+      "type": "policy",
+      "country": "EE. UU.",
+      "founded": "2026-06",
+      "founded_precision": "month",
+      "leadership": [
+        "Isaac \"Ike\" Harris (fundador y director ejecutivo)"
+      ],
+      "desc": "Think tank estadounidense que se presenta como independiente y que trabaja entre los laboratorios de IA de frontera y el aparato de seguridad nacional de EE. UU. (Pentágono, comunidad de inteligencia, Congreso). Lo anunció el Center for AI Safety en junio de 2026 como instituto con sede en Washington D. C.; su director, Isaac Harris, fue asesor de políticas del secretario de Defensa sobre China y seguridad tecnológica.",
+      "url": "https://frontiersecurityinstitute.org/",
+      "confidence": "verified",
+      "source": "https://safe.ai/news/cais-names-former-xai-leader-devin-kim-president-and-establishes-frontier-security-institute-in-major-expansion-of-leadership-and-reach",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "eu-ai-office",
+      "name": "Oficina Europea de IA (AI Office)",
+      "type": "gov",
+      "country": "Unión Europea",
+      "founded": "2024-01",
+      "founded_precision": "month",
+      "desc": "Órgano de la Comisión Europea, creado en enero de 2024 dentro de la Dirección General de Redes de Comunicación, Contenido y Tecnologías, que aplica la Ley de IA a los modelos de IA de propósito general. Desde el 2 de agosto de 2026 puede exigir información, evaluar modelos, ordenar medidas correctoras, restringir su disponibilidad y multar a sus proveedores. A los de modelos con riesgo sistémico les exige obligaciones adicionales frente a riesgos como los químicos, biológicos, radiológicos y nucleares, los ciberataques o la pérdida de control. La apoya un panel científico de 60 expertos independientes.",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "confidence": "verified",
+      "source": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "ban-asi-act-2026",
+      "name": "Ban Artificial Superintelligence Act (2026)",
+      "type": "document",
+      "country": "EE. UU.",
+      "founded": "2026-09",
+      "founded_precision": "month",
+      "desc": "Proyecto de ley presentado en septiembre de 2026 en el Congreso de EE. UU. por el representante Greg Casar y el senador Bernie Sanders. Prohibiría desarrollar o desplegar superinteligencia artificial, pausaría el desarrollo de IA avanzada hasta que funcione un nuevo Departamento de IA con rango ministerial y declararía política de EE. UU. buscar acuerdos internacionales que prohíban la superinteligencia.",
+      "url": "https://casar.house.gov/media/press-releases/news-casar-sanders-introduce-legislation-create-new-federal-agency-ban",
+      "confidence": "verified",
+      "source": "https://casar.house.gov/media/press-releases/news-casar-sanders-introduce-legislation-create-new-federal-agency-ban",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "lasst",
+      "name": "LASST (Legal Advocates for Safe Science and Technology)",
+      "type": "activism",
+      "country": "EE. UU.",
+      "founded": null,
+      "founded_precision": null,
+      "leadership": [
+        "Tyler Whitmer (fundador, presidente y CEO)"
+      ],
+      "desc": "Organización estadounidense sin ánimo de lucro de litigio de interés público que usa la vía judicial para reducir los riesgos de tecnologías punteras como la IA generativa. En 2026 demandó a OpenAI por el acceso no autorizado de sus agentes de IA a sistemas de terceros, y representó a las cuatro organizaciones que demandaron a cinco laboratorios de frontera en noviembre.",
+      "url": "https://lasst.org",
+      "confidence": "verified",
+      "source": "https://lasst.org/who-we-are/",
+      "last_checked": "2026-11-22"
+    },
+    {
+      "id": "meta-superintelligence-scaling-framework",
+      "name": "Meta Superintelligence Scaling Framework",
+      "type": "document",
+      "country": "Documento vivo",
+      "founded": null,
+      "founded_precision": null,
+      "desc": "Marco de autogobernanza de Meta frente a riesgos catastróficos de la IA de frontera en tres ámbitos: químico y biológico, ciberseguridad y pérdida de control. Antes se titulaba Frontier AI Framework; la versión vigente es la 2.1, de octubre de 2026.",
+      "summary": "La versión 2.1 añade requisitos de contención para evitar que un modelo escape de su entorno durante el entrenamiento y la evaluación (categoría «Loss of Control 3»), consideraciones específicas para la publicación de pesos abiertos y el anuncio de un comité del consejo de administración dedicado a la IA. Clasifica los modelos en riesgo alto o crítico, con mitigaciones adicionales antes del despliegue o antes de seguir desarrollando, respectivamente. The Midas Project señaló que la misma actualización eliminó el umbral numérico de ciberseguridad, la retención provisional del despliegue y el compromiso de fijar los umbrales «con la máxima elicitación en mente».",
+      "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework",
+      "confidence": "verified",
+      "source": "https://research.meta.ai/static/meta-superintelligence-scaling-framework",
+      "last_checked": "2026-11-22"
     }
   ],
   "edges": [
@@ -1530,10 +1670,10 @@
       "source": "metr",
       "target": "anthropic",
       "type": "eval",
-      "label": "revisión externa de riesgo (sabotaje)",
-      "desc": "METR revisó el informe de riesgo de sabotaje de Anthropic para Claude Opus 4.6 (marzo de 2026), evaluando la solidez de su análisis y de sus conclusiones — no es una evaluación de capacidades independiente desde cero, sino una revisión externa del propio informe de Anthropic.",
+      "label": "revisión externa: sabotaje (mar. 2026) y aceleración de la I+D (nov. 2026)",
+      "desc": "METR revisó el informe de riesgo de sabotaje de Anthropic para Claude Opus 4.6 (marzo de 2026), evaluando la solidez de su análisis y de sus conclusiones — no es una evaluación de capacidades independiente desde cero, sino una revisión externa del propio informe de Anthropic. En noviembre de 2026 METR publicó una evaluación con amplio acceso interno (agosto-octubre de 2026, sin acceso a modelos no públicos): estima que el ritmo de mejora de capacidades de Anthropic se ha acelerado 1,9 veces (intervalo del 95%: 1,5-2,8) desde octubre de 2025, atribuye en torno al 80% de esa aceleración al uso de IA en la propia investigación y descarta que se deba a más cómputo de entrenamiento. Anthropic censuró en la versión pública la mayoría de las pruebas que METR consideraba más informativas.",
       "confidence": "verified",
-      "source_ref": "https://metr.org/blog/2026-03-12-sabotage-risk-report-opus-4-6-review/"
+      "source_ref": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/"
     },
     {
       "source": "metr",
@@ -2322,10 +2462,10 @@
       "source": "tencent",
       "target": "deepseek",
       "type": "funding",
-      "label": "inversor minoritario (ronda sin cierre confirmado)",
-      "desc": "Tencent y Alibaba negociaron en abril de 2026 entrar en la primera ronda de financiación externa de DeepSeek (valoración >20.000 M$); Tencent propuso hasta un 20% de participación, que DeepSeek rechazó por ceder demasiado control. En la ronda de mayo de 2026, Alibaba se retiró y Tencent entró como inversor financiero minoritario sin injerencia técnica — no se ha confirmado el cierre final ni el porcentaje exacto.",
+      "label": "inversor (ronda de 2026)",
+      "desc": "Tencent y Alibaba negociaron en abril de 2026 entrar en la financiación externa de DeepSeek; Tencent propuso hasta un 20% de participación, que DeepSeek rechazó por ceder demasiado control, y Alibaba acabó retirándose. Según Caixin, DeepSeek cerró el 17 de noviembre de 2026 su segunda ronda de financiación externa, de unos 100.000 millones de yuanes (unos 15.000 M$): una sociedad que agrupa a los nuevos inversores tomó en torno al 17,3% de la empresa. TechNode (oct. 2026) sitúa a Tencent y CATL como principales inversores de la ronda.",
       "confidence": "unverified",
-      "source_ref": "https://www.bloomberg.com/news/articles/2026-04-22/deepseek-in-talks-to-raise-at-20-billion-value-the-information"
+      "source_ref": "https://www.caixinglobal.com/2026-11-20/deepseek-closes-100-billion-yuan-funding-round-102506825.html"
     },
     {
       "source": "shanghai-ai-lab",
@@ -2488,6 +2628,177 @@
       "desc": "Open Philanthropy (hoy Coefficient Giving) figura entre los donantes que financiaron LawZero durante su fase de incubación, según su nota de lanzamiento. No se indica importe.",
       "confidence": "verified",
       "source_ref": "https://lawzero.org/en/news/yoshua-bengio-launches-lawzero-new-nonprofit-advancing-safe-design-ai"
+    },
+    {
+      "source": "coefficient-giving",
+      "target": "resi",
+      "type": "funding",
+      "label": "financia",
+      "desc": "RESI declara en su web estar financiado por subvenciones de Coefficient Giving, Schmidt Sciences y AISTOF.",
+      "confidence": "verified",
+      "source_ref": "https://resi.org/"
+    },
+    {
+      "source": "coefficient-giving",
+      "target": "averi",
+      "type": "funding",
+      "label": "financia",
+      "desc": "Coefficient Giving figura entre los financiadores de AVERI citados en su anuncio de lanzamiento (enero de 2026), junto a Halcyon Futures, Fathom y otros donantes.",
+      "confidence": "verified",
+      "source_ref": "https://milesbrundage.substack.com/p/the-launch-of-averi"
+    },
+    {
+      "source": "alliance-secure-ai",
+      "target": "anthropic",
+      "type": "litigation",
+      "label": "demanda (nov. 2026)",
+      "desc": "Demanda presentada el 12 de noviembre de 2026 ante el Tribunal Superior de California (condado de San Francisco) por Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI, al amparo de la ley californiana de competencia desleal. Pide prohibir a las demandadas desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. Demandada: Anthropic PBC.",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "alliance-secure-ai",
+      "target": "openai",
+      "type": "litigation",
+      "label": "demanda (nov. 2026)",
+      "desc": "Demanda presentada el 12 de noviembre de 2026 ante el Tribunal Superior de California (condado de San Francisco) por Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI, al amparo de la ley californiana de competencia desleal. Pide prohibir a las demandadas desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. Demandadas: OpenAI Group PBC y OpenAI Foundation.",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "alliance-secure-ai",
+      "target": "google-deepmind",
+      "type": "litigation",
+      "label": "demanda (nov. 2026)",
+      "desc": "Demanda presentada el 12 de noviembre de 2026 ante el Tribunal Superior de California (condado de San Francisco) por Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI, al amparo de la ley californiana de competencia desleal. Pide prohibir a las demandadas desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. Demandada: Google LLC, que según la demanda desarrolla Gemini «including through its Google DeepMind unit».",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "alliance-secure-ai",
+      "target": "meta-msl",
+      "type": "litigation",
+      "label": "demanda (nov. 2026)",
+      "desc": "Demanda presentada el 12 de noviembre de 2026 ante el Tribunal Superior de California (condado de San Francisco) por Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI, al amparo de la ley californiana de competencia desleal. Pide prohibir a las demandadas desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. Demandada: Meta Platforms, Inc., que según la demanda desarrolla sus modelos «including through its Meta Superintelligence Labs unit».",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "alliance-secure-ai",
+      "target": "spacexai",
+      "type": "litigation",
+      "label": "demanda (nov. 2026)",
+      "desc": "Demanda presentada el 12 de noviembre de 2026 ante el Tribunal Superior de California (condado de San Francisco) por Irreplaceable Education Fund, Public Citizen, Heat Initiative y The Alliance for Secure AI, al amparo de la ley californiana de competencia desleal. Pide prohibir a las demandadas desarrollar o desplegar sistemas más capaces que los que tenían en esa fecha y usar IA para dirigir de forma autónoma la I+D de sistemas más capaces. Demandadas: SpaceX Super Intelligence LLC y SpaceX Super Intelligence Corp., que desarrollan Grok.",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "anthropic",
+      "type": "weak",
+      "label": "la señala como empresa no segura (nov. 2026)",
+      "desc": "La declaración afirma que «Anthropic is not a safe AI company» y pide «rechazar su temerario intento de acumular poder». Se publicó en vísperas de la salida a bolsa de la empresa.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "cais",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Dan Hendrycks, director ejecutivo de CAIS, firma la declaración; CAIS la difunde y dice en su comunicado que se ha unido a ella.",
+      "confidence": "verified",
+      "source_ref": "https://safe.ai/news/anthropic-is-not-a-safe-ai-company"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "fli",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Firman Max Tegmark (fundador y presidente del consejo), Anthony Aguirre (presidente y CEO) y otros dos miembros de Future of Life Institute, con su cargo como afiliación.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "miri",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Firman Nate Soares (presidente) y Malo Bourgon (CEO) de MIRI, con su cargo como afiliación.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "pauseai",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Firman Joep Meindertsma (fundador de PauseAI), Holly Elmore (PauseAI US) y Maxime Fournes (PauseAI Global), con su cargo como afiliación.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "controlai",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Firman Andrea Miotti (fundador y CEO) y Connor Leahy (director en EE. UU.) de ControlAI, con su cargo como afiliación.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "misanthropic-statement",
+      "target": "cesia",
+      "type": "network",
+      "label": "firmada por su dirección",
+      "desc": "Firma Charbel-Raphaël Ségerie, director ejecutivo de CeSIA, con su cargo como afiliación.",
+      "confidence": "verified",
+      "source_ref": "https://misanthropicstatement.com/"
+    },
+    {
+      "source": "cais",
+      "target": "frontier-security-institute",
+      "type": "network",
+      "label": "lo crea (jun. 2026)",
+      "desc": "CAIS anunció en junio de 2026 la creación del Frontier Security Institute, que su comunicado llama «Frontier Security Institute at CAIS». La web del propio instituto se describe como think tank independiente y no menciona a CAIS.",
+      "confidence": "verified",
+      "source_ref": "https://safe.ai/news/cais-names-former-xai-leader-devin-kim-president-and-establishes-frontier-security-institute-in-major-expansion-of-leadership-and-reach"
+    },
+    {
+      "source": "miri",
+      "target": "ban-asi-act-2026",
+      "type": "advocacy",
+      "label": "respalda (sept. 2026)",
+      "desc": "MIRI respaldó públicamente el proyecto el 23 de septiembre de 2026, como «la primera ley que hemos visto con posibilidades de detener esta amenaza», y propuso cambios, entre ellos añadir el seguimiento y la monitorización de chips de IA.",
+      "confidence": "verified",
+      "source_ref": "https://www.lesswrong.com/posts/jszKCKwvzfmsNetNZ/miri-s-position-on-the-ban-artificial-superintelligence-act"
+    },
+    {
+      "source": "lasst",
+      "target": "openai",
+      "type": "litigation",
+      "label": "demanda (sept. 2026)",
+      "desc": "Demanda de LASST, fechada el 29 de septiembre de 2026, ante el Tribunal Superior de California (condado de San Francisco) contra OpenAI Group PBC y OpenAI Foundation, por el acceso no autorizado de agentes de IA de OpenAI a sistemas de un tercero. Pide prohibir a OpenAI acceder, directamente o mediante sus agentes, a sistemas informáticos sin autorización.",
+      "confidence": "verified",
+      "source_ref": "https://lasst.org/in-the-courts/hugging-face-complaint"
+    },
+    {
+      "source": "lasst",
+      "target": "alliance-secure-ai",
+      "type": "network",
+      "label": "representación legal (nov. 2026)",
+      "desc": "LASST figura, junto a Platkin LLP y Gerstein Harrow LLP, entre los abogados de los demandantes en la demanda de noviembre de 2026 contra cinco laboratorios de frontera.",
+      "confidence": "verified",
+      "source_ref": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf"
+    },
+    {
+      "source": "meta-msl",
+      "target": "meta-superintelligence-scaling-framework",
+      "type": "authorship",
+      "label": "autoría",
+      "desc": "Meta publicó la versión 2.1 del marco el 2 de octubre de 2026.",
+      "confidence": "verified",
+      "source_ref": "https://research.meta.ai/blog/developing-capable-models-responsibly"
     }
   ]
 }
