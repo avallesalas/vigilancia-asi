@@ -32,6 +32,7 @@
           "kind": "improved",
           "items": [
             { "text": "Nuevo tipo de vínculo, «demanda judicial», con su propia línea para distinguirlo de las protestas.", "nodes": [] },
+            { "text": "La leyenda incluye la demanda judicial y vuelve a mostrar las líneas de «autoría» y «extracción de capacidad», que no se veían.", "nodes": [] },
             { "text": "Dos páginas nuevas: Noticias, con lo que ha pasado en cada periodo y sus fuentes, y esta de cambios.", "nodes": [] }
           ]
         }

@@ -22,6 +22,10 @@ Formato: fecha, qué cambió, qué se verificó en esa sesión.
 - **`index.html`**: enlaces a las dos páginas bajo el subtítulo; ambas enlazan
   de vuelta al mapa. Sin cambios en el grafo.
 - **`CLAUDE.md`**: documenta las dos páginas y el esquema de `news.json`.
+- **Leyenda de `index.html`**: añade "Demanda judicial" (el tipo `litigation`
+  existía en `app.js` desde hoy, pero faltaba en la leyenda) y corrige las
+  muestras de "Autoría / relación directa" y "Extracción de capacidad", que no
+  se veían porque les faltaba `border-top-style`. Aprobado por el usuario.
 
 ## 2026-11-22 (revisión sept.–nov. 2026, segunda tanda: 6 nodos nuevos, 4 correcciones)
 
