@@ -1206,6 +1206,19 @@
       "last_checked": "2026-11-23"
     },
     {
+      "id": "paris-call-ai-safety-2026",
+      "name": "Paris Call for AI Safety and Security (2026)",
+      "type": "document",
+      "country": "Manifiesto",
+      "founded": "2026-11",
+      "founded_precision": "month",
+      "desc": "Declaración no vinculante firmada el 9 de noviembre de 2026 por gobiernos, empresas de IA y organizaciones de la sociedad civil, a iniciativa de Emmanuel Macron. Sigue abierta a nuevas adhesiones: a 23 de noviembre de 2026 la suscriben 19 países, 11 empresas (entre ellas Anthropic, OpenAI, Mistral AI y Microsoft) y 11 organizaciones. Los desarrolladores se comprometen a instalar mecanismos para detener sus modelos, también durante el entrenamiento y el uso interno, a revelar sus capacidades, limitaciones y riesgos conocidos y a facilitar su evaluación por expertos independientes; los firmantes, a crear un marco común de evaluación y gestión de riesgos de los modelos de frontera y a compartir información sobre incidentes graves. No la firman Estados Unidos, Reino Unido, China, Google ni Meta.",
+      "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security",
+      "confidence": "verified",
+      "source": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security",
+      "last_checked": "2026-11-23"
+    },
+    {
       "id": "lawzero",
       "name": "LawZero",
       "type": "research",
@@ -2799,6 +2812,78 @@
       "desc": "Meta publicó la versión 2.1 del marco el 2 de octubre de 2026.",
       "confidence": "verified",
       "source_ref": "https://research.meta.ai/blog/developing-capable-models-responsibly"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "anthropic",
+      "type": "network",
+      "label": "cofirmante (París, 2026)",
+      "desc": "Anthropic figura entre las empresas firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026), que compromete a los desarrolladores a instalar mecanismos para detener sus modelos y a facilitar su evaluación independiente.",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "openai",
+      "type": "network",
+      "label": "cofirmante (París, 2026)",
+      "desc": "OpenAI figura entre las empresas firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026), que compromete a los desarrolladores a instalar mecanismos para detener sus modelos y a facilitar su evaluación independiente.",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "mistral",
+      "type": "network",
+      "label": "cofirmante (París, 2026)",
+      "desc": "Mistral AI figura entre las empresas firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026), que compromete a los desarrolladores a instalar mecanismos para detener sus modelos y a facilitar su evaluación independiente.",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "lawzero",
+      "type": "network",
+      "label": "firmante (sociedad civil)",
+      "desc": "LawZero figura entre las organizaciones de la sociedad civil firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026).",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "saferai",
+      "type": "network",
+      "label": "firmante (sociedad civil)",
+      "desc": "SaferAI figura entre las organizaciones de la sociedad civil firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026).",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "fli",
+      "type": "network",
+      "label": "firmante (sociedad civil)",
+      "desc": "Future of Life Institute figura entre las organizaciones de la sociedad civil firmantes de la Paris Call for AI Safety and Security (9 de noviembre de 2026).",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "cesia",
+      "type": "network",
+      "label": "firmante crítico",
+      "desc": "CeSIA firma la declaración, pero sostiene que no fija umbrales de riesgo comunes, no garantiza a evaluadores y autoridades el acceso a los modelos y no prevé que las autoridades públicas puedan ordenar la suspensión de un modelo. Pide un calendario y obligaciones concretas para los desarrolladores; según su director ejecutivo, Charbel-Raphaël Ségerie, esas decisiones «deben recaer en las autoridades públicas».",
+      "confidence": "verified",
+      "source_ref": "https://cesia.org/en/publications/paris-call-ai-safety-cesia/"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "call-control-frontier-ai-2026",
+      "type": "narrative",
+      "label": "lo cita como precedente",
+      "desc": "El texto de la Paris Call cita el llamamiento para el control de los modelos de frontera, junto al proceso de Hiroshima, los compromisos de Seúl, la reunión del G7 en Évian y la sesión del Consejo de Seguridad de la ONU del 23 de septiembre, entre los esfuerzos que han sentado las bases de la cooperación.",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
     }
   ]
 }

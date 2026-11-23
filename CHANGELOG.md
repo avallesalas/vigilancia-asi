@@ -2,6 +2,34 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-23 (nodo nuevo: Paris Call for AI Safety and Security)
+
+Aprobado por el usuario desde `research/candidatos.md`.
+
+- **Nodo `paris-call-ai-safety-2026`** (`document`, `verified`). Fuente: la
+  página del Elíseo (EN y FR), leída y con la lista de firmantes contada a
+  mano el 2026-11-23: 19 países, 11 empresas y 11 organizaciones. La lista
+  está abierta y crece sin fechas por adhesión, lo que explica las cifras
+  distintas en prensa (6 y 8 países el 10-nov en The Next Web y The Decoder,
+  17/10 según Gill el 20-nov, 18/11 según Macron el 23-nov); el `desc` da la
+  cifra con fecha. Se quita de la propuesta el lugar ("en el Elíseo, en
+  vísperas del Foro de París sobre la Paz") porque la página del Elíseo no lo
+  dice; "a iniciativa de Emmanuel Macron" se apoya en la propia publicación
+  del Elíseo y en UN News del 20-nov ("hosted by French President Emmanuel
+  Macron").
+- **8 aristas** (todas `verified`): `network` "cofirmante (París, 2026)" a
+  `anthropic`, `openai` y `mistral`; `network` "firmante (sociedad civil)" a
+  `lawzero`, `saferai` y `fli`; `network` "firmante crítico" a `cesia`
+  (fuente: comunicado de CeSIA del 10-nov-2026, que confirma la firma y
+  detalla sus críticas); y `narrative` "lo cita como precedente" a
+  `call-control-frontier-ai-2026`, comprobada en el texto del Elíseo, que la
+  nombra entre los esfuerzos previos. El texto cita también los compromisos
+  de Seúl, pero no se añadió esa arista por no estar en la propuesta
+  aprobada.
+- **`news.json`**: noticia del 2026-11-09 sobre la firma, y la de Bridgetown
+  enlaza ya al nodo nuevo.
+- **`releases.json`**: ampliada la versión del 23-nov.
+
 ## 2026-11-23 (Noticias: cita de Guterres en Bridgetown)
 
 - **`news.json`**: corregida la cita de Guterres en la noticia de Bridgetown.

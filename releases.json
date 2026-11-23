@@ -3,13 +3,20 @@
   "releases": [
     {
       "date": "2026-11-23",
-      "title": "La cumbre de la ONU en Bridgetown, en Noticias",
-      "summary": "Noticias recoge la cumbre especial sobre seguridad de la IA que la ONU y Barbados celebraron el 23 de noviembre.",
+      "title": "La Llamada de París y la cumbre de la ONU en Bridgetown",
+      "summary": "Entra en el mapa la Llamada de París sobre la seguridad de la IA, firmada por Anthropic, OpenAI y Mistral AI, y Noticias recoge la cumbre especial sobre seguridad de la IA que la ONU y Barbados celebraron el 23 de noviembre.",
       "sections": [
+        {
+          "kind": "new",
+          "items": [
+            { "text": "La Llamada de París sobre la seguridad de la IA (noviembre de 2026): los laboratorios firmantes se comprometen a poder detener sus modelos y a dejarlos evaluar por expertos independientes. Enlaza con Anthropic, OpenAI y Mistral AI, con las organizaciones del mapa que la firman (LawZero, SaferAI, Future of Life Institute y CeSIA, que la firma con críticas) y con el llamamiento nórdico de septiembre, que cita como precedente.", "nodes": ["paris-call-ai-safety-2026"] }
+          ]
+        },
         {
           "kind": "updated",
           "items": [
             { "text": "Qué salió de la cumbre de Bridgetown: Guterres pide a los países empezar a negociar un marco común para gestionar los riesgos de la IA. Enlaza con el llamamiento de septiembre para controlar los modelos de frontera, que ya firman 34 países.", "nodes": ["call-control-frontier-ai-2026"] },
+            { "text": "Noticias cuenta también la firma de la Llamada de París el 9 de noviembre.", "nodes": ["paris-call-ai-safety-2026"] },
             { "text": "La ficha de ese llamamiento recoge ya a los 14 países que se han sumado desde septiembre (entre ellos Francia, Portugal, Suiza y Polonia) y corrige el número de firmantes iniciales, que eran 20 y no 21.", "nodes": ["call-control-frontier-ai-2026"] }
           ]
         }

@@ -11,7 +11,7 @@
           "date": "2026-11-23",
           "title": "La ONU pide en Bridgetown abrir conversaciones sobre un marco común de riesgos de la IA",
           "body": "António Guterres y la primera ministra de Barbados, Mia Mottley, celebran en Bridgetown una cumbre especial sobre seguridad de la IA. No se negocia ninguna declaración. El resultado es la petición de Guterres a los Estados miembros de que empiecen a discutir un marco multilateral de gestión de riesgos de la IA: medidas de seguridad compartidas, criterios comunes de prueba, requisitos básicos de transparencia, evaluación y supervisión independientes de los modelos avanzados y apoyo para que todos los países puedan aplicarlo. Propone además un fondo mundial para desarrollar capacidades en IA y advierte de que la tecnología supone «la mayor transferencia de poder de la historia de la humanidad». En su conversación con Mottley añadió que el poder pasa ahora «de los Estados, de las instituciones de gobierno, a un pequeño número de empresas y personas». Emmanuel Macron, por vídeo, defiende que aceptar los principios de la Llamada de París sobre la seguridad de la IA sea condición para acceder al mercado. En la presentación de la cumbre, el enviado de la ONU para tecnologías digitales, Amandeep Gill, citó como precedente el llamamiento de septiembre para el control de los modelos de frontera, que según la lista oficial firman ya 34 Estados y la Comisión Europea.",
-          "nodes": ["call-control-frontier-ai-2026"],
+          "nodes": ["call-control-frontier-ai-2026", "paris-call-ai-safety-2026"],
           "sources": [
             { "label": "UN News, 23-nov-2026", "url": "https://news.un.org/en/story/2026/11/1168861" },
             { "label": "UN News, presentación de la cumbre (20-nov-2026)", "url": "https://news.un.org/en/story/2026/11/1168854" },
@@ -57,6 +57,17 @@
           "nodes": ["alliance-secure-ai", "lasst", "anthropic", "openai", "google-deepmind", "meta-msl", "spacexai"],
           "sources": [
             { "label": "Demanda presentada (PDF, Platkin LLP)", "url": "https://www.platkinllp.com/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf" }
+          ],
+          "confidence": "verified"
+        },
+        {
+          "date": "2026-11-09",
+          "title": "Gobiernos, laboratorios y ONG firman la Llamada de París sobre la seguridad de la IA",
+          "body": "A iniciativa de Emmanuel Macron, gobiernos, empresas de IA y organizaciones de la sociedad civil firman una declaración no vinculante. Los desarrolladores se comprometen a instalar mecanismos para detener sus modelos, también durante el entrenamiento y el uso interno, a revelar sus capacidades y riesgos conocidos y a facilitar su evaluación por expertos independientes; todos los firmantes, a crear un marco común de evaluación de los modelos de frontera y a compartir información sobre incidentes graves. Entre las empresas están Anthropic, OpenAI, Mistral AI y Microsoft; no firman Google ni Meta, ni tampoco Estados Unidos, Reino Unido o China. La lista sigue abierta y a 23 de noviembre suma 19 países, 11 empresas y 11 organizaciones. CeSIA, una de ellas, firma pero critica que el texto no fije umbrales de riesgo comunes ni permita a las autoridades públicas suspender un modelo.",
+          "nodes": ["paris-call-ai-safety-2026", "anthropic", "openai", "mistral", "cesia"],
+          "sources": [
+            { "label": "Texto y firmantes (Elíseo)", "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security" },
+            { "label": "Comunicado de CeSIA", "url": "https://cesia.org/en/publications/paris-call-ai-safety-cesia/" }
           ],
           "confidence": "verified"
         },
