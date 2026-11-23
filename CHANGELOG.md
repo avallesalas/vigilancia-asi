@@ -17,15 +17,15 @@ Aprobado por el usuario desde `research/candidatos.md`.
   dice; "a iniciativa de Emmanuel Macron" se apoya en la propia publicación
   del Elíseo y en UN News del 20-nov ("hosted by French President Emmanuel
   Macron").
-- **8 aristas** (todas `verified`): `network` "cofirmante (París, 2026)" a
+- **9 aristas** (todas `verified`): `network` "cofirmante (París, 2026)" a
   `anthropic`, `openai` y `mistral`; `network` "firmante (sociedad civil)" a
   `lawzero`, `saferai` y `fli`; `network` "firmante crítico" a `cesia`
   (fuente: comunicado de CeSIA del 10-nov-2026, que confirma la firma y
   detalla sus críticas); y `narrative` "lo cita como precedente" a
   `call-control-frontier-ai-2026`, comprobada en el texto del Elíseo, que la
-  nombra entre los esfuerzos previos. El texto cita también los compromisos
-  de Seúl, pero no se añadió esa arista por no estar en la propuesta
-  aprobada.
+  nombra entre los esfuerzos previos. Después, con aprobación del usuario,
+  una novena con el mismo criterio y la misma frase del texto:
+  `narrative` "lo cita como precedente" a `seoul-frontier-ai-commitments`.
 - **`news.json`**: noticia del 2026-11-09 sobre la firma, y la de Bridgetown
   enlaza ya al nodo nuevo.
 - **`releases.json`**: ampliada la versión del 23-nov.

@@ -2884,6 +2884,15 @@
       "desc": "El texto de la Paris Call cita el llamamiento para el control de los modelos de frontera, junto al proceso de Hiroshima, los compromisos de Seúl, la reunión del G7 en Évian y la sesión del Consejo de Seguridad de la ONU del 23 de septiembre, entre los esfuerzos que han sentado las bases de la cooperación.",
       "confidence": "verified",
       "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+      "source": "paris-call-ai-safety-2026",
+      "target": "seoul-frontier-ai-commitments",
+      "type": "narrative",
+      "label": "lo cita como precedente",
+      "desc": "El texto de la Paris Call cita los compromisos de seguridad de la Cumbre de Seúl, junto al proceso de Hiroshima, la reunión del G7 en Évian, la sesión del Consejo de Seguridad de la ONU del 23 de septiembre y el llamamiento para el control de los modelos de frontera, entre los esfuerzos que han sentado las bases de la cooperación.",
+      "confidence": "verified",
+      "source_ref": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
     }
   ]
 }

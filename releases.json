@@ -9,7 +9,7 @@
         {
           "kind": "new",
           "items": [
-            { "text": "La Llamada de París sobre la seguridad de la IA (noviembre de 2026): los laboratorios firmantes se comprometen a poder detener sus modelos y a dejarlos evaluar por expertos independientes. Enlaza con Anthropic, OpenAI y Mistral AI, con las organizaciones del mapa que la firman (LawZero, SaferAI, Future of Life Institute y CeSIA, que la firma con críticas) y con el llamamiento nórdico de septiembre, que cita como precedente.", "nodes": ["paris-call-ai-safety-2026"] }
+            { "text": "La Llamada de París sobre la seguridad de la IA (noviembre de 2026): los laboratorios firmantes se comprometen a poder detener sus modelos y a dejarlos evaluar por expertos independientes. Enlaza con Anthropic, OpenAI y Mistral AI, con las organizaciones del mapa que la firman (LawZero, SaferAI, Future of Life Institute y CeSIA, que la firma con críticas) y con dos textos que cita como precedente: el llamamiento nórdico de septiembre y los compromisos de la Cumbre de Seúl.", "nodes": ["paris-call-ai-safety-2026"] }
           ]
         },
         {
