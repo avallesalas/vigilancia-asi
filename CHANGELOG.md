@@ -2,6 +2,39 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-23 (Noticias: cumbre de Bridgetown)
+
+- **`news.json`**: nueva noticia del 23-nov-2026 en el periodo sept.–nov., la
+  cumbre especial ONU-Barbados sobre seguridad de la IA. Verificado contra
+  UN News del 23-nov (crónica: sin declaración negociada, Guterres pide abrir
+  conversaciones sobre un marco multilateral de gestión de riesgos, fondo
+  mundial de capacidades, intervención de Macron) y del 20-nov (presentación,
+  con la cita de Gill al llamamiento nórdico). La cifra de 34 Estados más la
+  Comisión Europea sale de contar a mano la lista oficial de la Presidencia
+  de Finlandia el 23-nov. La noticia enlaza a `call-control-frontier-ai-2026`.
+  No se dan cifras de la Llamada de París porque las dos notas de la ONU
+  difieren (17 Estados y 10 desarrolladores frente a 18 y 11).
+- **Corrección de `call-control-frontier-ai-2026`** (aprobada por el usuario):
+  el `desc` decía "21 países", pero enumeraba 20, y esos 20 son exactamente
+  los firmantes sin fecha de adhesión en la lista oficial; el 21 era un error.
+  También decía "jefes de Estado o de Gobierno", y Bahréin, Turquía y EAU
+  firman por su ministro de Exteriores (Polonia por un vice primer ministro,
+  Suiza por un consejero federal). Ahora dice "líderes de 20 países" con esa
+  precisión, y añade los 14 países sumados después con la cifra actual
+  (34 a 23-nov-2026). Verificado contando a mano
+  https://www.presidentti.fi/en/a-call-for-control-of-frontier-ai-models/
+  el 2026-11-23. `last_checked` pasa a 2026-11-23. Ninguna arista afectada
+  (el nodo no tiene).
+  Corregida con el mismo criterio la nota de versión antigua de
+  `releases.json` que repetía "jefes de Estado o de Gobierno de 21 países".
+- **`research/candidatos.md`**: queda pendiente la Llamada de París como
+  posible nodo nuevo, con la discrepancia de cifras entre las dos notas de
+  UN News.
+- **`BACKLOG.md`**: cerrado el pendiente de añadir Bridgetown a Noticias.
+  Entra en el periodo sept.–nov., no en uno nuevo de diciembre, porque se
+  celebró en noviembre. No se crea nodo: la cumbre no produjo ningún
+  documento.
+
 ## 2026-11-22 (documentación de las páginas nuevas)
 
 No afecta a datos ni al mapa publicado. `site/README.md` describe Noticias,

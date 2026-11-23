@@ -2,6 +2,20 @@
   "_comment": "Notas de versión para changelog.html: qué ha cambiado en el mapa, contado para quien lo usa. Lenguaje llano, sin ids ni jerga de datos. El registro técnico completo (fuentes, verificaciones, descartes) sigue en CHANGELOG.md. 'nodes' son ids reales de data.json. Del más reciente al más antiguo.",
   "releases": [
     {
+      "date": "2026-11-23",
+      "title": "La cumbre de la ONU en Bridgetown, en Noticias",
+      "summary": "Noticias recoge la cumbre especial sobre seguridad de la IA que la ONU y Barbados celebraron el 23 de noviembre.",
+      "sections": [
+        {
+          "kind": "updated",
+          "items": [
+            { "text": "Qué salió de la cumbre de Bridgetown: Guterres pide a los países empezar a negociar un marco común para gestionar los riesgos de la IA. Enlaza con el llamamiento de septiembre para controlar los modelos de frontera, que ya firman 34 países.", "nodes": ["call-control-frontier-ai-2026"] },
+            { "text": "La ficha de ese llamamiento recoge ya a los 14 países que se han sumado desde septiembre (entre ellos Francia, Portugal, Suiza y Polonia) y corrige el número de firmantes iniciales, que eran 20 y no 21.", "nodes": ["call-control-frontier-ai-2026"] }
+          ]
+        }
+      ]
+    },
+    {
       "date": "2026-11-22",
       "title": "Otoño de 2026: demandas, una ley contra la superinteligencia y nuevos institutos",
       "summary": "Revisión de todo lo ocurrido entre septiembre y noviembre de 2026. Entran en el mapa los primeros pleitos contra los laboratorios, una ley presentada en el Congreso de EE. UU., la Oficina Europea de IA y tres institutos nuevos.",
@@ -59,7 +73,7 @@
         {
           "kind": "new",
           "items": [
-            { "text": "«A Call for Control of Frontier AI Models», firmado por jefes de Estado o de Gobierno de 21 países y la Comisión Europea durante la Asamblea General de la ONU: pide supervisión humana, pruebas de seguridad obligatorias antes del despliegue y una posible institución internacional de verificación.", "nodes": ["call-control-frontier-ai-2026"] }
+            { "text": "«A Call for Control of Frontier AI Models», firmado por líderes de 20 países y la Comisión Europea durante la Asamblea General de la ONU: pide supervisión humana, pruebas de seguridad obligatorias antes del despliegue y una posible institución internacional de verificación.", "nodes": ["call-control-frontier-ai-2026"] }
           ]
         },
         {
