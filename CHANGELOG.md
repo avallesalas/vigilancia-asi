@@ -2,6 +2,17 @@
 
 Formato: fecha, qué cambió, qué se verificó en esa sesión.
 
+## 2026-11-23 (Noticias: cita de Guterres en Bridgetown)
+
+- **`news.json`**: corregida la cita de Guterres en la noticia de Bridgetown.
+  Unía en una frase dos citas de momentos distintos y omitía "de las
+  instituciones de gobierno". Comprobado contra UN News
+  (https://news.un.org/en/story/2026/11/1168861): «the biggest transfer of
+  power in the history of humankind» es de la rueda de prensa al cierre;
+  «from States, from governing institutions to a small number of companies
+  and persons», de su conversación con Mia Mottley. Ahora van separadas y
+  completas.
+
 ## 2026-11-23 (Noticias: cumbre de Bridgetown)
 
 - **`news.json`**: nueva noticia del 23-nov-2026 en el periodo sept.–nov., la
